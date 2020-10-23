@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CSCD 210.iml" filepath="$PROJECT_DIR$/CSCD 210.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorkOne/HomeWorkOne.iml" filepath="$PROJECT_DIR$/HomeWorkOne/HomeWorkOne.iml" />
+    </modules>
+  </component>
+</project>
