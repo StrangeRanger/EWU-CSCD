@@ -21,14 +21,17 @@ public class HomeWorkOne {
          * Task 2)
          * Write a Java program that displays the perimeter and the area
          * of a rectangle with a width of 4.5 and a height of 8.0.
+         *
          * (Recall: perimeter = the sum of the lengths of all four sides.)
         /* ****************************************************************** */
         double width = 4.5, height = 8.0;
 
         System.out.println("\n\n**********************\n* Performing Task 2! *\n" +
                 "**********************");
+        // Displays the set width and height
         System.out.println("Width: " + width + "\nHeight: " + height + "\n");
-        System.out.println("Perimeter  = " + (2 * (width + height)));
+        // Displays the calculated perimeter
+        System.out.println("Perimeter = " + (2 * (width + height)));
 
 
         /* ****************************************************************** /*
@@ -49,11 +52,26 @@ public class HomeWorkOne {
         System.out.println("You'll be asked 5 times enter a temperature in " +
                 "degrees celsius.\n");
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Enter a temperature in degrees Celsius: ");
-            double celsius = userInput.nextDouble();
-            System.out.println(celsius + "°C = " + ((celsius * (9/5)) + 32) + "°F");
-        }
+        System.out.print("Enter a temperature in degrees Celsius: ");
+        double celsius = userInput.nextDouble();
+        // A. Displays Temperature in Fahrenheit
+        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F");
+
+        System.out.print("Enter a temperature in degrees Celsius: ");
+        celsius = userInput.nextDouble();
+        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
+
+        System.out.print("Enter a temperature in degrees Celsius: ");
+        celsius = userInput.nextDouble();
+        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
+
+        System.out.print("Enter a temperature in degrees Celsius: ");
+        celsius = userInput.nextDouble();
+        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
+
+        System.out.print("Enter a temperature in degrees Celsius: ");
+        celsius = userInput.nextDouble();
+        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
 
 
         /* ****************************************************************** /*
@@ -64,14 +82,16 @@ public class HomeWorkOne {
          *
          * Volume = Area * Height  where  Area = radius * radius * pi
         /* ****************************************************************** */
-        // 'userInput' has already been declared/initialized in Task 3
-        // 'height' has already been declared/initialized in Task 2
+        // 'userInput' has already been declared in Task 3
+        // 'height' has already been declared in Task 2
         double radius, area, volume;
         final double pi = 3.14159;
 
         System.out.println("\n\n**********************\n* Performing Task 4! *\n" +
                 "**********************");
-        System.out.println("You'll be asked to provide a height and radius.\n");
+        System.out.println("You'll be asked to provide a height and radius for " +
+                "an imaginary cylinder.\n");
+
         System.out.print("Enter a radius: ");
         radius = userInput.nextDouble();
         System.out.print("Enter a height: ");
@@ -79,7 +99,7 @@ public class HomeWorkOne {
         area = radius * radius * pi;
         volume = area * height;
 
-        System.out.println("\nArea = " + area + "\nVolume: " + volume);
+        System.out.println("\nArea = " + area + " Squared\nVolume = " + volume + " Cubbed");
 
 
         /* ****************************************************************** /*
@@ -97,20 +117,22 @@ public class HomeWorkOne {
          * Student Note: Used this website in reference to the DecimalFormat.
          * Since we are working with money, I decided it'd be a good idea to take
          * advantage of this opportunity to learn how to modify the number of
-         * decimal places.
+         * decimal places of a floating point number.
          * Site: https://farenda.com/java/java-format-double-2-decimal-places/
         /* ****************************************************************** */
-        // 'userInput' has already been declared/initialized in Task 3
+        // 'userInput' has already been declared in Task 3
         float totalCost, tipPercent, totalCostAfterTip;
+        // Using DecimalFormat to format output with two decimal points
         DecimalFormat dF = new DecimalFormat("#.##");
 
         System.out.println("\n\n**********************\n* Performing Task 5! *\n" +
                 "**********************");
         System.out.println("You'll be asked to input a set of values.\n");
+
         System.out.print("Enter the total cost billed for dinner: ");
         totalCost = userInput.nextFloat();
-        System.out.print("\n**Format input with a decimal in front (i.e. '.20')**\n" +
-                "Enter the amount (between 10% and 25%) to be tipped: ");
+        System.out.print("\n**Enter the percentage as a decimal point (i.e. 20% " +
+                "as .20)**\nEnter the amount (between 10% and 25%) to be tipped: ");
         tipPercent = userInput.nextFloat();
         totalCostAfterTip = totalCost + (totalCost * tipPercent);
         System.out.print("\nThe total amount spent after the tip: " + dF.format(totalCostAfterTip));
