@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EWU-CSCD-210.iml" filepath="$PROJECT_DIR$/EWU-CSCD-210.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorkOne/HomeWorkOne.iml" filepath="$PROJECT_DIR$/HomeWorkOne/HomeWorkOne.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorkTwo/HomeWorkTwo.iml" filepath="$PROJECT_DIR$/HomeWorkTwo/HomeWorkTwo.iml" />
     </modules>
   </component>
 </project>
