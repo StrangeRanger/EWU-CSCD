@@ -1,3 +1,4 @@
+import java.lang.module.FindException;
 import java.util.Scanner;
 
 public class HomeWorkThree {
@@ -19,7 +20,6 @@ public class HomeWorkThree {
          * abbreviated name of a month; or a year that is not in the specified
          * range).
         /* ****************************************************************** */
-///*
         int year;
         String month;
         Scanner userInput = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class HomeWorkThree {
                 "Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec\n");
 
         for (int i = 0; i < 5; i++) {
-            System.out.printf("Sample run %d\n", i+1);
+            System.out.printf("*** Sample run %d ***\n", i+1);
 
             while (true) {
                 System.out.print("Enter a year: ");
@@ -38,7 +38,9 @@ public class HomeWorkThree {
                 // to an integer
                 // Source: https://www.geeksforgeeks.org/why-is-scanner-skipping-nextline-after-use-of-other-next-functions/
                 year = Integer.parseInt(userInput.nextLine());
+
                 if (year < 1900 || year > 2100) {
+                    // Output is printed in red
                     System.out.printf("%sInvalid year: Enter a year between 1900 " +
                             "and 2100%s\n", "\033[1;31m", "\033[0m");
                 } else {
@@ -51,7 +53,7 @@ public class HomeWorkThree {
                 month = userInput.nextLine().toLowerCase();
                 switch (month) {
                     case "jan":
-                        System.out.println("There are 31 days in January of " + year);
+                        System.out.println("There are 31 days in January of " + year + "\n");
                         break;
                     case "feb":
                         int day;
@@ -105,6 +107,7 @@ public class HomeWorkThree {
                         System.out.println("There are 31 days in December of " + year + "\n");
                         break;
                     default:
+                        // Output is printed in red
                         System.out.printf("%sInvalid month: Enter one of the possible " +
                                 "months displayed in the list above%s\n", "\033[1;31m", "\033[0m");
                         continue;
@@ -112,7 +115,10 @@ public class HomeWorkThree {
                 break;
             }
         }
-//*/
+
+        // Adds extra line between next task
+        System.out.println("");
+
 
         /* ***************************************************************** /*
          * Task 2)
@@ -129,7 +135,6 @@ public class HomeWorkThree {
          * template and made modifications to it.
          * https://github.com/jsquared21/Intro-to-Java-Programming/blob/master/Exercise_04/Exercise_04_24/Exercise_04_24.java
         /* ****************************************************************** */
-///*
         String city1, city2, city3, temp;
         Scanner userInputTwo = new Scanner(System.in);
 
@@ -137,8 +142,7 @@ public class HomeWorkThree {
                 "**********************");
 
         for (int i = 0; i < 5; i++) {
-            System.out.printf("*** Sample run %d ***\n", i+1);
-
+            System.out.printf("*** Sample run %d ***\n", i + 1);
             System.out.print("Enter first city: ");
             city1 = userInputTwo.nextLine();
             System.out.print("Enter second city: ");
@@ -163,7 +167,10 @@ public class HomeWorkThree {
 
             System.out.printf("Cities in ascending order: %s < %s < %s\n\n", city1, city2, city3);
         }
-//*/
+
+        // Adds extra line between next task
+        System.out.println("");
+
 
         /* ****************************************************************** /*
          * Task 3)
@@ -173,7 +180,34 @@ public class HomeWorkThree {
          * that eight primes are printed per each line. Separate different
          * numbers by one or more spaces.
         /* ****************************************************************** */
+        int numberOfPrime = 0;
+        System.out.println("**********************\n* Performing Task 3! *\n" +
+                "**********************");
 
+        for (int number = 2; number < 1000; number++) {
+            boolean isPrime = true;
+            // Identifies prime numbers
+            for (int divisor = 2; divisor <= number / 2; divisor++) {
+                if (number % divisor == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                numberOfPrime++;
+
+                // Prints a new line after 8 numbers are printed to a line
+                if (numberOfPrime % 8 == 0) {
+                    System.out.println(number);
+                } else {
+                    System.out.print(number + " ");
+                }
+            }
+        }
+
+        // Adds extra line between next task
+        System.out.println("");
 
 
         /* ****************************************************************** /*
@@ -189,18 +223,78 @@ public class HomeWorkThree {
          * uppercase & lowercase letters, and non-letter characters such as
          * numbers, ‘_’, ‘&’, ‘$’ or similar (spec. characters)
         /* ****************************************************************** */
+        String string, stringLowerCase;
+        int vowel, consonant;
+        char letter;
+        Scanner userInputFour = new Scanner(System.in);
 
+        System.out.println("**********************\n* Performing Task 4! *\n" +
+                "**********************");
+        System.out.println("Note: 'y' will not be counted as a vowel\n");
+
+        for (int i = 0; i < 5; i++) {
+            vowel = 0; consonant = 0;
+
+            System.out.printf("*** Sample run %d ***\n", i + 1);
+            System.out.print("Enter a string: ");
+            string = userInputFour.nextLine();
+            stringLowerCase = string.toLowerCase();
+
+            for (int index = 0; index < string.length(); index++) {
+                letter = stringLowerCase.charAt(index);
+
+                // Didn't include y because I feel like that would have made things
+                // more complicated (that of which I usually do to myself)
+                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' ||
+                        letter == 'u') {
+                    vowel++;
+                } else if (letter == 'b' || letter == 'c' || letter == 'd' || letter == 'f' ||
+                        letter == 'g' || letter == 'h' || letter == 'j' || letter == 'k' ||
+                        letter == 'l' || letter == 'm' || letter == 'n' || letter == 'p' ||
+                        letter == 'q' || letter == 'r' || letter == 's' || letter == 't' ||
+                        letter == 'v' || letter == 'w' || letter == 'x' || letter == 'y' ||
+                        letter == 'z') {
+                    consonant++;
+                }
+            }
+
+            System.out.printf("Vowels: %d\nConsonants: %d\n\n", vowel, consonant);
+        }
+
+        // Adds extra line between next task
+        System.out.println("");
 
 
         /* ****************************************************************** /*
          * Task 5)
          * Write a Java program that prompts the user to enter a string and then
          * displays that string in reverse order. The string should be at least
-         * 10 characters long. Show five sample outputs of your code; at most
-         * one example is allowed to be a palindrome.
+         * 10 characters long.
+         *
+         * Show five sample outputs of your code; at most one example is allowed
+         * to be a palindrome.
          * Example: “AbCD1” reversed becomes “1DCbA”.
         /* ****************************************************************** */
+        String normalString, reverseString;
+        // 'letter' is already declared
+        Scanner userInputFive = new Scanner(System.in);
 
+        System.out.println("**********************\n* Performing Task 5! *\n" +
+                "**********************");
 
+        for (int i = 0; i < 5; i++) {
+            reverseString = "";
+
+            System.out.printf("*** Sample run %d ***\n", i + 1);
+            System.out.print("Enter a string: ");
+            normalString = userInputFive.nextLine();
+
+            for (int index = 0; index < normalString.length(); index++) {
+                letter = normalString.charAt(normalString.length() - (index + 1));
+                reverseString = reverseString + letter;
+            }
+
+            System.out.println("String in reverse: " + reverseString + "\n");
+        }
     }
 }
