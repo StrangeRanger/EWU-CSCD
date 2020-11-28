@@ -45,34 +45,19 @@ public class HomeWorkOne {
          * Celsius: 0, 18, 36, -12.5, -40
         /* ****************************************************************** */
         // Creates a Scanner object
-        Scanner userInput = new Scanner(System.in);
+        Scanner userInputThree = new Scanner(System.in);
 
         System.out.println("\n\n**********************\n* Performing Task 3! *\n" +
                 "**********************");
         System.out.println("You'll be asked 5 times enter a temperature in " +
                 "degrees celsius.\n");
 
-        System.out.print("Enter a temperature in degrees Celsius: ");
-        double celsius = userInput.nextDouble();
-        // A. Displays Temperature in Fahrenheit
-        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F");
-
-        System.out.print("Enter a temperature in degrees Celsius: ");
-        celsius = userInput.nextDouble();
-        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
-
-        System.out.print("Enter a temperature in degrees Celsius: ");
-        celsius = userInput.nextDouble();
-        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
-
-        System.out.print("Enter a temperature in degrees Celsius: ");
-        celsius = userInput.nextDouble();
-        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
-
-        System.out.print("Enter a temperature in degrees Celsius: ");
-        celsius = userInput.nextDouble();
-        System.out.println(celsius + "°C = " + ((celsius * (9.0/5.0)) + 32.0) + "°F"); // A.
-
+        for (var i = 0; i < 5; i++) {
+            System.out.print("Enter a temperature in degrees Celsius: ");
+            double celsius = userInputThree.nextDouble();
+            // Displays Temperature in Fahrenheit
+            System.out.println(celsius + "°C = " + ((celsius * (9.0 / 5.0)) + 32.0) + "°F");
+        }
 
         /* ****************************************************************** /*
          * Task 4)
@@ -82,7 +67,7 @@ public class HomeWorkOne {
          *
          * Volume = Area * Height  where  Area = radius * radius * pi
         /* ****************************************************************** */
-        // 'userInput' has already been declared in Task 3
+        Scanner userInputFour = new Scanner(System.in);
         // 'height' has already been declared in Task 2
         double radius, area, volume;
         final double pi = 3.14159;
@@ -93,13 +78,13 @@ public class HomeWorkOne {
                 "an imaginary cylinder.\n");
 
         System.out.print("Enter a radius: ");
-        radius = userInput.nextDouble();
+        radius = userInputFour.nextDouble();
         System.out.print("Enter a height: ");
-        height = userInput.nextDouble();
+        height = userInputFour.nextDouble();
         area = radius * radius * pi;
         volume = area * height;
 
-        System.out.println("\nArea = " + area + " Squared\nVolume = " + volume + " Cubbed");
+        System.out.println("\nArea = " + area + " Squared\nVolume = " + volume + " Cubed");
 
 
         /* ****************************************************************** /*
@@ -113,27 +98,21 @@ public class HomeWorkOne {
          * places (that stand for cents). Submit five sample runs showing the
          * totals for different combinations of the pre-tip dollar amount and
          * the tip percentage.
-         *
-         * Student Note: Used this website in reference to the DecimalFormat.
-         * Since we are working with money, I decided it'd be a good idea to take
-         * advantage of this opportunity to learn how to modify the number of
-         * decimal places of a floating point number.
-         * Site: https://farenda.com/java/java-format-double-2-decimal-places/
         /* ****************************************************************** */
-        // 'userInput' has already been declared in Task 3
-        float totalCost, tipPercent, totalCostAfterTip;
+        Scanner userInputFive = new Scanner(System.in);
         // Using DecimalFormat to format output with two decimal points
         DecimalFormat dF = new DecimalFormat("#.##");
+        float totalCost, tipPercent, totalCostAfterTip;
 
         System.out.println("\n\n**********************\n* Performing Task 5! *\n" +
                 "**********************");
         System.out.println("You'll be asked to input a set of values.\n");
 
         System.out.print("Enter the total cost billed for dinner: ");
-        totalCost = userInput.nextFloat();
+        totalCost = userInputFive.nextFloat();
         System.out.print("\n**Enter the percentage as a decimal point (i.e. 20% " +
                 "as .20)**\nEnter the amount (between 10% and 25%) to be tipped: ");
-        tipPercent = userInput.nextFloat();
+        tipPercent = userInputFive.nextFloat();
         totalCostAfterTip = totalCost + (totalCost * tipPercent);
         System.out.print("\nThe total amount spent after the tip: " + dF.format(totalCostAfterTip));
     }

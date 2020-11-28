@@ -20,9 +20,9 @@ public class HomeWorkThree {
          * abbreviated name of a month; or a year that is not in the specified
          * range).
         /* ****************************************************************** */
+        Scanner userInput = new Scanner(System.in);
         int year;
         String month;
-        Scanner userInput = new Scanner(System.in);
 
         System.out.println("**********************\n* Performing Task 1! *\n" +
                 "**********************");
@@ -129,14 +129,9 @@ public class HomeWorkThree {
          *
          * Show output of five sample runs of your program (for five different
          * “triplets” of cities).
-         *
-         * STUDENT NOTE:
-         * I honestly couldn't figure this out, so I used the code here as a
-         * template and made modifications to it.
-         * https://github.com/jsquared21/Intro-to-Java-Programming/blob/master/Exercise_04/Exercise_04_24/Exercise_04_24.java
         /* ****************************************************************** */
-        String city1, city2, city3, temp;
         Scanner userInputTwo = new Scanner(System.in);
+        String city1, city2, city3, temp;
 
         System.out.println("**********************\n* Performing Task 2! *\n" +
                 "**********************");
@@ -223,10 +218,10 @@ public class HomeWorkThree {
          * uppercase & lowercase letters, and non-letter characters such as
          * numbers, ‘_’, ‘&’, ‘$’ or similar (spec. characters)
         /* ****************************************************************** */
+        Scanner userInputFour = new Scanner(System.in);
         String string, stringLowerCase;
         int vowel, consonant;
         char letter;
-        Scanner userInputFour = new Scanner(System.in);
 
         System.out.println("**********************\n* Performing Task 4! *\n" +
                 "**********************");
@@ -275,9 +270,9 @@ public class HomeWorkThree {
          * to be a palindrome.
          * Example: “AbCD1” reversed becomes “1DCbA”.
         /* ****************************************************************** */
+        Scanner userInputFive = new Scanner(System.in);
         String normalString, reverseString;
         // 'letter' is already declared
-        Scanner userInputFive = new Scanner(System.in);
 
         System.out.println("**********************\n* Performing Task 5! *\n" +
                 "**********************");
