@@ -1,3 +1,3 @@
-# EWU-CSCD-210
+# EWU Computer Science
 
-This repo is a collection of projects/homework that was given to me and projects I've done in my CSCD 210 class while at Eastern.
+This repo is a collection of all the projects/homework that I've done while at EWU.

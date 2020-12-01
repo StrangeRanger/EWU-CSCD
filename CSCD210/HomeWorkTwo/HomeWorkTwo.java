@@ -3,17 +3,9 @@ import java.util.Random;
 
 public class HomeWorkTwo {
     public static void main(String[] args) {
-        /* ****************************************************************** /*
-         * Task 1)
-         * Body Mass Index (BMI) is calculated by taking your weight in
-         * kilograms and dividing it by the square of your height in meters.
-         * (So, if you are 6’0’’, that’s about 1.83 meters.) Write a Java
-         * program that prompts the user to enter a weight in lbs. and height
-         * in inches, and then (after appropriately converting the units)
-         * displays the BMI. Consider 1 pound to be equal to 0.45359 kilos and
-         * 1 inch to be equal to 0.0254 meters. Include the output of your code
-         * for five combinations of (weight, height) in (pounds, inches).
-        /* ******************************************************************* */
+        /* ********************************************************************
+         [ Task 1 ]
+         ******************************************************************** */
         Scanner userInput = new Scanner(System.in);
         double imperialWeight, imperialHeight, weight, height, userBMI;
 
@@ -37,15 +29,9 @@ public class HomeWorkTwo {
         }
 
 
-        /* ****************************************************************** /*
-         * Task 2)
-         * A palindrome integer is one that “reads the same” from left to right
-         * and from right to left. So, for instance: 121, 12321 and 757 are all
-         * palindrome integers. Write a Java program that prompts a user to
-         * enter a 3-digit positive integer and determines whether it is a
-         * palindrome. Include the output of testing your code on the following
-         * input values: 171, 173, 747, 905 and 007.
-        /* ****************************************************************** */
+        /* ********************************************************************
+         [ Task 2 ]
+         ******************************************************************** */
         Scanner userInputTwo = new Scanner(System.in);
         String integer;
 
@@ -65,22 +51,9 @@ public class HomeWorkTwo {
         }
 
 
-        /* ****************************************************************** /*
-         * Task 3)
-         * Write a Java program that plays the kids’ game rock-paper-scissors
-         * (RPS). Assume scissors win vs. paper, paper wins vs. rock and rock
-         * wins vs. scissors. The program randomly generates an int among values
-         * {0, 1, 2} representing rock, scissors, and paper, respectively. The
-         * program prompts the user to enter a value 0, 1 or 2 and then displays
-         * a message on who has won, based on the RPS game rules above. Should
-         * both the user and the program pick the same choice, the game is tied
-         * (i.e., nobody won).
-         *
-         * Show the output of your game for five different choices of play
-         * (computer, user) where each of computer and user is one of 0, 1 or
-         * 2. (For example, (0, 1) means computer played rock and user played
-         * scissors, so the user would win in that scenario.)
-        /* ****************************************************************** */
+        /* ********************************************************************
+         [ Task 3 ]
+         ******************************************************************** */
         Scanner userInputThree = new Scanner(System.in);
         Random randomInt = new Random();
         int userChoice, computerChoice;
@@ -107,14 +80,9 @@ public class HomeWorkTwo {
         }
 
 
-        /* ****************************************************************** /*
-         * Task 4)
-         * Write a Java program that prompts the user to enter a non-negative
-         * integer and then determines whether that integer is divisible by i)
-         * 6 and 7, ii) 6 or 7 (one or both), and iii) by exactly one of 6 and
-         * 7, but not both. Test run your program on the following input values,
-         * and show the output in each case: 7, 18, 23, 42, 50.
-        /* ****************************************************************** */
+        /* ********************************************************************
+         [ Task 4 ]
+         ******************************************************************** */
         Scanner userInputFour = new Scanner(System.in);
         int userInt;
 
@@ -136,21 +104,9 @@ public class HomeWorkTwo {
         }
 
 
-        /* ****************************************************************** /*
-         * Task 5)
-         * Write a Java program that prompts the user to enter a hexadecimal
-         * number (single-digit, i.e., one of 0, 1, ..., 9, A, B, C, D, E, F),
-         * converts it to a 4-digit binary number, and displays that binary
-         * value. For example, hex 7 is 0111 in binary and hex A is 1010 in
-         * binary. Hex digits that are represented as English letters can be
-         * either uppercase or lowercase (so, either ‘A’ or ‘a’ would stand for
-         * (decimal) 10). For an incorrect input (anything that’s not a valid
-         * hexadecimal digit), your program should notify the user that the
-         * input was not valid. Make sure to use the char datatype.
-         *
-         * Show the output of your code for the following input values:
-         * 9, f, 3, G, x
-        /* ****************************************************************** */
+        /* ********************************************************************
+         [ Task 5 ]
+         ******************************************************************** */
         char userHex;
         Scanner userInputFive = new Scanner(System.in);
 
