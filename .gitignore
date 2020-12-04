@@ -1,15 +1,19 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
 # Editor-based HTTP Client requests
 /httpRequests/
+
 # Idea configuration dir...
 /.idea/
-# All the unwanted 'iml' files
-/EWU-CSCD-210.iml
+
+# Idea created 'iml' files
+*.iml
 
 # Compiled class file
 *.class
