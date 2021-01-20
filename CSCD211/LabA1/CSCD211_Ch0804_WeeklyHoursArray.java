@@ -7,6 +7,10 @@
  *               during the single week, then lists the employees from the
  *               greatest number of hours worked, to least number of hours
  *               worked.
+ * Notes:        Compared to the 'SortStudentsArray' program, I did this one
+ *               a bit different. To make a long explanation short, I didn't
+ *               modify the array directly, rather just read the data in
+ *               'totalHoursWorked' and so on and so forth...
  *
  ******************************************************************************/
 
@@ -61,7 +65,6 @@ public class CSCD211_Ch0804_WeeklyHoursArray {
          * int
          */
         int max = 0;
-
         for (int i = 0; i < customArray.length; i++) {
             if (customArray[i] > max) {
                 max = customArray[i];
