@@ -1,11 +1,11 @@
-/******************************************************************************
- *
- * Name:         Hunter T.
- * Date:         January 12, 2021
- * Class:        CSCD 211
- * Descriptions: Takes the given input and finds the sum of each row of numbers.
- *
- ******************************************************************************/
+// *****************************************************************************
+//
+// Name:         Hunter T.
+// Date:         January 12, 2021
+// Class:        CSCD 211
+// Descriptions: Takes the given input and finds the sum of each row of numbers.
+//
+// *****************************************************************************
 
 import java.util.Scanner;
 

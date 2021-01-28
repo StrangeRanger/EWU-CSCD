@@ -1,18 +1,18 @@
-/******************************************************************************
- *
- * Name:         Hunter T.
- * Date:         January 12, 2021
- * Class:        CSCD 211
- * Descriptions: Takes the number of hours worked by a set a of employees
- *               during the single week, then lists the employees from the
- *               greatest number of hours worked, to least number of hours
- *               worked.
- * Notes:        Compared to the 'SortStudentsArray' program, I did this one
- *               a bit different. To make a long explanation short, I didn't
- *               modify the array directly, rather just read the data in
- *               'totalHoursWorked' and so on and so forth...
- *
- ******************************************************************************/
+// *****************************************************************************
+//
+// Name:         Hunter T.
+// Date:         January 12, 2021
+// Class:        CSCD 211
+// Descriptions: Takes the number of hours worked by a set a of employees
+//               during the single week, then lists the employees from the
+//               greatest number of hours worked, to least number of hours
+//               worked.
+// Notes:        Compared to the 'SortStudentsArray' program, I did this one
+//               a bit different. To make a long explanation short, I didn't
+//               modify the array directly, rather just read the data in
+//               'totalHoursWorked' and so on and so forth...
+//
+// *****************************************************************************
 
 public class CSCD211_Ch0804_WeeklyHoursArray {
     public static void main(String[] args) {

@@ -1,13 +1,13 @@
-/******************************************************************************
- *
- * Name:         Hunter T.
- * Date:         January 12, 2021
- * Class:        CSCD 211
- * Descriptions: Calculates the number of correct answer for each student, then
- *               lists the students from least number of correct answers to
- *               greatest number of correct answers.
- *
- ******************************************************************************/
+// *****************************************************************************
+//
+// Name:         Hunter T.
+// Date:         January 12, 2021
+// Class:        CSCD 211
+// Descriptions: Calculates the number of correct answer for each student, then
+//               lists the students from least number of correct answers to
+//               greatest number of correct answers.
+//
+// *****************************************************************************
 
 public class CSCD211_Ch0803_SortStudentsArray {
     public static void main(String[] args) {

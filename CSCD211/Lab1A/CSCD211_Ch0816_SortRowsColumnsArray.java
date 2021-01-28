@@ -1,13 +1,13 @@
-/******************************************************************************
- *
- * Name:         Hunter T.
- * Date:         January 12, 2021
- * Class:        CSCD 211
- * Descriptions: Takes a given array and performs a primary and secondary sort.
- * Notes:        This program only works with an array with a row of 2 and a
- *               column of x.
- *
- ******************************************************************************/
+// *****************************************************************************
+//
+// Name:         Hunter T.
+// Date:         January 12, 2021
+// Class:        CSCD 211
+// Descriptions: Takes a given array and performs a primary and secondary sort.
+// Notes:        This program only works with an array with a row of 2 and a
+//               column of x.
+//
+// *****************************************************************************
 
 import java.util.Arrays;
 
