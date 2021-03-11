@@ -10,12 +10,12 @@ package lab1.cscd211methods;
 // *****************************************************************************
 
 import java.util.*;
-import lab1.cscd211enums.*;
 import lab1.cscd211classes.*;
-
+import lab1.cscd211enums.*;
 
 /** The methods class for the Lab */
 public class CSCD211Lab1Methods {
+
     /**
      * The convertColor method converts a string to a color. This
      * method is called from various other methods.
@@ -34,8 +34,7 @@ public class CSCD211Lab1Methods {
 
         return Color.valueOf(color.toUpperCase().trim());
     }
-   
-   
+
     /**
      * The displayAll method displays all Person objects that contain a specific
      * color.
@@ -50,14 +49,13 @@ public class CSCD211Lab1Methods {
             throw new IllegalArgumentException("myPeeps is null");
         }
 
-        for(Person p:myPeeps) {
+        for (Person p : myPeeps) {
             if (p.getColor().equals(toFind)) {
                 System.out.println(p + "\n");
             }
         }
     }
-   
-   
+
     /**
      * The fillArray method creates an array of type person. Reads the
      * information from the file, creates a person and places the person
@@ -88,8 +86,7 @@ public class CSCD211Lab1Methods {
 
         return newArray;
     }
-   
-   
+
     /**
      * The menu method. Valid menu choices are:
      * 1. Print the Array to the screen
@@ -113,7 +110,9 @@ public class CSCD211Lab1Methods {
 
         System.out.println("Please choose from the following:");
         System.out.println("1. Print the Array to the screen");
-        System.out.println("2. Display all people that contain a certain color");
+        System.out.println(
+            "2. Display all people that contain a certain color"
+        );
         System.out.println("3. Sort the array by Color");
         System.out.println("4. Sort the array by the 'natural order'");
         System.out.println("5. Quit");
@@ -125,15 +124,19 @@ public class CSCD211Lab1Methods {
 
                 choice = Integer.parseInt(kb.nextLine());
             } catch (Exception e) {
-                System.out.println("Invalid input: Enter an integer corresponding to" +
-                        " your choice");
+                System.out.println(
+                    "Invalid input: Enter an integer corresponding to" +
+                    " your choice"
+                );
                 continue;
             }
 
             // Catches input that is out of the option range
             if (choice < 1 || choice > 5) {
-                System.out.println("Invalid input: Enter an integer " +
-                        "corresponding to your choice");
+                System.out.println(
+                    "Invalid input: Enter an integer " +
+                    "corresponding to your choice"
+                );
             }
         }
 
@@ -159,7 +162,7 @@ public class CSCD211Lab1Methods {
             System.out.println(p + "\n");
         }
     }
-    
+
     /**
      * The readColor method reads a string from the keyboard and then converts it to a color by calling the private method convertColor
      *
@@ -181,7 +184,9 @@ public class CSCD211Lab1Methods {
             System.out.print("Please enter a color: ");
             c = kb.nextLine();
             if (c == null || c.isEmpty()) {
-                System.out.println("Invalid input: This field cannot be left blank");
+                System.out.println(
+                    "Invalid input: This field cannot be left blank"
+                );
             } else {
                 break;
             }

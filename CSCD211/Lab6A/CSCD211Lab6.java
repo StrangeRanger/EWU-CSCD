@@ -32,6 +32,7 @@
 import java.util.Date;
 
 public class CSCD211Lab6 {
+
     public static void main(String[] args) {
         Person person = new Person("Peter");
         Person.Student student = new Person.Student("Susan");
@@ -86,11 +87,12 @@ public class CSCD211Lab6 {
  * Person class
  */
 class Person {
+
     // A person has a name, address, phone number, and e-mail address
     protected String name, address, phoneNumber, email;
 
     /** Default constructor */
-    public Person() { }  // Unused and is therefore redundant
+    public Person() {} // Unused and is therefore redundant
 
     /** Constructor */
     Person(String providedName) {
@@ -110,39 +112,50 @@ class Person {
 
     /** Student class status */
     public static class Student extends Person {
+
         // I'm not sure what I am supposed to do with these variables exactly
         public static final int FRESHMEN = 1;
         public static final int SOPHOMORE = 2;
         public static final int JUNIOR = 3;
         public static final int SENIOR = 4;
+
         // Refer to super class constructor
-        public Student(String providedName) { super(providedName); }
+        public Student(String providedName) {
+            super(providedName);
+        }
     }
 
-
     public static class Employee extends Person {
+
         // I'm not sure what I am supposed to do with this object
         Date dateHired = new Date();
         public double salary;
         public String office;
-        // Refer to super class constructor
-        public Employee(String providedName) { super(providedName); }
-    }
 
+        // Refer to super class constructor
+        public Employee(String providedName) {
+            super(providedName);
+        }
+    }
 
     public static class Faculty extends Employee {
+
         public String officeHours;
         public String rank;
-        // Refer to super class constructor
-        public Faculty(String providedName) { super(providedName); }
-    }
 
+        // Refer to super class constructor
+        public Faculty(String providedName) {
+            super(providedName);
+        }
+    }
 
     static class Staff extends Employee {
+
         public String title;
+
         // Refer to super class constructor
-        public Staff(String providedName) { super(providedName); }
+        public Staff(String providedName) {
+            super(providedName);
+        }
     }
 }
-
-

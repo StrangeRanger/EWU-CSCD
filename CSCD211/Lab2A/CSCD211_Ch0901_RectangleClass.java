@@ -9,26 +9,35 @@
 // *****************************************************************************
 
 public class CSCD211_Ch0901_RectangleClass {
+
     /** Main method */
     public static void main(String[] args) {
         // Create a rectangle with a width of 4 and a height of 40
         Rectangle rectangleOne = new Rectangle(4, 40);
-        System.out.println("The area of a rectangle with a width of 4.0 and " +
-                "a height of 40.0 is " + rectangleOne.getArea());
-        System.out.println("The perimeter of the rectangle is " +
-                rectangleOne.getPerimeter());
+        System.out.println(
+            "The area of a rectangle with a width of 4.0 and " +
+            "a height of 40.0 is " +
+            rectangleOne.getArea()
+        );
+        System.out.println(
+            "The perimeter of the rectangle is " + rectangleOne.getPerimeter()
+        );
 
         // Create a rectangle with a width of 3.5 and a height of 35.9
         Rectangle rectangleTwo = new Rectangle(3.5, 35.9);
-        System.out.println("The area of a rectangle with a width of 3.5 and " +
-                "a height of 35.9 is " + rectangleTwo.getArea());
-        System.out.println("The perimeter of the rectangle is " +
-                rectangleTwo.getPerimeter());
+        System.out.println(
+            "The area of a rectangle with a width of 3.5 and " +
+            "a height of 35.9 is " +
+            rectangleTwo.getArea()
+        );
+        System.out.println(
+            "The perimeter of the rectangle is " + rectangleTwo.getPerimeter()
+        );
     }
 }
 
-
 class Rectangle {
+
     double width, height;
 
     /**

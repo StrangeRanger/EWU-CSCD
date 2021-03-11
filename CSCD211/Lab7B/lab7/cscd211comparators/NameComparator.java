@@ -1,7 +1,7 @@
 package lab7.cscd211comparators;
 
-import lab7.cscd211inheritance.Employee;
 import java.util.Comparator;
+import lab7.cscd211inheritance.Employee;
 
 /**
  * The NameComparator class the only compares by the Employee name The class
@@ -9,6 +9,7 @@ import java.util.Comparator;
  * parameters are final.
  */
 public class NameComparator implements Comparator<Employee> {
+
     /**
      * The compare method compares based solely on the name.
      *
@@ -19,8 +20,9 @@ public class NameComparator implements Comparator<Employee> {
      * @throws IllegalArgumentException If either Employee is null
      */
     public int compare(final Employee e1, final Employee e2) {
-        if (e1 == null || e2 == null)
-        { throw new IllegalArgumentException("Bad compare"); }
+        if (e1 == null || e2 == null) {
+            throw new IllegalArgumentException("Bad compare");
+        }
         return e1.getName().compareTo(e2.getName());
     }
 }

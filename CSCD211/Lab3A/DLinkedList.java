@@ -12,19 +12,19 @@ import java.lang.*;
 
 /** The DLinkedList class implements a doubly Linked list. */
 class DLinkedList {
-    private Node first;  // First element in the list
-    private Node last;   // Last element in the list
 
+    private Node first; // First element in the list
+    private Node last; // Last element in the list
 
     /** Constructor. */
     public DLinkedList() {}
 
-
     /** The Node class stores a list element and a reference to the next node. */
     private class Node {
-        String element;  // The element in the list
-        Node next;       // Next element in the list
-        Node prev;       // Previous element in the list
+
+        String element; // The element in the list
+        Node next; // Next element in the list
+        Node prev; // Previous element in the list
 
         /**
          * Constructor.
@@ -44,17 +44,19 @@ class DLinkedList {
          *
          * @param val The element to be stored in the node.
          */
-        Node(String val) { this(val, null, null); }
+        Node(String val) {
+            this(val, null, null);
+        }
     }
-
 
     /**
      * The isEmpty method checks to see if the list is empty.
      *
      * @return True if list is empty, false otherwise.
      */
-    public boolean isEmpty() { return first == null; }
-
+    public boolean isEmpty() {
+        return first == null;
+    }
 
     /**
      * The size method returns the length of the list.
@@ -65,13 +67,12 @@ class DLinkedList {
         int count = 0;
         Node p = first;
 
-        while (p != null) {  // Null marks the end of the list
+        while (p != null) { // Null marks the end of the list
             count++;
             p = p.next;
         }
         return count;
     }
-
 
     /**
      * The add method adds to the end of the list.
@@ -83,13 +84,12 @@ class DLinkedList {
         if (isEmpty()) {
             first = new Node(e);
             last = first;
-        // Add to end of existing list
+            // Add to end of existing list
         } else {
             last.next = new Node(e);
             last = last.next;
         }
     }
-
 
     /**
      * Adds an element at a specified index.
@@ -102,24 +102,31 @@ class DLinkedList {
     public void add(int index, String e) {
         Node pred;
 
-        if (index < 0 || index > size()) { throw new IndexOutOfBoundsException(); }
+        if (index < 0 || index > size()) {
+            throw new IndexOutOfBoundsException();
+        }
 
         // New element is placed at the beginning
         if (index == 0) {
             first = new Node(e, first, null);
-            if (last == null) { last = first; }
+            if (last == null) {
+                last = first;
+            }
             return;
         }
 
         // Sets pred to node, which will be the predecessor of the new node
         pred = first;
-        for (int i = 1; i < index; i++) { pred = pred.next; }
+        for (int i = 1; i < index; i++) {
+            pred = pred.next;
+        }
         // Adds new node containing the element
         pred.next = new Node(e, pred.next, pred);
         // If the last element changed
-        if (pred.next.next == null) { last = pred.next; }
+        if (pred.next.next == null) {
+            last = pred.next;
+        }
     }
-
 
     /**
      * The toString method computes the string representation of the list.
@@ -131,13 +138,12 @@ class DLinkedList {
         StringBuilder strBuilder = new StringBuilder();
         Node p = first;
 
-        while (p != null) {  // Null marks the end of the list
+        while (p != null) { // Null marks the end of the list
             strBuilder.append(p.element).append("\n");
             p = p.next;
         }
         return strBuilder.toString();
     }
-
 
     /**
      * Removes an element at a given position, from the list.
@@ -148,23 +154,27 @@ class DLinkedList {
     public void remove(int index) {
         Node previous = first, current;
 
-        if (index < 0 || index >= size())
-        { throw new IndexOutOfBoundsException(); }
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException();
+        }
 
         // Remove first element
         if (index == 0) {
             first = first.next;
             // If there was only one element in list
-            if (first == null) { last = null; }
+            if (first == null) {
+                last = null;
+            }
             return;
         }
 
-        for (int k = 1; k < index; k++) { previous = previous.next; }
+        for (int k = 1; k < index; k++) {
+            previous = previous.next;
+        }
 
         current = previous.next;
         previous.next = current.next;
     }
-
 
     /*
     // I could not figure out how to get this to work
@@ -191,15 +201,14 @@ class DLinkedList {
         //throw new InvalidParameterException(element + " does not exist in list");
     }*/
 
-
-    public static void main(String[]args) {
+    public static void main(String[] args) {
         DLinkedList ll = new DLinkedList();
         ll.add("Amy");
         ll.add("Bob");
         ll.add(0, "Al");
         ll.add(2, "Beth");
         ll.add("Larry");
-        ll.add("Carol");    
+        ll.add("Carol");
         ll.remove(4);
 
         System.out.println("The elements of the list are:");

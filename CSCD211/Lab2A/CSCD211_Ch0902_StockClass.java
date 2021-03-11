@@ -9,20 +9,23 @@
 // *****************************************************************************
 
 public class CSCD211_Ch0902_StockClass {
+
     /** Main method */
     public static void main(String[] args) {
         Stock stocks = new Stock("ORCL", "Oracle Corporation");
 
-        System.out.println("Previous Closing Price: " + stocks.previousClosingPrice);
+        System.out.println(
+            "Previous Closing Price: " + stocks.previousClosingPrice
+        );
         System.out.println("Current Price: " + stocks.currentPrice);
         System.out.println("Price Change: " + stocks.getChangePercent() + "%");
     }
 }
 
-
 class Stock {
+
     String symbol, name;
-    double previousClosingPrice = 34.5, currentPrice = 34.35 ;
+    double previousClosingPrice = 34.5, currentPrice = 34.35;
 
     /**
      * Construct a stock with a symbol and name
@@ -45,6 +48,5 @@ class Stock {
         } else {
             return percent;
         }
-
     }
 }

@@ -1,7 +1,7 @@
 package lab7.cscd211comparators;
 
-import lab7.cscd211inheritance.Employee;
 import java.util.Comparator;
+import lab7.cscd211inheritance.Employee;
 
 /**
  * The SalaryComparator class the only compares by the Employee salary. The
@@ -9,6 +9,7 @@ import java.util.Comparator;
  * all parameters are final.
  */
 public class SalaryComparator implements Comparator<Employee> {
+
     /**
      * The compare method compares based solely on the salary.
      *
@@ -19,13 +20,18 @@ public class SalaryComparator implements Comparator<Employee> {
      * @throws IllegalArgumentException If either Employee is null
      */
     public int compare(final Employee e1, final Employee e2) {
-        if (e1 == null || e2 == null)
-        { throw new IllegalArgumentException("Bad compare"); }
+        if (e1 == null || e2 == null) {
+            throw new IllegalArgumentException("Bad compare");
+        }
 
         // Code below can be replaced by:
         // return Double.compare(e1.getSalary(), e2.getSalary());
-        if (e1.getSalary() > e2.getSalary()) { return 1; }
-        else if (e1.getSalary() < e2.getSalary()) { return -1; }
-        else { return 0; }
+        if (e1.getSalary() > e2.getSalary()) {
+            return 1;
+        } else if (e1.getSalary() < e2.getSalary()) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

@@ -12,8 +12,19 @@
 import java.util.Arrays;
 
 public class CSCD211_Ch0816_SortRowsColumnsArray {
+
     public static void main(String[] args) {
-        int[][] myArray = {{4,5},{2,4},{1,7},{1,2},{1,1},{5,2},{4,2},{4,1},{5,4}};
+        int[][] myArray = {
+            { 4, 5 },
+            { 2, 4 },
+            { 1, 7 },
+            { 1, 2 },
+            { 1, 1 },
+            { 5, 2 },
+            { 4, 2 },
+            { 4, 1 },
+            { 5, 4 },
+        };
 
         sort(myArray);
     }
@@ -58,12 +69,11 @@ public class CSCD211_Ch0816_SortRowsColumnsArray {
             }
 
             // Is zero if the index already where it belongs
-            if (minIndex != 0 ) {
+            if (minIndex != 0) {
                 tmpInt = m[primaryIndex];
                 m[primaryIndex] = m[minIndex];
                 m[minIndex] = tmpInt;
             }
-
             // Uncomment code below for help debugging
             /*
             System.out.println("Primary index at m[X][]: " + primaryIndex +

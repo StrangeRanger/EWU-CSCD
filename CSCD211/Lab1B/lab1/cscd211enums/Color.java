@@ -10,7 +10,7 @@ package lab1.cscd211enums;
 //
 // *****************************************************************************
 
-/** 
+/**
  * The enumerated type Color.
  * Enumerated constant values for this lab are RED, GREEN, BLUE, PURPLE in
  * this order.
@@ -21,10 +21,13 @@ package lab1.cscd211enums;
  * already defined by the Enum class
  */
 public enum Color {
-    RED, GREEN, BLUE, PURPLE;
+    RED,
+    GREEN,
+    BLUE,
+    PURPLE;
 
     @Override
     public String toString() {
-        return this.name().charAt(0) + this.name().substring(1).toLowerCase();  // RED turned into into Red
+        return this.name().charAt(0) + this.name().substring(1).toLowerCase(); // RED turned into into Red
     }
 }

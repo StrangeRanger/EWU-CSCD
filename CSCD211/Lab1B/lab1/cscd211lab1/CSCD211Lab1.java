@@ -2,59 +2,49 @@ package lab1.cscd211lab1;
 
 import java.io.*;
 import java.util.*;
-import lab1.cscd211enums.*;
 import lab1.cscd210utils.*;
 import lab1.cscd211classes.*;
-import lab1.cscd211methods.*;
 import lab1.cscd211comparators.*;
-
+import lab1.cscd211enums.*;
+import lab1.cscd211methods.*;
 
 /**
  * The provided class used to test your code.  This file will
  * not be changed!<br>
- * 
- * <br>NOTE: FileUtils and SortUtils are provided 
+ *
+ * <br>NOTE: FileUtils and SortUtils are provided
  */
-public class CSCD211Lab1
-{
-   public static void main(String [] args) throws Exception
-   {
-      File inf = null;
-      int total, choice;
-      Person [] myPeeps = null;
-      Scanner kb = new Scanner(System.in), fin = null;
+public class CSCD211Lab1 {
 
-      inf = FileUtils.openInputFile(kb);
-      fin = new Scanner(inf);
-      total = FileUtils.countRecords(fin, 3);
-      fin.close();
+    public static void main(String[] args) throws Exception {
+        File inf = null;
+        int total, choice;
+        Person[] myPeeps = null;
+        Scanner kb = new Scanner(System.in), fin = null;
 
-      fin = new Scanner(inf);
-      myPeeps = CSCD211Lab1Methods.fillArray(fin, total);
-      SortUtils.selectionSort(myPeeps);
-      fin.close();
+        inf = FileUtils.openInputFile(kb);
+        fin = new Scanner(inf);
+        total = FileUtils.countRecords(fin, 3);
+        fin.close();
 
-      do
-      {
-         choice = CSCD211Lab1Methods.menu(kb);
+        fin = new Scanner(inf);
+        myPeeps = CSCD211Lab1Methods.fillArray(fin, total);
+        SortUtils.selectionSort(myPeeps);
+        fin.close();
 
-         if(choice == 1)
-            CSCD211Lab1Methods.printArray(myPeeps);
+        do {
+            choice = CSCD211Lab1Methods.menu(kb);
 
-         else if(choice == 2)
-         {
-            Color toFind = CSCD211Lab1Methods.readColor(kb);
-            CSCD211Lab1Methods.displayAll(toFind, myPeeps);
-         }// end choice == 2
-
-         else if(choice == 3)
-            Arrays.sort(myPeeps, new ColorComparator());
-
-         else if(choice == 4)
-            Arrays.sort(myPeeps);
-
-      }while(choice != 5);
-
-   }// end main
-
-}// end class
+            if (choice == 1) CSCD211Lab1Methods.printArray(myPeeps); else if (
+                choice == 2
+            ) {
+                Color toFind = CSCD211Lab1Methods.readColor(kb);
+                CSCD211Lab1Methods.displayAll(toFind, myPeeps);
+            } // end choice == 2
+            else if (choice == 3) Arrays.sort(
+                myPeeps,
+                new ColorComparator()
+            ); else if (choice == 4) Arrays.sort(myPeeps);
+        } while (choice != 5);
+    } // end main
+} // end class

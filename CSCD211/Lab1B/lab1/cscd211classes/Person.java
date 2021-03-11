@@ -11,9 +11,9 @@ package lab1.cscd211classes;
 
 import lab1.cscd211enums.*;
 
-
 /** The person class */
 public class Person implements Comparable<Person> {
+
     /** The person's first name */
     private String fn;
     /** The person's favorite color */
@@ -51,12 +51,16 @@ public class Person implements Comparable<Person> {
     @Override
     public int compareTo(Person another) {
         int res = this.ln.compareTo(another.ln);
-        if (res != 0) { return res; }
+        if (res != 0) {
+            return res;
+        }
 
         res = this.ln.compareTo(another.fn);
-        if (res != 0) { return res; }
+        if (res != 0) {
+            return res;
+        }
 
-        return 0;  // Added this because compiler complained about no return
+        return 0; // Added this because compiler complained about no return
     }
 
     /**
@@ -78,4 +82,3 @@ public class Person implements Comparable<Person> {
         return this.fn + " " + this.ln + ", " + this.color;
     }
 }
-

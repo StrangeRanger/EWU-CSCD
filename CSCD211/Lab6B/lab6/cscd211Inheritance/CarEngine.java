@@ -5,11 +5,10 @@ package lab6.cscd211Inheritance;
 // Name:        Hunter T.
 // Date:        February 20, 2021
 // Class:       CSCD 211
-// Description: The CarEngine class is a child of the Engine class. It contains 
+// Description: The CarEngine class is a child of the Engine class. It contains
 //              NO additional parameters.
 //
 // *****************************************************************************
-
 
 /**
  * The CarEngine class is a child of the Engine class. It contains NO
@@ -17,6 +16,7 @@ package lab6.cscd211Inheritance;
  */
 
 public class CarEngine extends Engine {
+
     /**
      * CarEngine calls the appropriate constructor of Engine.
      *
@@ -26,7 +26,6 @@ public class CarEngine extends Engine {
     public CarEngine(final String manufacturer, final int horsePower) {
         super(manufacturer, horsePower);
     }
-
 
     /**
      * CarEngine calls the appropriate constructor of Engine.
@@ -38,7 +37,6 @@ public class CarEngine extends Engine {
         super(horsePower, manufacturer);
     }
 
-
     /**
      * The toString returns Car Engine and the value from the toString in the Engine class.
      *
@@ -48,7 +46,6 @@ public class CarEngine extends Engine {
     public String toString() {
         return "Car Engine - " + super.toString();
     }
-
 
     /**
      * This method calls the calcOutput from the Engine class and then divides that value by 12.

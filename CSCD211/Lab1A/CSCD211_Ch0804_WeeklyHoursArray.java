@@ -15,16 +15,18 @@
 // *****************************************************************************
 
 public class CSCD211_Ch0804_WeeklyHoursArray {
+
     public static void main(String[] args) {
         int[][] hoursWorked = {
-                {2, 4, 3, 4, 5, 8, 8},
-                {7, 3, 4, 3, 3, 4, 4},
-                {3, 3, 4, 3, 3, 2, 2},
-                {9, 3, 4, 7, 3, 4, 1},
-                {3, 5, 4, 3, 6, 3, 8},
-                {3, 4, 4, 6, 3, 4, 4},
-                {3, 7, 4, 8, 3, 8, 4},
-                {6, 3, 5, 9, 2, 7, 9}};
+            { 2, 4, 3, 4, 5, 8, 8 },
+            { 7, 3, 4, 3, 3, 4, 4 },
+            { 3, 3, 4, 3, 3, 2, 2 },
+            { 9, 3, 4, 7, 3, 4, 1 },
+            { 3, 5, 4, 3, 6, 3, 8 },
+            { 3, 4, 4, 6, 3, 4, 4 },
+            { 3, 7, 4, 8, 3, 8, 4 },
+            { 6, 3, 5, 9, 2, 7, 9 },
+        };
         // Stores the accumulative hours worked by each employee
         int[] totalHoursWorked = new int[hoursWorked.length];
 
@@ -40,16 +42,28 @@ public class CSCD211_Ch0804_WeeklyHoursArray {
 
         // Lists employees from most amount of hours worked to least hours
         // worked
-        for (int totalHours = maxNumber(totalHoursWorked); totalHours >= 0; totalHours--) {
-            for (int employee = 0; employee < totalHoursWorked.length; employee++) {
+        for (
+            int totalHours = maxNumber(totalHoursWorked);
+            totalHours >= 0;
+            totalHours--
+        ) {
+            for (
+                int employee = 0;
+                employee < totalHoursWorked.length;
+                employee++
+            ) {
                 if (totalHoursWorked[employee] == totalHours) {
-                    System.out.println("Employee " + employee + "'s total " +
-                            "hours worked is " + totalHours);
+                    System.out.println(
+                        "Employee " +
+                        employee +
+                        "'s total " +
+                        "hours worked is " +
+                        totalHours
+                    );
                 }
             }
         }
     }
-
 
     public static int maxNumber(int[] customArray) {
         /**

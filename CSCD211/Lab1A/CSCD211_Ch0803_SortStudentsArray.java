@@ -10,27 +10,31 @@
 // *****************************************************************************
 
 public class CSCD211_Ch0803_SortStudentsArray {
+
     public static void main(String[] args) {
         // Students' answers to the questions
         char[][] answers = {
-                {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
-                {'D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D'},
-                {'E', 'D', 'D', 'A', 'C', 'B', 'E', 'E', 'A', 'D'},
-                {'C', 'B', 'A', 'E', 'D', 'C', 'E', 'E', 'A', 'D'},
-                {'A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
-                {'B', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
-                {'B', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
-                {'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}};
+            { 'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D' },
+            { 'D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D' },
+            { 'E', 'D', 'D', 'A', 'C', 'B', 'E', 'E', 'A', 'D' },
+            { 'C', 'B', 'A', 'E', 'D', 'C', 'E', 'E', 'A', 'D' },
+            { 'A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D' },
+            { 'B', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D' },
+            { 'B', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D' },
+            { 'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D' },
+        };
         // Stores each student's total correct answers
         int[] totalCorrectAnswers = new int[answers.length];
         // Array representing current index locations of all data inside
         // 'totalCorrectAnswers'
         int[] indexList = new int[answers.length];
         // Key to the questions
-        char[] keys = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
+        char[] keys = { 'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D' };
 
         // Generates array for 'indexList'
-        for (int i = 0; i < answers.length; i ++) { indexList[i] = i; }
+        for (int i = 0; i < answers.length; i++) {
+            indexList[i] = i;
+        }
 
         // Grades answers
         for (int i = 0; i < answers.length; i++) {
@@ -68,8 +72,13 @@ public class CSCD211_Ch0803_SortStudentsArray {
 
         // Prints out results
         for (int i = 0; i < totalCorrectAnswers.length; i++) {
-            System.out.println("Student " + indexList[i] + "'s correct " +
-                    "count is " + totalCorrectAnswers[i]);
+            System.out.println(
+                "Student " +
+                indexList[i] +
+                "'s correct " +
+                "count is " +
+                totalCorrectAnswers[i]
+            );
         }
     }
 }

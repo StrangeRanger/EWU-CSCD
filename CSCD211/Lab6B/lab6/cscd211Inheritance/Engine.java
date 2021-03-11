@@ -11,7 +11,6 @@ package lab6.cscd211Inheritance;
 //
 // *****************************************************************************
 
-
 /**
  * The engine class contains a String for the manufacturer, and an int for the
  * horsePower. This class represents a basic Engine. The manufacturer is private
@@ -19,9 +18,9 @@ package lab6.cscd211Inheritance;
  */
 
 public class Engine implements Comparable<Engine> {
+
     protected int horsePower;
     private String manufacturer;
-
 
     /**
      * The constructor that creates an Engine based on the manufacturer and the
@@ -37,7 +36,6 @@ public class Engine implements Comparable<Engine> {
         this(horsePower, manufacturer);
     }
 
-
     /**
      * The constructor that creates an Engine based on the manufacturer and the
      * horsePower.
@@ -49,16 +47,16 @@ public class Engine implements Comparable<Engine> {
      *                                  horsePower is less than or equal to 0
      */
     public Engine(final int horsePower, final String manufacturer) {
-        if ((manufacturer == null || manufacturer.isEmpty()))
-        { throw new IllegalArgumentException("Bad Engine"); }
-        if (horsePower <= 0)
-        { throw new IllegalArgumentException("Bad Engine"); }
+        if ((manufacturer == null || manufacturer.isEmpty())) {
+            throw new IllegalArgumentException("Bad Engine");
+        }
+        if (horsePower <= 0) {
+            throw new IllegalArgumentException("Bad Engine");
+        }
 
         this.manufacturer = manufacturer;
         this.horsePower = horsePower;
-
     }
-
 
     /**
      * This toString returns Manufacturer the value with HP of the horse power value
@@ -66,9 +64,13 @@ public class Engine implements Comparable<Engine> {
      */
     @Override
     public String toString() {
-        return "Manufacturer: " + this.manufacturer + " with HP of " + this.horsePower;
+        return (
+            "Manufacturer: " +
+            this.manufacturer +
+            " with HP of " +
+            this.horsePower
+        );
     }
-
 
     /**
      * This method returns this horsePower divided by 5.
@@ -78,7 +80,6 @@ public class Engine implements Comparable<Engine> {
     public int calcOutput() {
         return this.horsePower / 5;
     }
-
 
     // NOTE: Unsure if this is correct
     /**
@@ -92,10 +93,11 @@ public class Engine implements Comparable<Engine> {
         if (this.horsePower == pi.horsePower) {
             return this.manufacturer.compareTo(pi.manufacturer);
         } else {
-            return String.valueOf(this.horsePower).compareTo(String.valueOf(pi.horsePower));
+            return String
+                .valueOf(this.horsePower)
+                .compareTo(String.valueOf(pi.horsePower));
         }
     }
-
 
     /**
      * Returns this manufacturer
@@ -104,5 +106,4 @@ public class Engine implements Comparable<Engine> {
     public String getManufacturer() {
         return this.manufacturer;
     }
-
 }
