@@ -1,5 +1,23 @@
 package lab6.cscd211Inheritance;
 
+// *****************************************************************************
+//
+// Name:        Hunter T.
+// Date:        February 20, 2021
+// Class:       CSCD 211
+// Description: The TruckEngine class is a child of the Engine class. It
+//              contains an additional parameter, a boolean, indicating if the 
+//              truck contains a diesel engine or not. This parameter will be 
+//              used in the calcOutput method.
+//
+// *****************************************************************************
+
+
+/**
+ * The TruckEngine class is a child of the Engine class. It contains an
+ * additional parameter, a boolean, indicating if the truck contains a diesel 
+ * engine or not. This parameter will be used in the calcOutput method.
+ */
 public class TruckEngine extends Engine {
     private boolean diesel;
 

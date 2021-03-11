@@ -1,5 +1,17 @@
 package lab6.cscd211Inheritance;
 
+// *****************************************************************************
+//
+// Name:        Hunter T.
+// Date:        February 20, 2021
+// Class:       CSCD 211
+// Description: The engine class contains a String for the manufacturer, and an
+//              int for the horsePower. This class represents a basic Engine.
+//              The manufacturer is private and the horsePower is protected.
+//
+// *****************************************************************************
+
+
 /**
  * The engine class contains a String for the manufacturer, and an int for the
  * horsePower. This class represents a basic Engine. The manufacturer is private

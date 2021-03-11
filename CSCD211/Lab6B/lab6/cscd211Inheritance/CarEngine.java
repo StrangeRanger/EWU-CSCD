@@ -1,5 +1,16 @@
 package lab6.cscd211Inheritance;
 
+// *****************************************************************************
+//
+// Name:        Hunter T.
+// Date:        February 20, 2021
+// Class:       CSCD 211
+// Description: The CarEngine class is a child of the Engine class. It contains 
+//              NO additional parameters.
+//
+// *****************************************************************************
+
+
 /**
  * The CarEngine class is a child of the Engine class. It contains NO
  * additional parameters.
