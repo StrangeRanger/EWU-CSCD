@@ -3,9 +3,8 @@ import java.util.Scanner;
 
 public class HomeWorkTwo {
     public static void main(String[] args) {
-        /* ********************************************************************
-         [ Task 1 ]
-         ******************************************************************** */
+        /*--[ Task 1 ]*****************************************************************/
+
         Scanner userInput = new Scanner(System.in);
         double  imperialWeight, imperialHeight, weight, height, userBMI;
 
@@ -17,20 +16,19 @@ public class HomeWorkTwo {
         for (var i = 0; i < 5; i++) {
             System.out.print("Enter your weight in pounds: ");
             imperialWeight = userInput.nextDouble();
-            // Converts pounds to kilograms
+            // Converts pounds to kilograms.
             weight = imperialWeight / 2.205;
             System.out.print("Enter your height in inches: ");
             imperialHeight = userInput.nextDouble();
-            // Converts inches to meters
+            // Converts inches to meters.
             height = imperialHeight / 39.37;
-            // Calculates BMI
+            // Calculates BMI.
             userBMI = weight / (height * height);
             System.out.println("BMI: " + userBMI + "\n");
         }
 
-        /* ********************************************************************
-         [ Task 2 ]
-         ******************************************************************** */
+        /*--[ Task 2 ]*****************************************************************/
+
         Scanner userInputTwo = new Scanner(System.in);
         String  integer;
 
@@ -49,18 +47,17 @@ public class HomeWorkTwo {
             }
         }
 
-        /* ********************************************************************
-         [ Task 3 ]
-         ******************************************************************** */
+        /*--[ Task 3 ]*****************************************************************/
+
         Scanner userInputThree = new Scanner(System.in);
         Random  randomInt      = new Random();
         int     userChoice, computerChoice;
 
         System.out.println("\n\n**********************\n* Performing Task 3! *\n"
                            + "**********************");
-        System.out.println("For a total of 5 times, you'll be asked to choose"
-                           +
-                           "rock, paper, or scissors in number formed (use key below)");
+        System.out.println(
+                "For a total of 5 times, you'll be asked to choose"
+                + "rock, paper, or scissors in number formed (use key below)");
         System.out.println("Key: 0 = Rock\n1 = Scissors\n2 = Paper\n");
 
         for (var i = 0; i < 5; i++) {
@@ -70,18 +67,17 @@ public class HomeWorkTwo {
             System.out.println("Computer choice: " + computerChoice);
             if (userChoice == computerChoice) {
                 System.out.println("Tie!\n");
-            } else if ((userChoice == 0 && computerChoice == 1) ||
-                       (userChoice == 1 && computerChoice == 2) ||
-                       (userChoice == 2 && computerChoice == 0)) {
+            } else if ((userChoice == 0 && computerChoice == 1)
+                       || (userChoice == 1 && computerChoice == 2)
+                       || (userChoice == 2 && computerChoice == 0)) {
                 System.out.println("User won!\n");
             } else {
                 System.out.println("Computer won!\n");
             }
         }
 
-        /* ********************************************************************
-         [ Task 4 ]
-         ******************************************************************** */
+        /*--[ Task 4 ]*****************************************************************/
+
         Scanner userInputFour = new Scanner(System.in);
         int     userInt;
 
@@ -95,19 +91,18 @@ public class HomeWorkTwo {
             userInt = userInputFour.nextInt();
 
             System.out.println(
-                    userInt + " is divisible by 6 and 7: " +
-                    ((userInt % 6 == 0 && userInt % 7 == 0) ? "True" : "False"));
+                    userInt + " is divisible by 6 and 7: "
+                    + ((userInt % 6 == 0 && userInt % 7 == 0) ? "True" : "False"));
             System.out.println(
-                    userInt + " is divisible by 6 or 7: " +
-                    ((userInt % 6 == 0 || userInt % 7 == 0) ? "True" : "False"));
+                    userInt + " is divisible by 6 or 7: "
+                    + ((userInt % 6 == 0 || userInt % 7 == 0) ? "True" : "False"));
             System.out.println(
-                    userInt + " is divisible by 6 or 7, but not both: " +
-                    ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n" : "False\n"));
+                    userInt + " is divisible by 6 or 7, but not both: "
+                    + ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n" : "False\n"));
         }
 
-        /* ********************************************************************
-         [ Task 5 ]
-         ******************************************************************** */
+        /*--[ Task 5 ]*****************************************************************/
+
         char    userHex;
         Scanner userInputFive = new Scanner(System.in);
 

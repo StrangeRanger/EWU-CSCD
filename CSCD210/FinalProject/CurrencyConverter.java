@@ -9,22 +9,20 @@ import java.util.Scanner;
 
 public class CurrencyConverter {
     public static void main(String[] args) {
-        /* ********************************************************************
-         [ Module Wide Variables ]
-         ******************************************************************** */
+        /*--[ Module Wide Variables ]**************************************************/
+
         Scanner       userInput       = new Scanner(System.in);
         JSONObject    conversionRates = (JSONObject) getAPIData("USD");
-        DecimalFormat df              = new DecimalFormat("#.##");  // Format output
+        DecimalFormat df              = new DecimalFormat("#.##");  // Format output.
         String        base, nonBase;
         double        baseValue, nonBaseValue, amount;
-        final String  RED    = "\033[1;31m";  // String color becomes red
-        final String  DEFCLR = "\033[0m";     // String color gets reset
+        final String  RED    = "\033[1;31m";  // String color becomes red.
+        final String  DEFCLR = "\033[0m";     // String color gets reset.
 
-        /* ********************************************************************
-         [ Main ]
-         ******************************************************************** */
+        /*--[ Main ]*******************************************************************/
+
         df.setRoundingMode(
-                RoundingMode.HALF_EVEN);  // Set rounding method for final output
+                RoundingMode.HALF_EVEN);  // Set rounding method for final output.
 
         System.out.println(
                 "IMPORTANT NOTES:\n1) When entering a currency, "
@@ -53,9 +51,9 @@ public class CurrencyConverter {
             System.out.print("Enter base currency to be converted: ");
             base = userInput.nextLine().toUpperCase();
 
-            // A. Checks if a valid base currency is provided
-            if (conversionRates.get(base) !=
-                null) {  // B. Null produced if base not found
+            // A. Checks if a valid base currency is provided.
+            if (conversionRates.get(base)
+                != null) {  // B. Null produced if base not found.
                 conversionRates = (JSONObject) getAPIData(base);
                 baseValue       = (double) conversionRates.get(base);
                 break;
@@ -85,7 +83,7 @@ public class CurrencyConverter {
         while (true) {
             try {
                 System.out.print("Enter an amount to be converted: ");
-                // Parses Double to df converting 'amount' to a string
+                // Parses Double to df converting 'amount' to a string.
                 amount = Double.parseDouble(df.format(userInput.nextDouble()));
                 break;
             } catch (Exception e) {
@@ -102,44 +100,35 @@ public class CurrencyConverter {
                           df.format(amount * nonBaseValue), nonBase);
     }
 
+    /**
+     * Retrieves the currency conversion rates from an API
+     * (https://api.exchangeratesapi.io/latest).
+     *
+     * @param baseCurrency The currency that will act as the base value when retrieving
+     *                     conversion rates for that currency (comes from user input).
+     * @return Object      All the conversion rates located in the 'rates' key of the
+     *                     retrieved json.
+     *
+     * @NOTES The code in this module has been modified to suite my needs. You can find
+     *        the original code at the site below.
+     *        Source:
+     *        https://medium.com/swlh/getting-json-data-from-a-restful-api-using-java-b327aafb3751
+     * @NOTES I tried for nearly half a day to figure this out on my own, which includes
+     *        figuring out how to get the necessary library to even do this section. So
+     *        I ended up resorting to grabbing then making slight modification to the
+     *        code, created by someone else.
+     */
     public static Object getAPIData(String baseCurrency) {
-        /**
-         * Retrieves the currency conversion rates from an API
-         * (https://api.exchangeratesapi.io/latest)
-         *
-         * Parameters
-         * ----------
-         *      baseCurrency: The currency that will act as the base value when
-         *                    retrieving conversion rates for that currency
-         *                    (comes from user input)
-         *
-         * Return
-         * ------
-         *      data_obj.get("rates"): All the conversion rates located in the
-         *                             'rates' key of the retrieved json
-         *
-         * Module Notes
-         * ------------
-         * The code in this module has been modified to suite my needs. You can
-         * find the original code at the site below.
-         * Source:
-         * https://medium.com/swlh/getting-json-data-from-a-restful-api-using-java-b327aafb3751
-         *
-         * Note: I tried for nearly half a day to figure this out on my own,
-         * which includes figuring out how to get the necessary library to
-         * even do this section. So I ended up resorting to grabbing then
-         * making slight modification to the code, created by someone else.
-         */
         try {
-            String tmpURL =
-                    "https://api.exchangeratesapi.io/latest?base=" + (baseCurrency);
+            String tmpURL
+                    = "https://api.exchangeratesapi.io/latest?base=" + (baseCurrency);
             URL url = new URL(tmpURL);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
 
-            // Getting the response code
+            // Getting the response code.
             int responseCode = conn.getResponseCode();
 
             if (responseCode != 200) {
@@ -148,19 +137,19 @@ public class CurrencyConverter {
                 StringBuilder inline = new StringBuilder();
                 Scanner userInput    = new Scanner(url.openStream());
 
-                // Write all the JSON data into a string using a scanner
+                // Write all the JSON data into a string using a scanner.
                 while (userInput.hasNext()) {
                     inline.append(userInput.nextLine());
                 }
 
-                // Close the scanner
+                // Close the scanner.
                 userInput.close();
 
-                // Using the JSON simple library parse the string into a json object
+                // Using the JSON simple library parse the string into a json object.
                 JSONParser parse    = new JSONParser();
                 JSONObject data_obj = (JSONObject) parse.parse(inline.toString());
 
-                // Return the required object from the above created object
+                // Return the required object from the above created object.
                 return data_obj.get("rates");
             }
         } catch (Exception e) {

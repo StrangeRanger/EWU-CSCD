@@ -1,29 +1,27 @@
-// *****************************************************************************
+// *************************************************************************************
 //
 // Name:        Hunter T.
 // Date:        February 4, 2021
 // Class:       CSCD 211
-// Description: A recreation (of sort) of the already existing LinkedList class
-//              in Java.
+// Description: A recreation (of sort) of the already existing LinkedList class in Java.
 //
-// *****************************************************************************
+// *************************************************************************************
 
 import java.lang.*;
 
 /** The DLinkedList class implements a doubly Linked list. */
 class DLinkedList {
-    private Node first;  // First element in the list
-    private Node last;   // Last element in the list
+    private Node first;  // First element in the list.
+    private Node last;   // Last element in the list.
 
     /** Constructor. */
-    public DLinkedList() {
-    }
+    public DLinkedList() { }
 
     /** The Node class stores a list element and a reference to the next node. */
     private class Node {
-        String element;  // The element in the list
-        Node   next;     // Next element in the list
-        Node   prev;     // Previous element in the list
+        String element;  // The element in the list.
+        Node   next;     // Next element in the list.
+        Node   prev;     // Previous element in the list.
 
         /**
          * Constructor.
@@ -66,7 +64,8 @@ class DLinkedList {
         int  count = 0;
         Node p     = first;
 
-        while (p != null) {  // Null marks the end of the list
+        // Null marks the end of the list.
+        while (p != null) {
             count++;
             p = p.next;
         }
@@ -79,12 +78,10 @@ class DLinkedList {
      * @param e The element to add.
      */
     public void add(String e) {
-        // Add to an empty list
-        if (isEmpty()) {
+        if (isEmpty()) {  // Add to an empty list.
             first = new Node(e);
             last  = first;
-            // Add to end of existing list
-        } else {
+        } else {  // Add to end of existing list
             last.next = new Node(e);
             last      = last.next;
         }
@@ -114,14 +111,14 @@ class DLinkedList {
             return;
         }
 
-        // Sets pred to node, which will be the predecessor of the new node
+        // Sets pred to node, which will be the predecessor of the new node.
         pred = first;
         for (int i = 1; i < index; i++) {
             pred = pred.next;
         }
-        // Adds new node containing the element
+        // Adds new node containing the element.
         pred.next = new Node(e, pred.next, pred);
-        // If the last element changed
+        // If the last element changed.
         if (pred.next.next == null) {
             last = pred.next;
         }
@@ -137,7 +134,8 @@ class DLinkedList {
         StringBuilder strBuilder = new StringBuilder();
         Node          p          = first;
 
-        while (p != null) {  // Null marks the end of the list
+        // Null marks the end of the list.
+        while (p != null) {
             strBuilder.append(p.element).append("\n");
             p = p.next;
         }
@@ -148,6 +146,7 @@ class DLinkedList {
      * Removes an element at a given position, from the list.
      *
      * @param index The position of the element to remove.
+     *
      * @exception IndexOutOfBoundsException When index is out of bounds.
      */
     public void remove(int index) {
@@ -157,10 +156,10 @@ class DLinkedList {
             throw new IndexOutOfBoundsException();
         }
 
-        // Remove first element
+        // Remove first element.
         if (index == 0) {
             first = first.next;
-            // If there was only one element in list
+            // If there was only one element in list.
             if (first == null) {
                 last = null;
             }
@@ -181,10 +180,10 @@ class DLinkedList {
      * Locates the index at which a given string is located inside the list.
      *
      * @param element The element to remove.
-     * @return true if the element was removed, false otherwise.
+     * @return true   If the element was removed, false otherwise.
      */
     /*public void remove(String element) {
-        int index, i;
+        int  index, i;
         Node current = first;
 
         for (i = 0; i < size() - 1; i++) {

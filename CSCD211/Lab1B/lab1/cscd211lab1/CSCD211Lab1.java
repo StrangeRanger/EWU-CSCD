@@ -10,10 +10,9 @@ import lab1.cscd211enums.*;
 import lab1.cscd211methods.*;
 
 /**
- * The provided class used to test your code.  This file will
- * not be changed!<br>
+ * The provided class used to test your code. This file will not be changed!
  *
- * <br>NOTE: FileUtils and SortUtils are provided
+ * @NOTE FileUtils and SortUtils are provided.
  */
 public class CSCD211Lab1 {
     public static void main(String[] args) throws Exception {

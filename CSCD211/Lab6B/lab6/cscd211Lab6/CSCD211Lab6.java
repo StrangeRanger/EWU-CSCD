@@ -5,18 +5,15 @@ import java.util.*;
 import lab6.cscd211Comparator.*;
 import lab6.cscd211Inheritance.*;
 
-/**
- * This lab is about simple inheritance with no
- * abstraction.
- */
+/** This lab is about simple inheritance with no abstraction. */
 public class CSCD211Lab6 {
     /**
-     * The main method used to test the basic inheritance.  Along with this main is
-     * a PDF named results.pdf that shows my output from my run.
+     * The main method used to test the basic inheritance. Along with this main is a PDF
+     * named results.pdf that shows my output from my run.
      *
-     * @param args Representing the command line arguments
+     * @param args Representing the command line arguments.
      *
-     * @throws Exception If there are any Exceptions generated
+     * @throws Exception If there are any Exceptions generated.
      */
     public static void main(String[] args) throws Exception {
         ArrayList<Engine> myList = new ArrayList<Engine>(5);
@@ -28,19 +25,19 @@ public class CSCD211Lab6 {
 
         for (Engine e: myList) {
             System.out.println(e + " output of " + e.calcOutput());
-        }  // end for
+        }
         System.out.println();
 
         Collections.sort(myList);
         for (Engine e: myList) {
             System.out.println(e);
-        }  // end for
+        }
         System.out.println();
 
         Collections.sort(myList, new ManufacturerComparator());
         for (Engine e: myList) {
             System.out.println(e);
-        }  // end for
+        }
         System.out.println();
-    }  // end main
-}  // end class
+    }
+}

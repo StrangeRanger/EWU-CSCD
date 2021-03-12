@@ -3,19 +3,17 @@ import java.util.Scanner;
 
 public class HomeWorkFour {
     public static void main(String[] args) {
-        /* ********************************************************************
-         [ Module Wide Variables ]
-         ******************************************************************** */
-        String RED    = "\033[1;31m";  // String color becomes red
-        String DEFCLR = "\033[0m";     // String color gets reset
+        /*--[ Module Wide Variables ]**************************************************/
 
-        /* ********************************************************************
-         [ Task 1 ]
-         ******************************************************************** */
+        String RED    = "\033[1;31m";  // String color becomes red.
+        String DEFCLR = "\033[0m";     // String color gets reset.
+
+        /*--[ Task 1 ]*****************************************************************/
+
         Scanner userInput = new Scanner(System.in);
         Random  randomInt = new Random();
         int     userChoice, computerChoice, userScore = 0, computerScore = 0;
-        // Dictates the number of wins required for the game to stop
+        // Dictates the number of wins required for the game to stop.
         int scoreToWin = 3;
 
         System.out.println("\n\n**********************\n* Performing Task 1! *\n"
@@ -32,15 +30,15 @@ public class HomeWorkFour {
             computerChoice = randomInt.nextInt(4);
             System.out.println("Computer choice: " + computerChoice);
 
-            if (userChoice >= 3 || userChoice < 0) {  // Prevents input of >= 3 and < 0
+            if (userChoice >= 3 || userChoice < 0) {  // Prevents input of >= 3 and < 0.
                 System.out.printf("%sInvalid input: Enter a number between 0 "
                                           + "and 2%s\n",
                                   RED, DEFCLR);
             } else if (userChoice == computerChoice) {
                 System.out.println("Tie!\n");
-            } else if ((userChoice == 0 && computerChoice == 1) ||
-                       (userChoice == 1 && computerChoice == 2) ||
-                       (userChoice == 2 && computerChoice == 0)) {
+            } else if ((userChoice == 0 && computerChoice == 1)
+                       || (userChoice == 1 && computerChoice == 2)
+                       || (userChoice == 2 && computerChoice == 0)) {
                 System.out.println("User won!\n");
                 userScore += 1;
             } else {
@@ -49,14 +47,13 @@ public class HomeWorkFour {
             }
         }
 
-        System.out.println("\nChampion: " +
-                           ((userScore > computerScore) ? "User\n" : "Computer\n"));
-        // Adds extra line between next task
-        System.out.println("");
+        System.out.println("\nChampion: "
+                           + ((userScore > computerScore) ? "User\n" : "Computer\n"));
+        // Adds extra line between next task.
+        System.out.println();
 
-        /* ********************************************************************
-         [ Task 2]
-         ******************************************************************** */
+        /*--[ Task 2 ]*****************************************************************/
+
         Scanner userInputTwo = new Scanner(System.in);
         int     sum;
 
@@ -66,8 +63,7 @@ public class HomeWorkFour {
                 "You'll be asked 5 times to enter 1 to 20 different integers "
                 + "(of any negative or positive value, except 0). You will enter "
                 + "a single integer per prompt, and can enter a 0 to stop the program"
-                +
-                " from prompting your input.\nNote: Only whole numbers are accepted\n");
+                + " from prompting your input.\nNote: Only whole numbers are accepted\n");
 
         for (var i = 0; i < 5; i++) {
             int numOfInput = 0;
@@ -91,12 +87,11 @@ public class HomeWorkFour {
                               ((double) sum / (double) numOfInput));
         }
 
-        // Adds extra line between next task
-        System.out.println("");
+        // Adds extra line between next task.
+        System.out.println();
 
-        /* ********************************************************************
-         [ Task 3 ]
-         ******************************************************************** */
+        /*--[ Task 3 ]*****************************************************************/
+
         Scanner userInputThree = new Scanner(System.in);
         String  hex;
         int     validHex = 0;
@@ -112,19 +107,19 @@ public class HomeWorkFour {
             hex = userInputThree.nextLine();
 
             if (hex.length() >= 1 && hex.length() <= 5) {
-                // Checks if input is valid hexadecimal then converts to decimal
+                // Checks if input is valid hexadecimal then converts to decimal.
                 for (var index = 0; index < hex.length(); index++) {
                     char hexIndex = hex.charAt(index);
 
                     if (Character.isLowerCase(hexIndex)) {
                         hexIndex = Character.toUpperCase(hexIndex);
                     }
-                    if (hexIndex != '0' && hexIndex != '1' && hexIndex != '2' &&
-                        hexIndex != '3' && hexIndex != '4' && hexIndex != '5' &&
-                        hexIndex != '6' && hexIndex != '7' && hexIndex != '8' &&
-                        hexIndex != '9' && hexIndex != 'A' && hexIndex != 'B' &&
-                        hexIndex != 'C' && hexIndex != 'D' && hexIndex != 'E' &&
-                        hexIndex != 'F' && hexIndex != 'G') {
+                    if (hexIndex != '0' && hexIndex != '1' && hexIndex != '2'
+                        && hexIndex != '3' && hexIndex != '4' && hexIndex != '5'
+                        && hexIndex != '6' && hexIndex != '7' && hexIndex != '8'
+                        && hexIndex != '9' && hexIndex != 'A' && hexIndex != 'B'
+                        && hexIndex != 'C' && hexIndex != 'D' && hexIndex != 'E'
+                        && hexIndex != 'F' && hexIndex != 'G') {
                         invalidHex = true;
                         System.out.printf("%sInvalid hexadecimal: Enter a valid"
                                                   + " hexadecimal number%s\n",
@@ -135,9 +130,9 @@ public class HomeWorkFour {
 
                 if (! invalidHex) {
                     validHex++;
-                    System.out.println("Hexadecimal in decimal form: " +
-                                       Integer.parseInt(hex, 16));
-                    System.out.println("");
+                    System.out.println("Hexadecimal in decimal form: "
+                                       + Integer.parseInt(hex, 16));
+                    System.out.println();
                 }
             } else {
                 System.out.printf("%sInvalid input: Enter a total of 1 "
@@ -146,9 +141,8 @@ public class HomeWorkFour {
             }
         }
 
-        /* ********************************************************************
-         [ Task 4 ]
-         ******************************************************************** */
+        /*--[ Task 4 ]*****************************************************************/
+
         String fiveAndSix = "", onlyFiveOrSix = "";
         int    fiveAndSixLineCount = 1, onlyFiveOrSixLineCount = 1;
 
@@ -180,9 +174,8 @@ public class HomeWorkFour {
         System.out.println("\nIntegers between 100 and 1,000 that are divisible "
                            + "by either 5 or 6, but not both:\n" + onlyFiveOrSix);
 
-        /* ********************************************************************
-         [ Task 5 ]
-         ******************************************************************** */
+        /*--[ Task 5 ]*****************************************************************/
+
         Scanner userInputFive = new Scanner(System.in);
         int     normalNumber;
 
@@ -205,8 +198,7 @@ public class HomeWorkFour {
                 } catch (Exception e) {
                     System.out.printf(
                             "%sError: An exception occurred\nMake sure "
-                                    +
-                                    "your input has no more than 10 digits and consists "
+                                    + "your input has no more than 10 digits and consists "
                                     + "of only numbers%s\n",
                             RED, DEFCLR);
                     continue;
@@ -216,8 +208,8 @@ public class HomeWorkFour {
             reverse(normalNumber);
         }
 
-        // Adds extra line between next task
-        System.out.println("");
+        // Adds extra line between next task.
+        System.out.println();
         System.out.println(
                 "In response to: (State briefly how your program treats "
                 + "trailing 0’s, such as in input 10000.)\nI have no idea what you "
@@ -228,8 +220,8 @@ public class HomeWorkFour {
     public static void reverse(int number) {
         String reverseNumber = "";
         char   digit;
-        // Convert number to a String because it's easier to reverse the given
-        // input if variable is a string
+        // Convert number to a String because it's easier to reverse the given input if
+        // variable is a string.
         String numberString = Integer.toString(number);
 
         for (int index = 0; index < numberString.length(); index++) {

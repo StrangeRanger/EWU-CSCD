@@ -1,15 +1,15 @@
-// *****************************************************************************
+// *************************************************************************************
 //
 // Name:        Hunter T.
 // Date:        January 22, 2021
 // Class:       CSCD 211
-// Description: Prints out the previous stock price, the current stock price,
-//              and the price change in percentage.
+// Description: Prints out the previous stock price, the current stock price, and the
+//              price change in percentage.
 //
-// *****************************************************************************
+// *************************************************************************************
 
 public class CSCD211_Ch0902_StockClass {
-    /** Main method */
+    /** Main method. */
     public static void main(String[] args) {
         Stock stocks = new Stock("ORCL", "Oracle Corporation");
 
@@ -23,22 +23,17 @@ class Stock {
     String symbol, name;
     double previousClosingPrice = 34.5, currentPrice = 34.35;
 
-    /**
-     * Construct a stock with a symbol and name
-     */
+    /** Construct a stock with a symbol and name. */
     Stock(String specifiedSymbol, String specifiedName) {
         symbol = specifiedSymbol;
         name   = specifiedName;
     }
 
-    /**
-     * Return the the percentage difference of the current and previous stock
-     * price
-     */
+    /** Return the the percentage difference of the current and previous stock price. */
     double getChangePercent() {
         double percent = ((1 - (currentPrice / previousClosingPrice)) * 100);
 
-        // Determines whether to return a negative or positive percentage
+        // Determines whether to return a negative or positive percentage.
         if (currentPrice < previousClosingPrice) {
             return (percent - (percent * 2));
         } else {

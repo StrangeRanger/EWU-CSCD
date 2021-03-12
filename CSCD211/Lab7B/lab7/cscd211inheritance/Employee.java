@@ -3,7 +3,7 @@ package lab7.cscd211inheritance;
 /**
  * The Generic Employee Base class. There will never just be an employee.
  *
- * NOTE: All parameters will be passed as final and all preconditions will be met.
+ * @NOTE All parameters will be passed as final and all preconditions will be met.
  */
 public abstract class Employee implements Comparable<Employee> {
     /** This is a constant representing the BASE pay and can't be changed. */
@@ -15,13 +15,13 @@ public abstract class Employee implements Comparable<Employee> {
     /**
      * EVC All parameters are for the private class level variables.
      *
-     * @param name              The name
-     * @param basePayrate       The base pay
-     * @param additionalPayrate The additional pay
+     * @param name              The name.
+     * @param basePayrate       The base pay.
+     * @param additionalPayrate The additional pay.
      *
      * @throws IllegalArgumentException If any of the strings are empty or the doubles
-     *         are less than 0
-     * @throws IllegalArgumentException If any of the strings are null
+     *                                  are less than 0.
+     * @throws IllegalArgumentException If any of the strings are null.
      */
     public Employee(String name, double basePayrate, double additionalPayrate) {
         if (name.isEmpty() || basePayrate < 0 || additionalPayrate < 0) {
@@ -39,7 +39,7 @@ public abstract class Employee implements Comparable<Employee> {
     /**
      * Return the salary.
      *
-     * @return double Salary
+     * @return double Salary.
      */
     public double getSalary() {
         return this.salary + this.BASE;
@@ -48,7 +48,7 @@ public abstract class Employee implements Comparable<Employee> {
     /**
      * Return the base salary.
      *
-     * @return double Base salary
+     * @return double Base salary.
      */
     public double getBaseSalary() {
         return this.BASE;
@@ -57,7 +57,7 @@ public abstract class Employee implements Comparable<Employee> {
     /**
      * Return the name.
      *
-     * @return String Name
+     * @return String Name.
      */
     public String getName() {
         return this.name;
@@ -66,7 +66,7 @@ public abstract class Employee implements Comparable<Employee> {
     /**
      * This method first gets the class via getClass and then the simple name.
      *
-     * @return String the String of the simpleName
+     * @return String the String of the simpleName.
      */
     public String getType() {
         return this.getClass().getSimpleName();
@@ -75,7 +75,7 @@ public abstract class Employee implements Comparable<Employee> {
     /**
      * Simply returns the name.
      *
-     * @return String The name
+     * @return String The name.
      */
     @Override
     public String toString() {
@@ -85,10 +85,10 @@ public abstract class Employee implements Comparable<Employee> {
     /**
      * compareTo first by type. If the types are the same then by salary.
      *
-     * @param another Representing the BCR to the DCO
-     * @return int    The order
+     * @param another Representing the BCR to the DCO.
+     * @return int    The order.
      *
-     * @throws IllegalArgumentException If another is null
+     * @throws IllegalArgumentException If another is null.
      */
     public int compareTo(Employee another) {
         if (another == null) {

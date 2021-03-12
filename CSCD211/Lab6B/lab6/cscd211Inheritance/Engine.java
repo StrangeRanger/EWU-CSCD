@@ -1,22 +1,21 @@
 package lab6.cscd211Inheritance;
 
-// *****************************************************************************
+// *************************************************************************************
 //
 // Name:        Hunter T.
 // Date:        February 20, 2021
 // Class:       CSCD 211
-// Description: The engine class contains a String for the manufacturer, and an
-//              int for the horsePower. This class represents a basic Engine.
-//              The manufacturer is private and the horsePower is protected.
+// Description: The engine class contains a String for the manufacturer, and an int for
+//              the horsePower. This class represents a basic Engine. The manufacturer
+//              is private and the horsePower is protected.
 //
-// *****************************************************************************
+// *************************************************************************************
 
 /**
  * The engine class contains a String for the manufacturer, and an int for the
- * horsePower. This class represents a basic Engine. The manufacturer is private
- * and the horsePower is protected.
+ * horsePower. This class represents a basic Engine. The manufacturer is private and the
+ * horsePower is protected.
  */
-
 public class Engine implements Comparable<Engine> {
     protected int  horsePower;
     private String manufacturer;
@@ -25,11 +24,11 @@ public class Engine implements Comparable<Engine> {
      * The constructor that creates an Engine based on the manufacturer and the
      * horsePower.
      *
-     * @param manufacturer String representing the manufacturer
-     * @param horsePower   An int representing the horsePower
+     * @param manufacturer String representing the manufacturer.
+     * @param horsePower   An int representing the horsePower.
      *
      * @throws IllegalArgumentException If manufacturer is null or empty and if
-     *                                  horsePower is less than or equal to 0
+     *                                  horsePower is less than or equal to 0.
      */
     public Engine(final String manufacturer, final int horsePower) {
         this(horsePower, manufacturer);
@@ -39,11 +38,11 @@ public class Engine implements Comparable<Engine> {
      * The constructor that creates an Engine based on the manufacturer and the
      * horsePower.
      *
-     * @param manufacturer String representing the manufacturer
-     * @param horsePower   An int representing the horsePower
+     * @param manufacturer String representing the manufacturer.
+     * @param horsePower   An int representing the horsePower.
      *
      * @throws IllegalArgumentException If manufacturer is null or empty and if
-     *                                  horsePower is less than or equal to 0
+     *                                  horsePower is less than or equal to 0.
      */
     public Engine(final int horsePower, final String manufacturer) {
         if ((manufacturer == null || manufacturer.isEmpty())) {
@@ -58,13 +57,14 @@ public class Engine implements Comparable<Engine> {
     }
 
     /**
-     * This toString returns Manufacturer the value with HP of the horse power value
-     * @return Representing Manufacturer: value with HP of the horse power value
+     * This toString returns Manufacturer the value with HP of the horse power value.
+     *
+     * @return Representing Manufacturer: value with HP of the horse power value.
      */
     @Override
     public String toString() {
-        return ("Manufacturer: " + this.manufacturer + " with HP of " +
-                this.horsePower);
+        return ("Manufacturer: " + this.manufacturer + " with HP of "
+                + this.horsePower);
     }
 
     /**
@@ -78,11 +78,11 @@ public class Engine implements Comparable<Engine> {
 
     // NOTE: Unsure if this is correct
     /**
-     * This compareTo first compares by horsePower. If the horsePowers are the
-     * same then it compares by the manufacturer.
+     * This compareTo first compares by horsePower. If the horsePowers are the same then
+     * it compares by the manufacturer.
      *
      * @param pi
-     * @return int Representing natural order
+     * @return int Representing natural order.
      */
     public int compareTo(Engine pi) {
         if (this.horsePower == pi.horsePower) {
@@ -94,8 +94,9 @@ public class Engine implements Comparable<Engine> {
     }
 
     /**
-     * Returns this manufacturer
-     * @return String Representing this manufacturer
+     * Returns this manufacturer.
+     *
+     * @return String Representing this manufacturer.
      */
     public String getManufacturer() {
         return this.manufacturer;
