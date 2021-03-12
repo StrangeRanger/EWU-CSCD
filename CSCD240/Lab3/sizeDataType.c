@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    short shortVar;
-    int intVar;
-    char charVar;
-    double doubleVar;
-    long longVar;
+    short       shortVar;
+    int         intVar;
+    char        charVar;
+    double      doubleVar;
+    long        longVar;
     long double longDoubleVar;
 
     printf("Size of data type short: %lu\n", sizeof(shortVar));

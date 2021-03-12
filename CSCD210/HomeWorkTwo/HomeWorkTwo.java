@@ -2,22 +2,17 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HomeWorkTwo {
-
     public static void main(String[] args) {
         /* ********************************************************************
          [ Task 1 ]
          ******************************************************************** */
         Scanner userInput = new Scanner(System.in);
-        double imperialWeight, imperialHeight, weight, height, userBMI;
+        double  imperialWeight, imperialHeight, weight, height, userBMI;
 
-        System.out.println(
-            "**********************\n* Performing Task 1! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "For a total of time times, you'll be asked to enter" +
-            "both your weight (pounds) and height (inches)\n"
-        );
+        System.out.println("**********************\n* Performing Task 1! *\n"
+                           + "**********************");
+        System.out.println("For a total of time times, you'll be asked to enter"
+                           + "both your weight (pounds) and height (inches)\n");
 
         for (var i = 0; i < 5; i++) {
             System.out.print("Enter your weight in pounds: ");
@@ -37,15 +32,12 @@ public class HomeWorkTwo {
          [ Task 2 ]
          ******************************************************************** */
         Scanner userInputTwo = new Scanner(System.in);
-        String integer;
+        String  integer;
 
-        System.out.println(
-            "\n\n**********************\n* Performing Task 2! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "For a total of 5 times, you'll be asked to enter an" + "integer\n"
-        );
+        System.out.println("\n\n**********************\n* Performing Task 2! *\n"
+                           + "**********************");
+        System.out.println("For a total of 5 times, you'll be asked to enter an"
+                           + "integer\n");
 
         for (var i = 0; i < 5; i++) {
             System.out.print("Enter an integer: ");
@@ -61,31 +53,26 @@ public class HomeWorkTwo {
          [ Task 3 ]
          ******************************************************************** */
         Scanner userInputThree = new Scanner(System.in);
-        Random randomInt = new Random();
-        int userChoice, computerChoice;
+        Random  randomInt      = new Random();
+        int     userChoice, computerChoice;
 
-        System.out.println(
-            "\n\n**********************\n* Performing Task 3! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "For a total of 5 times, you'll be asked to choose" +
-            "rock, paper, or scissors in number formed (use key below)"
-        );
+        System.out.println("\n\n**********************\n* Performing Task 3! *\n"
+                           + "**********************");
+        System.out.println("For a total of 5 times, you'll be asked to choose"
+                           +
+                           "rock, paper, or scissors in number formed (use key below)");
         System.out.println("Key: 0 = Rock\n1 = Scissors\n2 = Paper\n");
 
         for (var i = 0; i < 5; i++) {
             System.out.print("Enter your choice of rock, paper, scissors: ");
-            userChoice = userInputThree.nextInt();
+            userChoice     = userInputThree.nextInt();
             computerChoice = randomInt.nextInt(4);
             System.out.println("Computer choice: " + computerChoice);
             if (userChoice == computerChoice) {
                 System.out.println("Tie!\n");
-            } else if (
-                (userChoice == 0 && computerChoice == 1) ||
-                (userChoice == 1 && computerChoice == 2) ||
-                (userChoice == 2 && computerChoice == 0)
-            ) {
+            } else if ((userChoice == 0 && computerChoice == 1) ||
+                       (userChoice == 1 && computerChoice == 2) ||
+                       (userChoice == 2 && computerChoice == 0)) {
                 System.out.println("User won!\n");
             } else {
                 System.out.println("Computer won!\n");
@@ -96,51 +83,38 @@ public class HomeWorkTwo {
          [ Task 4 ]
          ******************************************************************** */
         Scanner userInputFour = new Scanner(System.in);
-        int userInt;
+        int     userInt;
 
-        System.out.println(
-            "\n\n**********************\n* Performing Task 4! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "For a total of 5 times, you'll be asked to enter" + "an integer\n"
-        );
+        System.out.println("\n\n**********************\n* Performing Task 4! *\n"
+                           + "**********************");
+        System.out.println("For a total of 5 times, you'll be asked to enter"
+                           + "an integer\n");
 
         for (var i = 0; i < 5; i++) {
             System.out.print("Enter your an integer: ");
             userInt = userInputFour.nextInt();
 
             System.out.println(
-                userInt +
-                " is divisible by 6 and 7: " +
-                ((userInt % 6 == 0 && userInt % 7 == 0) ? "True" : "False")
-            );
+                    userInt + " is divisible by 6 and 7: " +
+                    ((userInt % 6 == 0 && userInt % 7 == 0) ? "True" : "False"));
             System.out.println(
-                userInt +
-                " is divisible by 6 or 7: " +
-                ((userInt % 6 == 0 || userInt % 7 == 0) ? "True" : "False")
-            );
+                    userInt + " is divisible by 6 or 7: " +
+                    ((userInt % 6 == 0 || userInt % 7 == 0) ? "True" : "False"));
             System.out.println(
-                userInt +
-                " is divisible by 6 or 7, but not both: " +
-                ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n" : "False\n")
-            );
+                    userInt + " is divisible by 6 or 7, but not both: " +
+                    ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n" : "False\n"));
         }
 
         /* ********************************************************************
          [ Task 5 ]
          ******************************************************************** */
-        char userHex;
+        char    userHex;
         Scanner userInputFive = new Scanner(System.in);
 
-        System.out.println(
-            "\n\n**********************\n* Performing Task 5! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "For a total of 5 times, you'll be asked to enter" +
-            "a single-digit, hexadecimal number\n"
-        );
+        System.out.println("\n\n**********************\n* Performing Task 5! *\n"
+                           + "**********************");
+        System.out.println("For a total of 5 times, you'll be asked to enter"
+                           + "a single-digit, hexadecimal number\n");
 
         for (var i = 0; i < 5; i++) {
             System.out.print("Enter a single-digit hexadecimal number: ");
@@ -181,9 +155,7 @@ public class HomeWorkTwo {
             } else if (userHex == 'F') {
                 System.out.println("Hexadecimal equivalent: 1111\n");
             } else {
-                System.out.println(
-                    "You entered an invalid hexadecimal number\n"
-                );
+                System.out.println("You entered an invalid hexadecimal number\n");
             }
         }
     }

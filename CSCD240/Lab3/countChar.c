@@ -1,12 +1,12 @@
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #define MAXSIZE 100
 
-int main(){
+int main() {
     char ch;
-    int i;
+    int  i;
     char sentence[MAXSIZE];
-    int alphabetsCount = 0;
+    int  alphabetsCount = 0;
 
     printf("Type a sentence: ");
     fgets(sentence, sizeof(sentence), stdin);
@@ -15,11 +15,9 @@ int main(){
            " in a sentence: ");
     scanf(" %c", &ch);
 
-    for (i = 0; sentence[i] != '\n'; i++) {
+    for (i = 0; sentence[i] != '\n'; i++)
         if (sentence[i] == toupper(ch) || sentence[i] == tolower(ch)) {
             alphabetsCount++;
         }
-    }
-
     printf("Character '%c' has a frequency of %d\n", ch, alphabetsCount);
 }

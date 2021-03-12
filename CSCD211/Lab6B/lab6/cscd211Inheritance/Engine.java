@@ -18,8 +18,7 @@ package lab6.cscd211Inheritance;
  */
 
 public class Engine implements Comparable<Engine> {
-
-    protected int horsePower;
+    protected int  horsePower;
     private String manufacturer;
 
     /**
@@ -55,7 +54,7 @@ public class Engine implements Comparable<Engine> {
         }
 
         this.manufacturer = manufacturer;
-        this.horsePower = horsePower;
+        this.horsePower   = horsePower;
     }
 
     /**
@@ -64,12 +63,8 @@ public class Engine implements Comparable<Engine> {
      */
     @Override
     public String toString() {
-        return (
-            "Manufacturer: " +
-            this.manufacturer +
-            " with HP of " +
-            this.horsePower
-        );
+        return ("Manufacturer: " + this.manufacturer + " with HP of " +
+                this.horsePower);
     }
 
     /**
@@ -93,9 +88,8 @@ public class Engine implements Comparable<Engine> {
         if (this.horsePower == pi.horsePower) {
             return this.manufacturer.compareTo(pi.manufacturer);
         } else {
-            return String
-                .valueOf(this.horsePower)
-                .compareTo(String.valueOf(pi.horsePower));
+            return String.valueOf(this.horsePower)
+                    .compareTo(String.valueOf(pi.horsePower));
         }
     }
 

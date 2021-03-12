@@ -13,7 +13,6 @@ import lab1.cscd211enums.*;
 
 /** The person class */
 public class Person implements Comparable<Person> {
-
     /** The person's first name */
     private String fn;
     /** The person's favorite color */
@@ -35,8 +34,8 @@ public class Person implements Comparable<Person> {
             throw new IllegalArgumentException("fn, ln, or color is null");
         }
 
-        this.fn = fn;
-        this.ln = ln;
+        this.fn    = fn;
+        this.ln    = ln;
         this.color = color;
     }
 
@@ -60,7 +59,7 @@ public class Person implements Comparable<Person> {
             return res;
         }
 
-        return 0; // Added this because compiler complained about no return
+        return 0;  // Added this because compiler complained about no return
     }
 
     /**

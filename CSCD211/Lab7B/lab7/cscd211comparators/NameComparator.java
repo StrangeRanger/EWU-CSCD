@@ -1,6 +1,7 @@
 package lab7.cscd211comparators;
 
 import java.util.Comparator;
+
 import lab7.cscd211inheritance.Employee;
 
 /**
@@ -9,7 +10,6 @@ import lab7.cscd211inheritance.Employee;
  * parameters are final.
  */
 public class NameComparator implements Comparator<Employee> {
-
     /**
      * The compare method compares based solely on the name.
      *

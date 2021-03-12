@@ -6,7 +6,6 @@ package lab7.cscd211inheritance;
  * NOTE: All parameters will be passed as final and all preconditions will be met.
  */
 public abstract class Employee implements Comparable<Employee> {
-
     /** This is a constant representing the BASE pay and can't be changed. */
     private double BASE;
     private String name;
@@ -20,7 +19,8 @@ public abstract class Employee implements Comparable<Employee> {
      * @param basePayrate       The base pay
      * @param additionalPayrate The additional pay
      *
-     * @throws IllegalArgumentException If any of the strings are empty or the doubles are less than 0
+     * @throws IllegalArgumentException If any of the strings are empty or the doubles
+     *         are less than 0
      * @throws IllegalArgumentException If any of the strings are null
      */
     public Employee(String name, double basePayrate, double additionalPayrate) {
@@ -31,8 +31,8 @@ public abstract class Employee implements Comparable<Employee> {
             throw new IllegalArgumentException("Bad Employee");
         }
 
-        this.name = name;
-        this.BASE = basePayrate;
+        this.name   = name;
+        this.BASE   = basePayrate;
         this.salary = additionalPayrate;
     }
 
@@ -96,9 +96,8 @@ public abstract class Employee implements Comparable<Employee> {
         }
 
         if (this.getType().equals(another.getType())) {
-            return String
-                .valueOf(this.salary)
-                .compareTo(String.valueOf(another.salary));
+            return String.valueOf(this.salary)
+                    .compareTo(String.valueOf(another.salary));
         } else {
             return this.getType().compareTo(another.getType());
         }

@@ -16,7 +16,6 @@ package lab6.cscd211Inheritance;
  */
 
 public class CarEngine extends Engine {
-
     /**
      * CarEngine calls the appropriate constructor of Engine.
      *
@@ -38,9 +37,11 @@ public class CarEngine extends Engine {
     }
 
     /**
-     * The toString returns Car Engine and the value from the toString in the Engine class.
+     * The toString returns Car Engine and the value from the toString in the Engine
+     * class.
      *
-     * @return String Representing Car Engine - the value from the Engine class toString.
+     * @return String Representing Car Engine - the value from the Engine class
+     *         toString.
      */
     @Override
     public String toString() {
@@ -48,7 +49,8 @@ public class CarEngine extends Engine {
     }
 
     /**
-     * This method calls the calcOutput from the Engine class and then divides that value by 12.
+     * This method calls the calcOutput from the Engine class and then divides that
+     * value by 12.
      *
      * return - int The Engine class calcOutput value divided by 12.
      */

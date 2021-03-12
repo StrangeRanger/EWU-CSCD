@@ -3,15 +3,15 @@
 #include <string.h>
 
 void printString(char *s[], int count);
-void swap(char** s, char** t);
+void swap(char **s, char **t);
 void sortString(char *s[], int count);
 
-int main(){
+int main() {
     char buff[BUFSIZ];
-    int count;
+    int  count;
     // 's' is a pointer to a char pointer, initially 's' is allocated storage for one
     // char pointer
-    char **s = malloc(sizeof(char*));
+    char **s = malloc(sizeof(char *));
 
     printf("Here is the list of unsorted names: \n\n");
 
@@ -24,7 +24,7 @@ int main(){
         strcpy(s[count], buff);
         // Step 3: resize the array of pointers pointed to by 's' to increase its size
         // for the next pointer
-        s = realloc(s, sizeof(char*)*(count +2));
+        s = realloc(s, sizeof(char *) * (count + 2));
     }
     // EOF reached. Now count the number of strings read
 
@@ -44,23 +44,26 @@ int main(){
 
 void printString(char *s[], int count) {
     int i;
-    for (i = 0; i < count; i++) { printf("%s", s[i]); }
+    for (i = 0; i < count; i++) {
+        printf("%s", s[i]);
+    }
     printf("\n");
 }
 
 void swap(char **s, char **t) {
     char *tmp;
     tmp = *s;
-    *s = *t;
-    *t = tmp;
+    *s  = *t;
+    *t  = tmp;
 }
 
 void sortString(char *s[], int count) {
     int i, j;
-    for (i = 0; i < count -1; i++) {
+    for (i = 0; i < count - 1; i++) {
         for (j = 0; j < count - 1; j++) {
-            if (strcmp(s[j], s[j + 1]) > 0) { swap(&s[j], &s[j + 1]); }
+            if (strcmp(s[j], s[j + 1]) > 0) {
+                swap(&s[j], &s[j + 1]);
+            }
         }
     }
 }
-

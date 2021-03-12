@@ -15,7 +15,7 @@
 int no[5];  // Global array
 
 int main() {
-    int i;  // For loop variable can't be created inside the loop
+    int i;      // For loop variable can't be created inside the loop
     int id[5];  // Local or automatic array
 
     printf("Printing array 'no':\n");
@@ -30,4 +30,3 @@ int main() {
 
     return 0;
 }
-

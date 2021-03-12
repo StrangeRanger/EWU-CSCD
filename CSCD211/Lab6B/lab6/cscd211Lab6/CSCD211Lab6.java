@@ -1,6 +1,7 @@
 package lab6.cscd211Lab6;
 
 import java.util.*;
+
 import lab6.cscd211Comparator.*;
 import lab6.cscd211Inheritance.*;
 
@@ -9,7 +10,6 @@ import lab6.cscd211Inheritance.*;
  * abstraction.
  */
 public class CSCD211Lab6 {
-
     /**
      * The main method used to test the basic inheritance.  Along with this main is
      * a PDF named results.pdf that shows my output from my run.
@@ -26,21 +26,21 @@ public class CSCD211Lab6 {
         myList.add(new CarEngine("Ford", 134));
         myList.add(new TruckEngine("Toyota", 200, false));
 
-        for (Engine e : myList) {
+        for (Engine e: myList) {
             System.out.println(e + " output of " + e.calcOutput());
-        } // end for
+        }  // end for
         System.out.println();
 
         Collections.sort(myList);
-        for (Engine e : myList) {
+        for (Engine e: myList) {
             System.out.println(e);
-        } // end for
+        }  // end for
         System.out.println();
 
         Collections.sort(myList, new ManufacturerComparator());
-        for (Engine e : myList) {
+        for (Engine e: myList) {
             System.out.println(e);
-        } // end for
+        }  // end for
         System.out.println();
-    } // end main
-} // end class
+    }  // end main
+}  // end class

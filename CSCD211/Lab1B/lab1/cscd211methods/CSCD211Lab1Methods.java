@@ -10,12 +10,12 @@ package lab1.cscd211methods;
 // *****************************************************************************
 
 import java.util.*;
+
 import lab1.cscd211classes.*;
 import lab1.cscd211enums.*;
 
 /** The methods class for the Lab */
 public class CSCD211Lab1Methods {
-
     /**
      * The convertColor method converts a string to a color. This
      * method is called from various other methods.
@@ -49,7 +49,7 @@ public class CSCD211Lab1Methods {
             throw new IllegalArgumentException("myPeeps is null");
         }
 
-        for (Person p : myPeeps) {
+        for (Person p: myPeeps) {
             if (p.getColor().equals(toFind)) {
                 System.out.println(p + "\n");
             }
@@ -77,8 +77,8 @@ public class CSCD211Lab1Methods {
         }
 
         for (int x = 0; x < total; x++) {
-            fn = fin.nextLine();
-            ln = fin.nextLine();
+            fn    = fin.nextLine();
+            ln    = fin.nextLine();
             color = fin.nextLine();
 
             newArray[x] = new Person(fn, ln, convertColor(color));
@@ -94,7 +94,8 @@ public class CSCD211Lab1Methods {
      * 3. Sort the array by Color
      * 4. Sort the array by the 'natural order'
      * 5. Quit
-     * You must ensure the value entered is within range You must ensure the input buffer is left empty
+     * You must ensure the value entered is within range You must ensure the input
+     * buffer is left empty
      *
      * @param kb   - Representing the Scanner object to the keyboard
      * @return int - Representing the menu choice
@@ -110,9 +111,7 @@ public class CSCD211Lab1Methods {
 
         System.out.println("Please choose from the following:");
         System.out.println("1. Print the Array to the screen");
-        System.out.println(
-            "2. Display all people that contain a certain color"
-        );
+        System.out.println("2. Display all people that contain a certain color");
         System.out.println("3. Sort the array by Color");
         System.out.println("4. Sort the array by the 'natural order'");
         System.out.println("5. Quit");
@@ -124,19 +123,15 @@ public class CSCD211Lab1Methods {
 
                 choice = Integer.parseInt(kb.nextLine());
             } catch (Exception e) {
-                System.out.println(
-                    "Invalid input: Enter an integer corresponding to" +
-                    " your choice"
-                );
+                System.out.println("Invalid input: Enter an integer corresponding to"
+                                   + " your choice");
                 continue;
             }
 
             // Catches input that is out of the option range
             if (choice < 1 || choice > 5) {
-                System.out.println(
-                    "Invalid input: Enter an integer " +
-                    "corresponding to your choice"
-                );
+                System.out.println("Invalid input: Enter an integer "
+                                   + "corresponding to your choice");
             }
         }
 
@@ -158,13 +153,14 @@ public class CSCD211Lab1Methods {
         }
 
         // foreach loop
-        for (Person p : myPeeps) {
+        for (Person p: myPeeps) {
             System.out.println(p + "\n");
         }
     }
 
     /**
-     * The readColor method reads a string from the keyboard and then converts it to a color by calling the private method convertColor
+     * The readColor method reads a string from the keyboard and then converts it to a
+     * color by calling the private method convertColor
      *
      * @param kb     - Representing the Scanner object
      * @return Color - Representing the Color enumerated type
@@ -184,9 +180,7 @@ public class CSCD211Lab1Methods {
             System.out.print("Please enter a color: ");
             c = kb.nextLine();
             if (c == null || c.isEmpty()) {
-                System.out.println(
-                    "Invalid input: This field cannot be left blank"
-                );
+                System.out.println("Invalid input: This field cannot be left blank");
             } else {
                 break;
             }

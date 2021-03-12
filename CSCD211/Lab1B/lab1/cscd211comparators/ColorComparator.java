@@ -11,6 +11,7 @@ package lab1.cscd211comparators;
 // *****************************************************************************
 
 import java.util.Comparator;
+
 import lab1.cscd211classes.*;
 
 /**
@@ -18,7 +19,6 @@ import lab1.cscd211classes.*;
  * parameterized type Person is used for the Comparator.
  */
 public class ColorComparator implements Comparator<Person> {
-
     /**
      * The compare method that compares two persons by the Color reference contents.
      *
@@ -33,9 +33,7 @@ public class ColorComparator implements Comparator<Person> {
      */
     public int compare(Person p1, Person p2) {
         if (p1 == null || p2 == null) {
-            throw new IllegalArgumentException(
-                "Person 1 and/or Person 2 are null"
-            );
+            throw new IllegalArgumentException("Person 1 and/or Person 2 are null");
         }
 
         return p1.getColor().compareTo(p2.getColor());

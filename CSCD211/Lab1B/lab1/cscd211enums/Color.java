@@ -28,6 +28,7 @@ public enum Color {
 
     @Override
     public String toString() {
-        return this.name().charAt(0) + this.name().substring(1).toLowerCase(); // RED turned into into Red
+        return this.name().charAt(0) +
+                this.name().substring(1).toLowerCase();  // RED turned into into Red
     }
 }

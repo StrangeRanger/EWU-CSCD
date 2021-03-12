@@ -10,14 +10,12 @@
 import java.util.Scanner;
 
 public class CSCD211_Ch0801_SumArray {
-
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        double[][] m = new double[3][4];
+        double[][] m      = new double[3][4];
 
-        System.out.println(
-            "Enter " + m.length + " rows and " + m[0].length + " columns: "
-        );
+        System.out.println("Enter " + m.length + " rows and " + m[0].length +
+                           " columns: ");
 
         // Updates 'm' based on input
         for (int i = 0; i < m.length; i++) {
@@ -28,12 +26,8 @@ public class CSCD211_Ch0801_SumArray {
 
         // Displays the sum of each row
         for (int i = 0; i < m.length; i++) {
-            System.out.print(
-                "\nSum of the elements at column " +
-                (i + 1) +
-                " is " +
-                sumColumn(m, i)
-            );
+            System.out.print("\nSum of the elements at column " + (i + 1) + " is " +
+                             sumColumn(m, i));
         }
     }
 

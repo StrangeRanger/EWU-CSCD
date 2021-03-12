@@ -11,11 +11,10 @@
 import java.util.*;
 
 public class LinkListAddRemoveTemplate {
-
     public static void main(String args[]) {
         LinkedList<String> list = new LinkedList<String>();
 
-        //Adding elements to the Linked list
+        // Adding elements to the Linked list
         list.add("Nancy");
         list.add("Cindy");
         list.add("Kona");
@@ -23,26 +22,26 @@ public class LinkListAddRemoveTemplate {
         list.add("Larry");
         list.add("Jerry");
 
-        //Removing First elements
+        // Removing First elements
         list.removeFirst();
 
-        //Same as list.remove(1) 2nd element
+        // Same as list.remove(1) 2nd element
         list.remove(1);
 
-        //Removing Last element
+        // Removing Last element
         list.removeLast();
 
-        //Iterating LinkedList
+        // Iterating LinkedList
         Iterator<String> iterator = list.iterator();
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
         }
         System.out.println("");
 
-        //removing 2nd element, index starts with 0
+        // removing 2nd element, index starts with 0
         list.remove(1);
 
-        //Iterating LinkedList again
+        // Iterating LinkedList again
         Iterator<String> iterator2 = list.iterator();
         while (iterator2.hasNext()) {
             System.out.print(iterator2.next() + " ");

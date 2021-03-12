@@ -10,8 +10,8 @@ import java.util.Scanner;
  * <br>NOTE: All passed parameters are always final!
  */
 public class FileUtils {
-
-    private FileUtils() {}
+    private FileUtils() {
+    }
 
     /**
      * The countRecords method counts the number of lines in the file
@@ -28,24 +28,24 @@ public class FileUtils {
      * @throws RuntimeException if the count of lines is 0
      */
     public static int countRecords(final Scanner fin, final int linesPer) {
-        if (fin == null) throw new IllegalArgumentException(
-            "Scanner can't be null"
-        );
+        if (fin == null)
+            throw new IllegalArgumentException("Scanner can't be null");
 
-        if (linesPer <= 0) throw new IllegalArgumentException(
-            "Parameter can't be less than or equal to 0"
-        );
+        if (linesPer <= 0)
+            throw new IllegalArgumentException(
+                    "Parameter can't be less than or equal to 0");
 
         int count = 0;
         while (fin.hasNext()) {
             fin.nextLine();
             count++;
-        } // end while
+        }  // end while
 
-        if (count == 0) throw new RuntimeException("Count is 0");
+        if (count == 0)
+            throw new RuntimeException("Count is 0");
 
         return count / linesPer;
-    } // end countRecords
+    }  // end countRecords
 
     /**
      * The openInputFile method prompts the user for a filename, attempts
@@ -61,12 +61,11 @@ public class FileUtils {
      * @throws IllegalArgumentException if the Scanner object is null
      */
     public static File openInputFile(final Scanner kb) {
-        if (kb == null) throw new IllegalArgumentException(
-            "Scanner can't be null"
-        );
+        if (kb == null)
+            throw new IllegalArgumentException("Scanner can't be null");
 
-        String fn = null;
-        File fin = null;
+        String fn  = null;
+        File   fin = null;
 
         do {
             System.out.print("Please enter the name of the file ");
@@ -74,11 +73,12 @@ public class FileUtils {
 
             fin = new File(fn);
 
-            if (!fin.exists()) System.out.println("The file does not exist");
-        } while (!fin.exists());
+            if (! fin.exists())
+                System.out.println("The file does not exist");
+        } while (! fin.exists());
 
         return fin;
-    } // end openInputFile
+    }  // end openInputFile
 
     /**
      * The openInputFile method receives a filename, attempts
@@ -94,17 +94,16 @@ public class FileUtils {
      */
 
     public static File openInputFile(final String filename) {
-        if (filename == null) throw new IllegalArgumentException(
-            "filename is null"
-        );
+        if (filename == null)
+            throw new IllegalArgumentException("filename is null");
 
-        if (filename.isEmpty()) throw new IllegalArgumentException(
-            "filename is empty"
-        );
+        if (filename.isEmpty())
+            throw new IllegalArgumentException("filename is empty");
 
         File inf = new File(filename);
-        if (inf.exists()) return inf;
+        if (inf.exists())
+            return inf;
 
         throw new RuntimeException("File could not be opened");
-    } // end openInputFile
-} // end class
+    }  // end openInputFile
+}  // end class

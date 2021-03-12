@@ -12,19 +12,18 @@ import java.lang.*;
 
 /** The DLinkedList class implements a doubly Linked list. */
 class DLinkedList {
-
-    private Node first; // First element in the list
-    private Node last; // Last element in the list
+    private Node first;  // First element in the list
+    private Node last;   // Last element in the list
 
     /** Constructor. */
-    public DLinkedList() {}
+    public DLinkedList() {
+    }
 
     /** The Node class stores a list element and a reference to the next node. */
     private class Node {
-
-        String element; // The element in the list
-        Node next; // Next element in the list
-        Node prev; // Previous element in the list
+        String element;  // The element in the list
+        Node   next;     // Next element in the list
+        Node   prev;     // Previous element in the list
 
         /**
          * Constructor.
@@ -35,8 +34,8 @@ class DLinkedList {
          */
         Node(String elem, Node n, Node p) {
             element = elem;
-            next = n;
-            prev = p;
+            next    = n;
+            prev    = p;
         }
 
         /**
@@ -64,10 +63,10 @@ class DLinkedList {
      * @return The number of elements in the list.
      */
     public int size() {
-        int count = 0;
-        Node p = first;
+        int  count = 0;
+        Node p     = first;
 
-        while (p != null) { // Null marks the end of the list
+        while (p != null) {  // Null marks the end of the list
             count++;
             p = p.next;
         }
@@ -83,11 +82,11 @@ class DLinkedList {
         // Add to an empty list
         if (isEmpty()) {
             first = new Node(e);
-            last = first;
+            last  = first;
             // Add to end of existing list
         } else {
             last.next = new Node(e);
-            last = last.next;
+            last      = last.next;
         }
     }
 
@@ -136,9 +135,9 @@ class DLinkedList {
     @Override
     public String toString() {
         StringBuilder strBuilder = new StringBuilder();
-        Node p = first;
+        Node          p          = first;
 
-        while (p != null) { // Null marks the end of the list
+        while (p != null) {  // Null marks the end of the list
             strBuilder.append(p.element).append("\n");
             p = p.next;
         }
@@ -172,7 +171,7 @@ class DLinkedList {
             previous = previous.next;
         }
 
-        current = previous.next;
+        current       = previous.next;
         previous.next = current.next;
     }
 

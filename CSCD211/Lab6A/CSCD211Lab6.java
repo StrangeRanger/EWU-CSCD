@@ -32,47 +32,46 @@
 import java.util.Date;
 
 public class CSCD211Lab6 {
-
     public static void main(String[] args) {
-        Person person = new Person("Peter");
-        Person.Student student = new Person.Student("Susan");
+        Person          person   = new Person("Peter");
+        Person.Student  student  = new Person.Student("Susan");
         Person.Employee employee = new Person.Employee("Eva");
-        Person.Faculty faculty = new Person.Faculty("Frank");
-        Person.Staff staff = new Person.Staff("Shane");
+        Person.Faculty  faculty  = new Person.Faculty("Frank");
+        Person.Staff    staff    = new Person.Staff("Shane");
 
         // Everything for Person Peter
-        person.address = "Peter's address";
+        person.address     = "Peter's address";
         person.phoneNumber = "111-1111";
-        person.email = "perter@email.com";
+        person.email       = "perter@email.com";
 
         // Everything for Student Susan
-        student.address = "Susan's address";
+        student.address     = "Susan's address";
         student.phoneNumber = "222-2222";
-        student.email = "susan@email.com";
+        student.email       = "susan@email.com";
 
         // Everything for Employee Eva
-        employee.address = "Eva's address";
+        employee.address     = "Eva's address";
         employee.phoneNumber = "333-3333";
-        employee.email = "eva@email.com";
-        employee.salary = 20.01;
-        employee.office = "West wing room 120";
+        employee.email       = "eva@email.com";
+        employee.salary      = 20.01;
+        employee.office      = "West wing room 120";
 
         // Everything for Faculty Frank
-        faculty.address = "Frank's address";
+        faculty.address     = "Frank's address";
         faculty.phoneNumber = "444-4444";
-        faculty.email = "frank@email.com";
-        faculty.salary = 20.02;
-        faculty.office = "West wing room 200";
+        faculty.email       = "frank@email.com";
+        faculty.salary      = 20.02;
+        faculty.office      = "West wing room 200";
         faculty.officeHours = "1:00 PM - 2:00 PM";
-        faculty.rank = "Unknown";
+        faculty.rank        = "Unknown";
 
         // Everything for Staff Shane
-        staff.address = "Shane's address";
+        staff.address     = "Shane's address";
         staff.phoneNumber = "555-5555";
-        staff.email = "shane@email.com";
-        staff.salary = 20.03;
-        staff.office = "North wing room 1";
-        staff.title = "Unknown 2";
+        staff.email       = "shane@email.com";
+        staff.salary      = 20.03;
+        staff.office      = "North wing room 1";
+        staff.title       = "Unknown 2";
 
         // Output
         System.out.println(person.toString());
@@ -87,12 +86,12 @@ public class CSCD211Lab6 {
  * Person class
  */
 class Person {
-
     // A person has a name, address, phone number, and e-mail address
     protected String name, address, phoneNumber, email;
 
     /** Default constructor */
-    public Person() {} // Unused and is therefore redundant
+    public Person() {
+    }  // Unused and is therefore redundant
 
     /** Constructor */
     Person(String providedName) {
@@ -112,12 +111,11 @@ class Person {
 
     /** Student class status */
     public static class Student extends Person {
-
         // I'm not sure what I am supposed to do with these variables exactly
-        public static final int FRESHMEN = 1;
+        public static final int FRESHMEN  = 1;
         public static final int SOPHOMORE = 2;
-        public static final int JUNIOR = 3;
-        public static final int SENIOR = 4;
+        public static final int JUNIOR    = 3;
+        public static final int SENIOR    = 4;
 
         // Refer to super class constructor
         public Student(String providedName) {
@@ -126,9 +124,8 @@ class Person {
     }
 
     public static class Employee extends Person {
-
         // I'm not sure what I am supposed to do with this object
-        Date dateHired = new Date();
+        Date          dateHired = new Date();
         public double salary;
         public String office;
 
@@ -139,7 +136,6 @@ class Person {
     }
 
     public static class Faculty extends Employee {
-
         public String officeHours;
         public String rank;
 
@@ -150,7 +146,6 @@ class Person {
     }
 
     static class Staff extends Employee {
-
         public String title;
 
         // Refer to super class constructor

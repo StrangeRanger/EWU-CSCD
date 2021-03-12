@@ -3,13 +3,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HomeWorkFive {
-
     public static void main(String[] args) {
         /* ********************************************************************
          [ Module Wide Variables ]
          ******************************************************************** */
-        String RED = "\033[1;31m"; // String color becomes red
-        String DEFCLR = "\033[0m"; // String color gets reset
+        String RED    = "\033[1;31m";  // String color becomes red
+        String DEFCLR = "\033[0m";     // String color gets reset
 
         /* ********************************************************************
          [ Task 1 ]
@@ -18,26 +17,21 @@ public class HomeWorkFive {
          * I am too tired and exhausted after working on the final for about 3
          * days straight. I'm fine with taking the Lose on this task.
          */
-        System.out.println(
-            "**********************\n* Performing Task 1! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "I am too tired and exhausted after working on the " +
-            "final for about 3 days straight. I'm fine with taking the " +
-            "Lose on this task.\n"
-        );
+        System.out.println("**********************\n* Performing Task 1! *\n"
+                           + "**********************");
+        System.out.println("I am too tired and exhausted after working on the "
+                           +
+                           "final for about 3 days straight. I'm fine with taking the "
+                           + "Lose on this task.\n");
 
         /* ********************************************************************
          [ Task 2 ]
          ******************************************************************** */
         Scanner userInputTwo = new Scanner(System.in);
-        int nByN;
+        int     nByN;
 
-        System.out.println(
-            "**********************\n* Performing Task 2! *\n" +
-            "**********************"
-        );
+        System.out.println("**********************\n* Performing Task 2! *\n"
+                           + "**********************");
 
         for (var i = 0; i < 5; i++) {
             while (true) {
@@ -46,22 +40,16 @@ public class HomeWorkFive {
                     nByN = Integer.parseInt(userInputTwo.nextLine());
 
                     if (nByN < 1 || nByN > 20) {
-                        System.out.printf(
-                            "%sInvalid input: Enter an integer " +
-                            "between 1 and 20%s\n",
-                            RED,
-                            DEFCLR
-                        );
+                        System.out.printf("%sInvalid input: Enter an integer "
+                                                  + "between 1 and 20%s\n",
+                                          RED, DEFCLR);
                     } else {
                         break;
                     }
                 } catch (Exception e) {
-                    System.out.printf(
-                        "%sInvalid input: Enter an integer " +
-                        "between 1 and 20%s\n",
-                        RED,
-                        DEFCLR
-                    );
+                    System.out.printf("%sInvalid input: Enter an integer "
+                                              + "between 1 and 20%s\n",
+                                      RED, DEFCLR);
                 }
             }
             printMatrix(nByN);
@@ -74,28 +62,23 @@ public class HomeWorkFive {
          * I am too tired and exhausted after working on the final for about 3
          * days straight. I'm fine with taking the Lose on this task.
          */
-        System.out.println(
-            "**********************\n* Performing Task 3! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "I am too tired and exhausted after working on the " +
-            "final for about 3 days straight. I'm fine with taking the " +
-            "Lose on this task.\n"
-        );
+        System.out.println("**********************\n* Performing Task 3! *\n"
+                           + "**********************");
+        System.out.println("I am too tired and exhausted after working on the "
+                           +
+                           "final for about 3 days straight. I'm fine with taking the "
+                           + "Lose on this task.\n");
 
         /* ********************************************************************
          [ Task 4 ]
          ******************************************************************** */
         Random randInt = new Random();
         // Each index represents it's corresponding number/place value
-        int[] zeroToNineCounter = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int[] zeroToNineCounter = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         int randNum;
 
-        System.out.println(
-            "**********************\n* Performing Task 4! *\n" +
-            "**********************"
-        );
+        System.out.println("**********************\n* Performing Task 4! *\n"
+                           + "**********************");
 
         for (var i = 0; i < 100; i++) {
             randNum = randInt.nextInt(10);
@@ -115,22 +98,19 @@ public class HomeWorkFive {
          * I am too tired and exhausted after working on the final for about 3
          * days straight. I'm fine with taking the Lose on this task.
          */
-        System.out.println(
-            "**********************\n* Performing Task 5! *\n" +
-            "**********************"
-        );
-        System.out.println(
-            "I am too tired and exhausted after working on the " +
-            "final for about 3 days straight. I'm fine with taking the " +
-            "Lose on this task."
-        );
+        System.out.println("**********************\n* Performing Task 5! *\n"
+                           + "**********************");
+        System.out.println("I am too tired and exhausted after working on the "
+                           +
+                           "final for about 3 days straight. I'm fine with taking the "
+                           + "Lose on this task.");
     }
 
     // Used in Task 2
     public static void printMatrix(int n) {
-        Random randInt = new Random();
-        StringBuilder outPut = new StringBuilder();
-        int randNum;
+        Random        randInt = new Random();
+        StringBuilder outPut  = new StringBuilder();
+        int           randNum;
 
         for (var column = 0; column < n; column++) {
             for (var row = 0; row < n; row++) {
