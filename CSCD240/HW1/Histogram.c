@@ -6,10 +6,10 @@
 int main() {
     int  count, i, j;
     char sentence[MAXROWS];
-    char alphabets[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-                        'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-                        'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-    int  frequency[NUM_ALPHABETS];
+    char alphabets[]
+            = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+               'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    int frequency[NUM_ALPHABETS];
 
     // Step 1: Write a function that reads a sentence from the keyboard (2 pts)
     printf("Enter a sentence of your choosing:\n");

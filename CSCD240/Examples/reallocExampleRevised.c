@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    int*   p1;
+    int *  p1;
     double average;
     double sum = 0.0;
     int    i   = 0, j, data;
@@ -17,6 +17,7 @@ int main() {
         printf("The average value is: %f\n", average);
         p1 = realloc(p1, sizeof(int) * (i + 1));
     }
+    free(p1);
 
     return 0;
 }

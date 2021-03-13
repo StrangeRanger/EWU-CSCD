@@ -17,29 +17,34 @@ int main() {
     printf("Calling  *(ptr+i)   version: \n");
 
     for (i = 0; i < SIZE; i++)
+
         printf("%d ", *(ptr + i));
     putchar('\n');
 
     printf("Calling  array[i]   version: \n");
 
     for (i = 0; i < SIZE; i++)
+
         printf("%d ", array[i]);
     putchar('\n');
 
     printf("Calling  *(array+i)   version: \n");
 
     for (i = 0; i < SIZE; i++)
+
         printf("%d ", *(array + i));
     putchar('\n');
 
     printf("Calling  ptr[i]   version: \n");
 
     for (i = 0; i < SIZE; i++)
+
         printf("%d ", ptr[i]);
     putchar('\n');
 
     printf("Calling  *ptr++   version: \n");
     for (i = 0; i < SIZE; i++)
+
         printf("%d ", *(ptr++));
     putchar('\n');
 
@@ -47,6 +52,7 @@ int main() {
 
     printf("Calling  *++ptr   version: \n");
     for (i = 0; i < SIZE; i++)
+
         printf("%d ", *++ptr);
     putchar('\n');
 
