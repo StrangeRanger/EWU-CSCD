@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    int *  p1;
+    int*   p1;
     double average;
     double sum = 0.0;
     int    i   = 0, j, data;

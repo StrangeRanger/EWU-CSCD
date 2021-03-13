@@ -48,7 +48,7 @@ public class CSCD211Lab1Methods {
             throw new IllegalArgumentException("myPeeps is null");
         }
 
-        for (Person p: myPeeps) {
+        for (Person p : myPeeps) {
             if (p.getColor().equals(toFind)) {
                 System.out.println(p + "\n");
             }
@@ -151,7 +151,7 @@ public class CSCD211Lab1Methods {
         }
 
         // foreach loop.
-        for (Person p: myPeeps) {
+        for (Person p : myPeeps) {
             System.out.println(p + "\n");
         }
     }

@@ -23,19 +23,19 @@ public class CSCD211Lab6 {
         myList.add(new CarEngine("Ford", 134));
         myList.add(new TruckEngine("Toyota", 200, false));
 
-        for (Engine e: myList) {
+        for (Engine e : myList) {
             System.out.println(e + " output of " + e.calcOutput());
         }
         System.out.println();
 
         Collections.sort(myList);
-        for (Engine e: myList) {
+        for (Engine e : myList) {
             System.out.println(e);
         }
         System.out.println();
 
         Collections.sort(myList, new ManufacturerComparator());
-        for (Engine e: myList) {
+        for (Engine e : myList) {
             System.out.println(e);
         }
         System.out.println();

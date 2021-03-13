@@ -6,7 +6,7 @@ public class ObjectSelectionSortTest {
 
         // Display the array's contents.
         System.out.println("Original order: ");
-        for (String element: people) {
+        for (String element : people) {
             System.out.print(element + " ");
         }
         System.out.println();
@@ -16,7 +16,7 @@ public class ObjectSelectionSortTest {
 
         // Display the array's contents.
         System.out.println("\nSorted order: ");
-        for (String element: people) {
+        for (String element : people) {
             System.out.print(element + " ");
         }
         System.out.println();
