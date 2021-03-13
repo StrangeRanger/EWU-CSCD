@@ -98,3 +98,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# clang
+_clang-format
