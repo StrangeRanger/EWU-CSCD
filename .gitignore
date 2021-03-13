@@ -98,5 +98,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# clang
+# clang stuff
 _clang-format
+c.txt
+java.txt
+code.sh
