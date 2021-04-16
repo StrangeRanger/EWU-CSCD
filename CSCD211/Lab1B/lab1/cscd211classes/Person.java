@@ -18,7 +18,7 @@ public class Person implements Comparable<Person> {
     /** The person's favorite color. */
     private String ln;
     /** The person's favorite color, */
-    private Color color;
+    private Color  color;
 
     /**
      * Explicit Value Constructor for Person.

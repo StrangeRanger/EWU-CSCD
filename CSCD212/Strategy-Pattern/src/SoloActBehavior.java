@@ -4,7 +4,6 @@ interface SoloActBehavior {
     void soloAct();
 }
 
-
 /** JumpOffStage solo act. */
 class JumpOffStage implements SoloActBehavior {
     @Override
@@ -13,7 +12,6 @@ class JumpOffStage implements SoloActBehavior {
     }
 }
 
-
 /** SmashGuitar solo act. */
 class SmashGuitar implements SoloActBehavior {
     @Override
@@ -21,7 +19,6 @@ class SmashGuitar implements SoloActBehavior {
         System.out.println(" smashed the guitar!");
     }
 }
-
 
 /** SetGuitarOnFire solo act. */
 class SetGuitarOnFire implements SoloActBehavior {

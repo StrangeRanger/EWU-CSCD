@@ -40,7 +40,7 @@ public class HomeWorkOne {
 
         /*--[ Task 4 ]*****************************************************************/
 
-        Scanner userInputFour = new Scanner(System.in);
+        Scanner      userInputFour = new Scanner(System.in);
         // 'height' has already been declared in Task 2.
         double       radius, area, volume;
         final double pi = 3.14159;
@@ -62,9 +62,9 @@ public class HomeWorkOne {
 
         /*--[ Task 5 ]*****************************************************************/
 
-        Scanner userInputFive = new Scanner(System.in);
+        Scanner       userInputFive = new Scanner(System.in);
         // Using DecimalFormat to format output with two decimal points.
-        DecimalFormat dF = new DecimalFormat("#.##");
+        DecimalFormat dF            = new DecimalFormat("#.##");
         float         totalCost, tipPercent, totalCostAfterTip;
 
         System.out.println("\n\n**********************\n* Performing Task 5! *\n"

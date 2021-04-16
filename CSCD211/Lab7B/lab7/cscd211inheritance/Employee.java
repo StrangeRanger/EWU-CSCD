@@ -7,8 +7,8 @@ package lab7.cscd211inheritance;
  */
 public abstract class Employee implements Comparable<Employee> {
     /** This is a constant representing the BASE pay and can't be changed. */
-    private double BASE;
-    private String name;
+    private double   BASE;
+    private String   name;
     /** The salary is the BASE + the additional salary. */
     protected double salary;
 

@@ -37,11 +37,11 @@ public class HomeWorkThree {
                 System.out.print("Enter a month: ");
                 month = userInput.nextLine().toLowerCase();
                 switch (month) {
-                    case "jan":
+                    case "jan" :
                         System.out.println("There are 31 days in January of " + year
                                            + "\n");
                         break;
-                    case "feb":
+                    case "feb" :
                         int day;
 
                         // Detects if it's a leap year
@@ -64,47 +64,47 @@ public class HomeWorkThree {
                         System.out.println("There are " + day + " days in February "
                                            + year + "\n");
                         break;
-                    case "mar":
+                    case "mar" :
                         System.out.println("There are 31 days in March of " + year
                                            + "\n");
                         break;
-                    case "apr":
+                    case "apr" :
                         System.out.println("There are 30 days in April of " + year
                                            + "\n");
                         break;
-                    case "may":
+                    case "may" :
                         System.out.println("There are 31 days in May of " + year
                                            + "\n");
                         break;
-                    case "jun":
+                    case "jun" :
                         System.out.println("There are 30 days in June of " + year
                                            + "\n");
                         break;
-                    case "jul":
+                    case "jul" :
                         System.out.println("There are 31 days in July of " + year
                                            + "\n");
                         break;
-                    case "aug":
+                    case "aug" :
                         System.out.println("There are 31 days in August of " + year
                                            + "\n");
                         break;
-                    case "sep":
+                    case "sep" :
                         System.out.println("There are 30 days in September of " + year
                                            + "\n");
                         break;
-                    case "oct":
+                    case "oct" :
                         System.out.println("There are 31 days in October of " + year
                                            + "\n");
                         break;
-                    case "nov":
+                    case "nov" :
                         System.out.println("There are 30 days in November of " + year
                                            + "\n");
                         break;
-                    case "dec":
+                    case "dec" :
                         System.out.println("There are 31 days in December of " + year
                                            + "\n");
                         break;
-                    default:
+                    default :
                         // Output is printed in red.
                         System.out.printf(
                                 "%sInvalid month: Enter one of the possible "

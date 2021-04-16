@@ -4,7 +4,6 @@ interface GuitarType {
     void guitar();
 }
 
-
 /** GibsonSG guitar type. */
 class GibsonSG implements GuitarType {
     @Override
@@ -13,7 +12,6 @@ class GibsonSG implements GuitarType {
     }
 }
 
-
 /** FenderTelecaster guitar type. */
 class FenderTelecaster implements GuitarType {
     @Override
@@ -21,7 +19,6 @@ class FenderTelecaster implements GuitarType {
         System.out.println(" is playing a Fender Telecaster!");
     }
 }
-
 
 /** GibsonFlyingV guitar type. */
 class GibsonFlyingV implements GuitarType {
