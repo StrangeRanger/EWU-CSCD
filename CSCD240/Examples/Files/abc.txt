@@ -1,4 +1,0 @@
-NAME   AGE CITY
-Harry  12  London
-Gerald 25  Munich
-Romeo  65  Pisa
