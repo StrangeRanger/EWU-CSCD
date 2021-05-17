@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement>#/Users/hunter/IDE Workspaces/PycharmProjects/ClassTrialNew/pkg</OriginalElement>
+  <nodes>
+    <node x="298.6785714285714" y="347.5">abc.ABCMeta</node>
+    <node x="423.67857142857144" y="796.0">abc.ABC</node>
+    <node x="0.0" y="1104.0">pkg.document_write_command.DocumentWriteCommand</node>
+    <node x="630.4285714285713" y="728.0">pkg.document.Document</node>
+    <node x="509.00000000000006" y="1104.0">pkg.document_erase_command.DocumentEraseCommand</node>
+    <node x="360.6785714285715" y="977.0">pkg.command.Command</node>
+    <node x="702.0" y="0.0">typing.Hashable</node>
+    <node x="884.4285714285713" y="695.0">pkg.document_invoker.DocumentInvoker</node>
+    <node x="645.5" y="105.0">object</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="pkg.document.Document" target="object" relationship="REALIZATION">
+      <point x="0.0" y="-83.0" />
+      <point x="747.4285714285713" y="670.0" />
+      <point x="784.0" y="670.0" />
+      <point x="0.0" y="270.0" />
+    </edge>
+    <edge source="abc.ABC" target="abc.ABCMeta" relationship="INSTANCEOF">
+      <point x="-26.000000000000057" y="-15.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="pkg.document_erase_command.DocumentEraseCommand" target="pkg.command.Command" relationship="REALIZATION">
+      <point x="0.0" y="-72.0" />
+      <point x="756.5" y="1079.0" />
+      <point x="475.6785714285715" y="1079.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="pkg.command.Command" target="abc.ABC" relationship="REALIZATION">
+      <point x="-5.6843418860808015E-14" y="-38.5" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="abc.ABC" target="object" relationship="REALIZATION">
+      <point x="25.999999999999943" y="-15.0" />
+      <point x="501.6785714285714" y="670.0" />
+      <point x="784.0" y="670.0" />
+      <point x="0.0" y="270.0" />
+    </edge>
+    <edge source="object" target="typing.Hashable" relationship="INTERFACE">
+      <point x="0.0" y="-270.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="pkg.document_write_command.DocumentWriteCommand" target="pkg.command.Command" relationship="REALIZATION">
+      <point x="0.0" y="-72.0" />
+      <point x="244.5" y="1079.0" />
+      <point x="475.6785714285715" y="1079.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="pkg.document_invoker.DocumentInvoker" target="object" relationship="REALIZATION">
+      <point x="0.0" y="-116.0" />
+      <point x="1062.9285714285713" y="670.0" />
+      <point x="784.0" y="670.0" />
+      <point x="0.0" y="270.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6703470031545742" showDependencies="false" x="641.9552941176469" y="432.3082352941176" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+</Diagram>
+
