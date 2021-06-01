@@ -69,7 +69,8 @@ public class HomeWorkTwo {
                 System.out.println("Tie!\n");
             } else if ((userChoice == 0 && computerChoice == 1)
                        || (userChoice == 1 && computerChoice == 2)
-                       || (userChoice == 2 && computerChoice == 0)) {
+                       || (userChoice == 2 && computerChoice == 0))
+            {
                 System.out.println("User won!\n");
             } else {
                 System.out.println("Computer won!\n");

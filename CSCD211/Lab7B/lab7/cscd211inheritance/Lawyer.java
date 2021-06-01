@@ -23,7 +23,9 @@ public class Lawyer extends Employee {
                   double additionalPayrate,
                   int    stockOptions) {
         super(name, basePayrate, additionalPayrate);
-        if (stockOptions < 0.00) { throw new IllegalArgumentException("Bad Lawyer"); }
+        if (stockOptions < 0.00) {
+            throw new IllegalArgumentException("Bad Lawyer");
+        }
         this.stockOptions = stockOptions;
     }
 

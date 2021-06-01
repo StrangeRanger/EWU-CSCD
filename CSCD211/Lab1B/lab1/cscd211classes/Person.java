@@ -50,10 +50,14 @@ public class Person implements Comparable<Person> {
     @Override
     public int compareTo(Person another) {
         int res = this.ln.compareTo(another.ln);
-        if (res != 0) { return res; }
+        if (res != 0) {
+            return res;
+        }
 
         res = this.ln.compareTo(another.fn);
-        if (res != 0) { return res; }
+        if (res != 0) {
+            return res;
+        }
 
         return 0;  // Added this because compiler complained about no return
     }

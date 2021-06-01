@@ -38,7 +38,8 @@ public class HomeWorkFour {
                 System.out.println("Tie!\n");
             } else if ((userChoice == 0 && computerChoice == 1)
                        || (userChoice == 1 && computerChoice == 2)
-                       || (userChoice == 2 && computerChoice == 0)) {
+                       || (userChoice == 2 && computerChoice == 0))
+            {
                 System.out.println("User won!\n");
                 userScore += 1;
             } else {
@@ -119,7 +120,8 @@ public class HomeWorkFour {
                         && hexIndex != '6' && hexIndex != '7' && hexIndex != '8'
                         && hexIndex != '9' && hexIndex != 'A' && hexIndex != 'B'
                         && hexIndex != 'C' && hexIndex != 'D' && hexIndex != 'E'
-                        && hexIndex != 'F' && hexIndex != 'G') {
+                        && hexIndex != 'F' && hexIndex != 'G')
+                    {
                         invalidHex = true;
                         System.out.printf("%sInvalid hexadecimal: Enter a valid"
                                                   + " hexadecimal number%s\n",

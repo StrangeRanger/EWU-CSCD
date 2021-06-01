@@ -19,7 +19,9 @@ public class CSCD211_Ch0801_SumArray {
 
         // Updates 'm' based on input.
         for (int i = 0; i < m.length; i++) {
-            for (int j = 0; j < m[i].length; j++) { m[i][j] = userInput.nextInt(); }
+            for (int j = 0; j < m[i].length; j++) {
+                m[i][j] = userInput.nextInt();
+            }
         }
 
         // Displays the sum of each row.

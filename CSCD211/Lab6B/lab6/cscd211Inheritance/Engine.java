@@ -48,7 +48,9 @@ public class Engine implements Comparable<Engine> {
         if ((manufacturer == null || manufacturer.isEmpty())) {
             throw new IllegalArgumentException("Bad Engine");
         }
-        if (horsePower <= 0) { throw new IllegalArgumentException("Bad Engine"); }
+        if (horsePower <= 0) {
+            throw new IllegalArgumentException("Bad Engine");
+        }
 
         this.manufacturer = manufacturer;
         this.horsePower   = horsePower;

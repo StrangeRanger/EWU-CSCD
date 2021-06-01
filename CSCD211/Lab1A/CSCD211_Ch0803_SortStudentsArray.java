@@ -31,7 +31,9 @@ public class CSCD211_Ch0803_SortStudentsArray {
         char[] keys               = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
 
         // Generates array for 'indexList'.
-        for (int i = 0; i < answers.length; i++) { indexList[i] = i; }
+        for (int i = 0; i < answers.length; i++) {
+            indexList[i] = i;
+        }
 
         // Grades answers.
         for (int i = 0; i < answers.length; i++) {

@@ -29,11 +29,15 @@ public class CSCD211Lab6 {
         System.out.println();
 
         Collections.sort(myList);
-        for (Engine e : myList) { System.out.println(e); }
+        for (Engine e : myList) {
+            System.out.println(e);
+        }
         System.out.println();
 
         Collections.sort(myList, new ManufacturerComparator());
-        for (Engine e : myList) { System.out.println(e); }
+        for (Engine e : myList) {
+            System.out.println(e);
+        }
         System.out.println();
     }
 }

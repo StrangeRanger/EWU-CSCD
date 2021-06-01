@@ -15,6 +15,8 @@ public class OrnamentDecorator extends HolidayComponent {
                              final int              cost,
                              final HolidayComponent component) {
         super(desc, cost);
-        if (component != null) { this.component = component; }
+        if (component != null) {
+            this.component = component;
+        }
     }
 }

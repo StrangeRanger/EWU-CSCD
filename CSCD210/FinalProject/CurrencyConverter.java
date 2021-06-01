@@ -52,8 +52,8 @@ public class CurrencyConverter {
             base = userInput.nextLine().toUpperCase();
 
             // A. Checks if a valid base currency is provided.
-            if (conversionRates.get(base)
-                != null) {  // B. Null produced if base not found.
+            if (conversionRates.get(base) != null)
+            {  // B. Null produced if base not found.
                 conversionRates = (JSONObject) getAPIData(base);
                 baseValue       = (double) conversionRates.get(base);
                 break;
@@ -138,7 +138,9 @@ public class CurrencyConverter {
                 Scanner userInput    = new Scanner(url.openStream());
 
                 // Write all the JSON data into a string using a scanner.
-                while (userInput.hasNext()) { inline.append(userInput.nextLine()); }
+                while (userInput.hasNext()) {
+                    inline.append(userInput.nextLine());
+                }
 
                 // Close the scanner.
                 userInput.close();

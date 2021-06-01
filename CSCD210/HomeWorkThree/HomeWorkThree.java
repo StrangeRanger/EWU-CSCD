@@ -144,7 +144,8 @@ public class HomeWorkThree {
                 city1 = city2;
                 city2 = temp;
             } else if ((city3.compareToIgnoreCase(city1) < 0)
-                       && (city3.compareToIgnoreCase(city2) < 0)) {
+                       && (city3.compareToIgnoreCase(city2) < 0))
+            {
                 temp  = city1;
                 city1 = city3;
                 city3 = temp;
@@ -227,7 +228,8 @@ public class HomeWorkThree {
                            || letter == 'm' || letter == 'n' || letter == 'p'
                            || letter == 'q' || letter == 'r' || letter == 's'
                            || letter == 't' || letter == 'v' || letter == 'w'
-                           || letter == 'x' || letter == 'y' || letter == 'z') {
+                           || letter == 'x' || letter == 'y' || letter == 'z')
+                {
                     consonant++;
                 }
             }
