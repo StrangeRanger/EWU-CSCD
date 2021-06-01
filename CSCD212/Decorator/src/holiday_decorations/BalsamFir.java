@@ -7,7 +7,5 @@ package holiday_decorations;
 public class BalsamFir extends HolidayComponent {
     private static final int price = 25;
 
-    public BalsamFir() {
-        super("Balsam Fir is decorated with", price);
-    }
+    public BalsamFir() { super("Balsam Fir is decorated with", price); }
 }

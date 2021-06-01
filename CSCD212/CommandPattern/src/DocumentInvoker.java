@@ -9,9 +9,7 @@ public class DocumentInvoker {
      * Constructor: instantiates a Document object.
      * @param name Name of the new document.
      */
-    public DocumentInvoker(String name) {
-        currentDoc = new Document(name);
-    }
+    public DocumentInvoker(String name) { currentDoc = new Document(name); }
 
     /**
      * Instantiate a 'DocumentWriteCommand' object to add 'text' to the document.
@@ -75,9 +73,7 @@ public class DocumentInvoker {
     }
 
     /** ... */
-    public String Read() {
-        return currentDoc.Read();
-    }
+    public String Read() { return currentDoc.Read(); }
 
     /** ... */
     public void printCommmandBuffer() {

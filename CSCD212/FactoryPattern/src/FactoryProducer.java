@@ -4,14 +4,14 @@ public class FactoryProducer {
 
     public Shape getFactory(String shapeType) {
         if (shapeType == null) {
-        	// This produces a NullPointerException.
+            // This produces a NullPointerException.
             return null;
         }
 
         if (shapeType.toLowerCase().contains("rounded")) {
-        	return roundedFactory.getShape(shapeType);
+            return roundedFactory.getShape(shapeType);
         } else {
-        	return shapeFactory.getShape(shapeType);
+            return shapeFactory.getShape(shapeType);
         }
     }
 }

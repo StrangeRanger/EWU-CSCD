@@ -8,12 +8,8 @@ public class SquarePeg {
      * Constructor.
      * @param width The width of the peg.
      */
-    public SquarePeg(double width) {
-        this.width = width;
-    }
+    public SquarePeg(double width) { this.width = width; }
 
     /** Return the radius of the peg. */
-    public double getWidth() {
-        return width;
-    }
+    public double getWidth() { return width; }
 }

@@ -138,9 +138,7 @@ public class CurrencyConverter {
                 Scanner userInput    = new Scanner(url.openStream());
 
                 // Write all the JSON data into a string using a scanner.
-                while (userInput.hasNext()) {
-                    inline.append(userInput.nextLine());
-                }
+                while (userInput.hasNext()) { inline.append(userInput.nextLine()); }
 
                 // Close the scanner.
                 userInput.close();

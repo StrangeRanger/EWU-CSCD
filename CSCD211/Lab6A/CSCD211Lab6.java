@@ -91,14 +91,10 @@ class Person {
     public Person() { }  // Unused and is therefore redundant.
 
     /** Constructor. */
-    Person(String providedName) {
-        this.name = providedName;
-    }
+    Person(String providedName) { this.name = providedName; }
 
     /** Get person's name. */
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     /** Override toString to output Person's name. */
     @Override
@@ -115,9 +111,7 @@ class Person {
         public static final int SENIOR    = 4;
 
         // Refer to super class constructor.
-        public Student(String providedName) {
-            super(providedName);
-        }
+        public Student(String providedName) { super(providedName); }
     }
 
     public static class Employee extends Person {
@@ -127,9 +121,7 @@ class Person {
         public String office;
 
         // Refer to super class constructor.
-        public Employee(String providedName) {
-            super(providedName);
-        }
+        public Employee(String providedName) { super(providedName); }
     }
 
     public static class Faculty extends Employee {
@@ -137,17 +129,13 @@ class Person {
         public String rank;
 
         // Refer to super class constructor.
-        public Faculty(String providedName) {
-            super(providedName);
-        }
+        public Faculty(String providedName) { super(providedName); }
     }
 
     static class Staff extends Employee {
         public String title;
 
         // Refer to super class constructor.
-        public Staff(String providedName) {
-            super(providedName);
-        }
+        public Staff(String providedName) { super(providedName); }
     }
 }

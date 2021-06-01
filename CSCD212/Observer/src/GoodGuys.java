@@ -32,8 +32,8 @@ public class GoodGuys {
     @Override
     public String toString() {
         return "    Hobbits: " + this.hobbits + "\n"
-      + "    Elves: " + this.elves + "\n"
-      + "    Dwarfs: " + this.dwarfs + "\n"
-      + "    Humans: " + this.humans + "\n";
+                + "    Elves: " + this.elves + "\n"
+                + "    Dwarfs: " + this.dwarfs + "\n"
+                + "    Humans: " + this.humans + "\n";
     }
 }

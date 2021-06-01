@@ -32,9 +32,7 @@ public class SortUtils<T extends Comparable<? super T>> {
             min = start;
 
             for (search = start + 1; search < array.length; search++) {
-                if (array[search].compareTo(array[min]) < 0) {
-                    min = search;
-                }
+                if (array[search].compareTo(array[min]) < 0) { min = search; }
             }
 
             temp         = array[min];

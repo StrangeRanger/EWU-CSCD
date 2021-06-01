@@ -9,25 +9,19 @@ public class Document {
      * Constructor.
      * @param name Name of the new document.
      */
-    public Document(String name) {
-        this.name = name;
-    }
+    public Document(String name) { this.name = name; }
 
     /**
      * Add 'text' to 'textArray' (the document).
      * @param text The text to be added.
      */
-    public void Write(String text) {
-        textArray.add(text);
-    }
+    public void Write(String text) { textArray.add(text); }
 
     /**
      * Remove 'text' from 'textArray' (the document).
      * @param text The text to be removed.
      */
-    public void Erase(String text) {
-        textArray.remove(text);
-    }
+    public void Erase(String text) { textArray.remove(text); }
 
     /**
      * Bold the 'text' at a specified index.
@@ -60,9 +54,7 @@ public class Document {
         StringBuffer txt = new StringBuffer();
 
         txt.append("------Contents of: ").append(name).append("------\n");
-        for (String s : textArray) {
-            txt.append(s).append("\n");
-        }
+        for (String s : textArray) { txt.append(s).append("\n"); }
         return txt.toString();
     }
 }

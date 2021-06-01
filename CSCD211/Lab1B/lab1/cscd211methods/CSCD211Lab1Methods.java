@@ -44,14 +44,10 @@ public class CSCD211Lab1Methods {
      * @throws IllegalArgumentException If the array is null.
      */
     public static void displayAll(final Color toFind, final Person[] myPeeps) {
-        if (myPeeps == null) {
-            throw new IllegalArgumentException("myPeeps is null");
-        }
+        if (myPeeps == null) { throw new IllegalArgumentException("myPeeps is null"); }
 
         for (Person p : myPeeps) {
-            if (p.getColor().equals(toFind)) {
-                System.out.println(p + "\n");
-            }
+            if (p.getColor().equals(toFind)) { System.out.println(p + "\n"); }
         }
     }
 
@@ -104,9 +100,7 @@ public class CSCD211Lab1Methods {
     public static int menu(Scanner kb) {
         int choice = 0;
 
-        if (kb == null) {
-            throw new IllegalArgumentException("kb is null");
-        }
+        if (kb == null) { throw new IllegalArgumentException("kb is null"); }
 
         System.out.println("Please choose from the following:");
         System.out.println("1. Print the Array to the screen");
@@ -146,14 +140,10 @@ public class CSCD211Lab1Methods {
      * @throws IllegalArgumentException If the array is null.
      */
     public static void printArray(final Person[] myPeeps) {
-        if (myPeeps == null) {
-            throw new IllegalArgumentException("myPeeps is null");
-        }
+        if (myPeeps == null) { throw new IllegalArgumentException("myPeeps is null"); }
 
         // foreach loop.
-        for (Person p : myPeeps) {
-            System.out.println(p + "\n");
-        }
+        for (Person p : myPeeps) { System.out.println(p + "\n"); }
     }
 
     /**
@@ -168,9 +158,7 @@ public class CSCD211Lab1Methods {
     public static Color readColor(final Scanner kb) {
         String c;
 
-        if (kb == null) {
-            throw new IllegalArgumentException("kb is null");
-        }
+        if (kb == null) { throw new IllegalArgumentException("kb is null"); }
 
         // Catches empty input that would result in an IllegalArgumentException
         // being thrown.

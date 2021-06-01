@@ -8,12 +8,8 @@ public class RoundPeg {
      * Constructor.
      * @param radius The radius of the peg.
      */
-    public RoundPeg(double radius) {
-        this.radius = radius;
-    }
+    public RoundPeg(double radius) { this.radius = radius; }
 
     /** Return the radius of the peg. */
-    public double getRadius() {
-        return radius;
-    }
+    public double getRadius() { return radius; }
 }

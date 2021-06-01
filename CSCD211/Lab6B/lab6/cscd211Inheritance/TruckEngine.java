@@ -28,7 +28,8 @@ public class TruckEngine extends Engine {
      * @param horsePower   Representing the horsePower held in the Engine class.
      * @param diesel       Boolean representing if the Truck Engine is a diesel engine.
      */
-    public TruckEngine(final String manufacturer, final int horsePower,
+    public TruckEngine(final String  manufacturer,
+                       final int     horsePower,
                        final boolean diesel) {
         super(manufacturer, horsePower);
         this.diesel = diesel;

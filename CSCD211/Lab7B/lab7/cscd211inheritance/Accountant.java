@@ -15,7 +15,9 @@ public class Accountant extends Employee {
      *
      * @throws IllegalArgumentException If parking stipend is less than 0.00.
      */
-    public Accountant(String name, double basePayrate, double additionalPayrate,
+    public Accountant(String name,
+                      double basePayrate,
+                      double additionalPayrate,
                       double parkingStipend) {
         super(name, basePayrate, additionalPayrate);
         if (parkingStipend < 0.00) {
@@ -24,9 +26,7 @@ public class Accountant extends Employee {
         this.parkingStipend = parkingStipend;
     }
 
-    public double getParkingStipend() {
-        return this.parkingStipend;
-    }
+    public double getParkingStipend() { return this.parkingStipend; }
 
     /**
      * Report prints to the screen I am an accountant. I make "the salary from the base

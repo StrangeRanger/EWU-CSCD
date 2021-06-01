@@ -17,15 +17,15 @@ public class Programmer extends Employee {
      * @param additionalPayrate The additional pay.
      * @param busPass           The bus pass.
      */
-    public Programmer(String name, double basePayrate, double additionalPayrate,
+    public Programmer(String  name,
+                      double  basePayrate,
+                      double  additionalPayrate,
                       boolean busPass) {
         super(name, basePayrate, additionalPayrate);
         this.busPass = busPass;
     }
 
-    public boolean getBusPass() {
-        return this.busPass;
-    }
+    public boolean getBusPass() { return this.busPass; }
 
     /**
      * Report prints to the screen I am a programmer. I get "the salary from the base

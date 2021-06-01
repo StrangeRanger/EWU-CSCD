@@ -21,14 +21,14 @@ public class HeadsOrTails {
 
         // Will NOT create a new instance of 'HOTSingleton'.
         HOTSingleton gameAll = HOTSingleton.getUniqueInstance();
-        gameAll.flip(100);   // A.1.
-        gameAll.getCount();  // B.1.
-        gameAll.resetCount();     // C.1. Resets the number of heads and tails to 0.
+        gameAll.flip(100);     // A.1.
+        gameAll.getCount();    // B.1.
+        gameAll.resetCount();  // C.1. Resets the number of heads and tails to 0.
 
-        gameAll.flip(100);   // A.1.
-        gameAll.getCount();  // B.1.
-        gameAll.flip(100);   // A.1.
-        gameAll.getCount();  // B.1.
-        gameAll.resetCount();     // C.1.
+        gameAll.flip(100);     // A.1.
+        gameAll.getCount();    // B.1.
+        gameAll.flip(100);     // A.1.
+        gameAll.getCount();    // B.1.
+        gameAll.resetCount();  // C.1.
     }
 }

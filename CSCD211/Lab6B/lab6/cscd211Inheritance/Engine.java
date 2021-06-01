@@ -48,9 +48,7 @@ public class Engine implements Comparable<Engine> {
         if ((manufacturer == null || manufacturer.isEmpty())) {
             throw new IllegalArgumentException("Bad Engine");
         }
-        if (horsePower <= 0) {
-            throw new IllegalArgumentException("Bad Engine");
-        }
+        if (horsePower <= 0) { throw new IllegalArgumentException("Bad Engine"); }
 
         this.manufacturer = manufacturer;
         this.horsePower   = horsePower;
@@ -72,9 +70,7 @@ public class Engine implements Comparable<Engine> {
      *
      * @return int Representing this horsePower divided by 5
      */
-    public int calcOutput() {
-        return this.horsePower / 5;
-    }
+    public int calcOutput() { return this.horsePower / 5; }
 
     // NOTE: Unsure if this is correct
     /**
@@ -98,7 +94,5 @@ public class Engine implements Comparable<Engine> {
      *
      * @return String Representing this manufacturer.
      */
-    public String getManufacturer() {
-        return this.manufacturer;
-    }
+    public String getManufacturer() { return this.manufacturer; }
 }

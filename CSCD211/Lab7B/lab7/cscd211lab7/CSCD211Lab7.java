@@ -27,16 +27,12 @@ public class CSCD211Lab7 {
 
         // Display Employee List.
         System.out.println("Employee List");
-        for (Employee e : myList) {
-            System.out.println(e);
-        }
+        for (Employee e : myList) { System.out.println(e); }
         System.out.println();
 
         // Display Employee Reports.
         System.out.println("Employee Report");
-        for (Employee e : myList) {
-            e.report();
-        }
+        for (Employee e : myList) { e.report(); }
         System.out.println();
 
         // Display Employee List by Natural Order.
