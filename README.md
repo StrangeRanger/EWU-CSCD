@@ -1,4 +1,6 @@
 # EWU Computer Science
+
+[![Project Tracker](https://img.shields.io/badge/repo%20status-Project%20Tracker-lightgrey)](https://randomserver.xyz/project-tracker.html#ewu-cscd)
 ![clang-format: Based on Chromium](https://img.shields.io/badge/code%20style-clang--format%3A%20Based%20on%20Chromium-FFE5B4)
 
 This repo is a collection of all the projects/homework that I've done while at EWU.
