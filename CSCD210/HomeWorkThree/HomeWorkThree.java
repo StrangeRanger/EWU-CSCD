@@ -38,8 +38,8 @@ public class HomeWorkThree {
                 month = userInput.nextLine().toLowerCase();
                 switch (month) {
                     case "jan":
-                        System.out.println("There are 31 days in January of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in January of " + year +
+                                           "\n");
                         break;
                     case "feb":
                         int day;
@@ -61,48 +61,48 @@ public class HomeWorkThree {
                             day = 28;
                         }
 
-                        System.out.println("There are " + day + " days in February "
-                                           + year + "\n");
+                        System.out.println("There are " + day + " days in February " +
+                                           year + "\n");
                         break;
                     case "mar":
-                        System.out.println("There are 31 days in March of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in March of " + year +
+                                           "\n");
                         break;
                     case "apr":
-                        System.out.println("There are 30 days in April of " + year
-                                           + "\n");
+                        System.out.println("There are 30 days in April of " + year +
+                                           "\n");
                         break;
                     case "may":
-                        System.out.println("There are 31 days in May of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in May of " + year +
+                                           "\n");
                         break;
                     case "jun":
-                        System.out.println("There are 30 days in June of " + year
-                                           + "\n");
+                        System.out.println("There are 30 days in June of " + year +
+                                           "\n");
                         break;
                     case "jul":
-                        System.out.println("There are 31 days in July of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in July of " + year +
+                                           "\n");
                         break;
                     case "aug":
-                        System.out.println("There are 31 days in August of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in August of " + year +
+                                           "\n");
                         break;
                     case "sep":
-                        System.out.println("There are 30 days in September of " + year
-                                           + "\n");
+                        System.out.println("There are 30 days in September of " + year +
+                                           "\n");
                         break;
                     case "oct":
-                        System.out.println("There are 31 days in October of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in October of " + year +
+                                           "\n");
                         break;
                     case "nov":
-                        System.out.println("There are 30 days in November of " + year
-                                           + "\n");
+                        System.out.println("There are 30 days in November of " + year +
+                                           "\n");
                         break;
                     case "dec":
-                        System.out.println("There are 31 days in December of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in December of " + year +
+                                           "\n");
                         break;
                     default:
                         // Output is printed in red.
@@ -138,14 +138,13 @@ public class HomeWorkThree {
 
             // Ignores case, because a different ascii number would be used, for
             // example, 'S' and 's', making it possible for inaccurate output to occur.
-            if ((city2.compareToIgnoreCase(city1) < 0)
-                && (city2.compareToIgnoreCase(city3) < 0)) {
+            if ((city2.compareToIgnoreCase(city1) < 0) &&
+                (city2.compareToIgnoreCase(city3) < 0)) {
                 temp  = city1;
                 city1 = city2;
                 city2 = temp;
-            } else if ((city3.compareToIgnoreCase(city1) < 0)
-                       && (city3.compareToIgnoreCase(city2) < 0))
-            {
+            } else if ((city3.compareToIgnoreCase(city1) < 0) &&
+                       (city3.compareToIgnoreCase(city2) < 0)) {
                 temp  = city1;
                 city1 = city3;
                 city3 = temp;
@@ -219,17 +218,16 @@ public class HomeWorkThree {
 
                 // Didn't include y because I feel like that would have made things
                 // more complicated (that of which I usually do to myself).
-                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o'
-                    || letter == 'u') {
+                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' ||
+                    letter == 'u') {
                     vowel++;
-                } else if (letter == 'b' || letter == 'c' || letter == 'd'
-                           || letter == 'f' || letter == 'g' || letter == 'h'
-                           || letter == 'j' || letter == 'k' || letter == 'l'
-                           || letter == 'm' || letter == 'n' || letter == 'p'
-                           || letter == 'q' || letter == 'r' || letter == 's'
-                           || letter == 't' || letter == 'v' || letter == 'w'
-                           || letter == 'x' || letter == 'y' || letter == 'z')
-                {
+                } else if (letter == 'b' || letter == 'c' || letter == 'd' ||
+                           letter == 'f' || letter == 'g' || letter == 'h' ||
+                           letter == 'j' || letter == 'k' || letter == 'l' ||
+                           letter == 'm' || letter == 'n' || letter == 'p' ||
+                           letter == 'q' || letter == 'r' || letter == 's' ||
+                           letter == 't' || letter == 'v' || letter == 'w' ||
+                           letter == 'x' || letter == 'y' || letter == 'z') {
                     consonant++;
                 }
             }

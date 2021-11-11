@@ -20,8 +20,8 @@ public class TreeTester {
         treeOne                  = Star.addStar(treeOne);
         treeOne                  = new Ruffles(treeOne);
         treeOne                  = new Lights(treeOne);
-        System.out.println("Tree1: " + treeOne.getDescription() + " costs: $"
-                           + treeOne.getCost());
+        System.out.println("Tree1: " + treeOne.getDescription() + " costs: $" +
+                           treeOne.getCost());
 
         /* Making a second tree. */
         HolidayComponent treeTwo = new BlueSpruce();
@@ -30,8 +30,8 @@ public class TreeTester {
         treeTwo                  = new SilverBalls(treeTwo);
         treeTwo                  = new Ruffles(treeTwo);
         treeTwo                  = new LEDs(treeTwo);
-        System.out.println("Tree2: " + treeTwo.getDescription() + " costs: $"
-                           + treeTwo.getCost());
+        System.out.println("Tree2: " + treeTwo.getDescription() + " costs: $" +
+                           treeTwo.getCost());
 
         /* Making a three tree. */
         HolidayComponent treeThree = new BalsamFir();
@@ -42,8 +42,8 @@ public class TreeTester {
         // Should fail to add a star.
         treeThree                  = Star.addStar(treeThree);
         treeThree                  = new LEDs(treeThree);
-        System.out.println("Tree3: " + treeThree.getDescription() + " costs: $"
-                           + treeThree.getCost());
+        System.out.println("Tree3: " + treeThree.getDescription() + " costs: $" +
+                           treeThree.getCost());
 
         /* Making a fourth tree. */
         HolidayComponent treeFour = new DouglasFir();
@@ -53,7 +53,7 @@ public class TreeTester {
         treeFour                  = Star.addStar(treeFour);
         treeFour                  = new LEDs(treeFour);
         treeFour                  = new RedBalls(treeFour);
-        System.out.println("Tree4: " + treeFour.getDescription() + " costs: $"
-                           + treeFour.getCost());
+        System.out.println("Tree4: " + treeFour.getDescription() + " costs: $" +
+                           treeFour.getCost());
     }
 }

@@ -38,8 +38,8 @@ public class HOTSingleton {
     /** Print out the total number of times the coin has landed on heads and tails. */
     public void getCount() {
         System.out.println(
-                "Displaying number times heads and tails occured respectively: " + heads
-                + " | " + tails);
+                "Displaying number times heads and tails occured respectively: " +
+                heads + " | " + tails);
     }
 
     /** Reset the number of heads and tails to 0. */

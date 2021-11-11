@@ -54,9 +54,7 @@ public class Document {
         StringBuffer txt = new StringBuffer();
 
         txt.append("------Contents of: ").append(name).append("------\n");
-        for (String s : textArray) {
-            txt.append(s).append("\n");
-        }
+        for (String s: textArray) { txt.append(s).append("\n"); }
         return txt.toString();
     }
 }

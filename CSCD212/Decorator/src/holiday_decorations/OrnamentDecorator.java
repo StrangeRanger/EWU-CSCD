@@ -11,12 +11,9 @@ public class OrnamentDecorator extends HolidayComponent {
      * @param cost      Ornament cost/price.
      * @param component Ornament component object.
      */
-    public OrnamentDecorator(final String           desc,
-                             final int              cost,
+    public OrnamentDecorator(final String desc, final int cost,
                              final HolidayComponent component) {
         super(desc, cost);
-        if (component != null) {
-            this.component = component;
-        }
+        if (component != null) { this.component = component; }
     }
 }

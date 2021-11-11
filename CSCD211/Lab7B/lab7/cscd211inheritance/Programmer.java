@@ -17,9 +17,7 @@ public class Programmer extends Employee {
      * @param additionalPayrate The additional pay.
      * @param busPass           The bus pass.
      */
-    public Programmer(String  name,
-                      double  basePayrate,
-                      double  additionalPayrate,
+    public Programmer(String name, double basePayrate, double additionalPayrate,
                       boolean busPass) {
         super(name, basePayrate, additionalPayrate);
         this.busPass = busPass;
@@ -32,9 +30,9 @@ public class Programmer extends Employee {
      * class" and I get a bus pass or and I do not get a bus pass.
      */
     public void report() {
-        System.out.println("I am a Programmer. I get " + getSalary()
-                           + ((getBusPass()) ? " and I get a buss pass."
-                                             : " and I do not get a bus pass."));
+        System.out.println("I am a Programmer. I get " + getSalary() +
+                           ((getBusPass()) ? " and I get a buss pass." :
+                                             " and I do not get a bus pass."));
     }
 
     // Unsure if this is correct

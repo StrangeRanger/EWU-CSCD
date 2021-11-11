@@ -39,9 +39,7 @@ public class FileUtils {
             count++;
         }
 
-        if (count == 0) {
-            throw new RuntimeException("Count is 0");
-        }
+        if (count == 0) { throw new RuntimeException("Count is 0"); }
 
         return count / linesPer;
     }
@@ -57,9 +55,7 @@ public class FileUtils {
      * @throws IllegalArgumentException If the Scanner object is null.
      */
     public static File openInputFile(final Scanner kb) {
-        if (kb == null) {
-            throw new IllegalArgumentException("Scanner can't be null");
-        }
+        if (kb == null) { throw new IllegalArgumentException("Scanner can't be null"); }
 
         String fn  = null;
         File   fin = null;
@@ -70,9 +66,7 @@ public class FileUtils {
 
             fin = new File(fn);
 
-            if (! fin.exists()) {
-                System.out.println("The file does not exist");
-            }
+            if (! fin.exists()) { System.out.println("The file does not exist"); }
         } while (! fin.exists());
 
         return fin;
@@ -100,9 +94,7 @@ public class FileUtils {
         }
 
         File inf = new File(filename);
-        if (inf.exists()) {
-            return inf;
-        }
+        if (inf.exists()) { return inf; }
 
         throw new RuntimeException("File could not be opened");
     }
