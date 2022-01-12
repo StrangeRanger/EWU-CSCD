@@ -54,7 +54,9 @@ public class CSCD211_Ch0804_WeeklyHoursArray {
     public static int maxNumber(int[] customArray) {
         int max = 0;
         for (int i = 0; i < customArray.length; i++) {
-            if (customArray[i] > max) { max = customArray[i]; }
+            if (customArray[i] > max) {
+                max = customArray[i];
+            }
         }
         return max;
     }

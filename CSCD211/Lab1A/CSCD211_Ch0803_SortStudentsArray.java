@@ -26,12 +26,14 @@ public class CSCD211_Ch0803_SortStudentsArray {
         int[] totalCorrectAnswers = new int[answers.length];
         // Array representing current index locations of all data inside
         // 'totalCorrectAnswers'.
-        int[] indexList           = new int[answers.length];
+        int[] indexList = new int[answers.length];
         // Key to the questions.
-        char[] keys               = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
+        char[] keys = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
 
         // Generates array for 'indexList'.
-        for (int i = 0; i < answers.length; i++) { indexList[i] = i; }
+        for (int i = 0; i < answers.length; i++) {
+            indexList[i] = i;
+        }
 
         // Grades answers.
         for (int i = 0; i < answers.length; i++) {

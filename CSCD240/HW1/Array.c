@@ -54,7 +54,8 @@ int main() {
                    "is:\n");
             writeArrayElements(c, rows, cols);
             break;
-        default: printf("Invalid input\n");
+        default:
+            printf("Invalid input\n");
     }
     return 0;
 }
@@ -64,7 +65,9 @@ void readArrayElements(int a[][MAXCOLS], int nRows, int nCols) {
 
     for (i = 0; i < nRows; i++) {
         printf("Enter data for row no: %d\n", i);
-        for (j = 0; j < nCols; j++) { scanf("%d", &a[i][j]); }
+        for (j = 0; j < nCols; j++) {
+            scanf("%d", &a[i][j]);
+        }
     }
 }
 
@@ -74,7 +77,9 @@ void writeArrayElements(int a[][MAXCOLS], int nRows, int nCols) {
     int i, j;
 
     for (i = 0; i < nRows; i++) {
-        for (j = 0; j < nCols; j++) { printf("%d ", a[i][j]); }
+        for (j = 0; j < nCols; j++) {
+            printf("%d ", a[i][j]);
+        }
         printf("\n");
     }
 }
@@ -86,7 +91,9 @@ void addArrayElements(int a[][MAXCOLS], int b[][MAXCOLS], int c[][MAXCOLS], int 
     int i, j;
 
     for (i = 0; i < nRows; i++) {
-        for (j = 0; j < nCols; j++) { c[i][j] = a[i][j] + b[i][j]; }
+        for (j = 0; j < nCols; j++) {
+            c[i][j] = a[i][j] + b[i][j];
+        }
     }
 }
 
@@ -97,7 +104,9 @@ void subtractArrayElements(int a[][MAXCOLS], int b[][MAXCOLS], int c[][MAXCOLS],
     int i, j;
 
     for (i = 0; i < nRows; i++) {
-        for (j = 0; j < nCols; j++) { c[i][j] = a[i][j] - b[i][j]; }
+        for (j = 0; j < nCols; j++) {
+            c[i][j] = a[i][j] - b[i][j];
+        }
     }
 }
 
@@ -108,6 +117,8 @@ void multiplyArrayElements(int a[][MAXCOLS], int b[][MAXCOLS], int c[][MAXCOLS],
     int i, j;
 
     for (i = 0; i < nRows; i++) {
-        for (j = 0; j < nCols; j++) { c[i][j] = a[i][j] * b[i][j]; }
+        for (j = 0; j < nCols; j++) {
+            c[i][j] = a[i][j] * b[i][j];
+        }
     }
 }

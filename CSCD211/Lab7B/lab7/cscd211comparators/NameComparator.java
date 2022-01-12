@@ -1,7 +1,6 @@
 package lab7.cscd211comparators;
 
 import java.util.Comparator;
-
 import lab7.cscd211inheritance.Employee;
 
 /**

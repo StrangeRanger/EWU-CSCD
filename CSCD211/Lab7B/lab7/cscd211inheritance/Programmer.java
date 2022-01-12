@@ -31,8 +31,8 @@ public class Programmer extends Employee {
      */
     public void report() {
         System.out.println("I am a Programmer. I get " + getSalary() +
-                           ((getBusPass()) ? " and I get a buss pass." :
-                                             " and I do not get a bus pass."));
+                           ((getBusPass()) ? " and I get a buss pass."
+                                           : " and I do not get a bus pass."));
     }
 
     // Unsure if this is correct

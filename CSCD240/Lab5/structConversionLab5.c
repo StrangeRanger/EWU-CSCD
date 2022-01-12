@@ -12,7 +12,6 @@ struct Person {
 void setData(struct Person *x);
 void printData(struct Person x);
 
-
 int main() {
     struct Person personOne;
 
@@ -54,4 +53,3 @@ void printData(struct Person x) {
     printf("Height(cm): %g\n", x.height);
     printf("Weight(kg): %g\n", x.weight);
 }
-

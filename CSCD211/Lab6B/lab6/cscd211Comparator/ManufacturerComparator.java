@@ -12,7 +12,6 @@ package lab6.cscd211Comparator;
 // *************************************************************************************
 
 import java.util.Comparator;
-
 import lab6.cscd211Inheritance.Engine;
 
 /**

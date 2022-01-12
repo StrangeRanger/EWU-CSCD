@@ -11,7 +11,6 @@ package lab1.cscd211comparators;
 // *************************************************************************************
 
 import java.util.Comparator;
-
 import lab1.cscd211classes.*;
 
 /**

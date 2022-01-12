@@ -7,8 +7,8 @@ package lab7.cscd211inheritance;
  */
 public abstract class Employee implements Comparable<Employee> {
     /** This is a constant representing the BASE pay and can't be changed. */
-    private double   BASE;
-    private String   name;
+    private double BASE;
+    private String name;
     /** The salary is the BASE + the additional salary. */
     protected double salary;
 
@@ -27,7 +27,9 @@ public abstract class Employee implements Comparable<Employee> {
         if (name.isEmpty() || basePayrate < 0 || additionalPayrate < 0) {
             throw new IllegalArgumentException("Bad Employee");
         }
-        if (name == null) { throw new IllegalArgumentException("Bad Employee"); }
+        if (name == null) {
+            throw new IllegalArgumentException("Bad Employee");
+        }
 
         this.name   = name;
         this.BASE   = basePayrate;
@@ -81,7 +83,9 @@ public abstract class Employee implements Comparable<Employee> {
      * @throws IllegalArgumentException If another is null.
      */
     public int compareTo(Employee another) {
-        if (another == null) { throw new IllegalArgumentException("Bad compareTo"); }
+        if (another == null) {
+            throw new IllegalArgumentException("Bad compareTo");
+        }
 
         if (this.getType().equals(another.getType())) {
             return String.valueOf(this.salary)

@@ -33,7 +33,9 @@ public class LinkListAddRemoveTemplate {
 
         // Iterating LinkedList.
         Iterator<String> iterator = list.iterator();
-        while (iterator.hasNext()) { System.out.print(iterator.next() + " "); }
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
         System.out.println("");
 
         // Removing 2nd element, index starts with 0.
@@ -41,7 +43,9 @@ public class LinkListAddRemoveTemplate {
 
         // Iterating LinkedList again.
         Iterator<String> iterator2 = list.iterator();
-        while (iterator2.hasNext()) { System.out.print(iterator2.next() + " "); }
+        while (iterator2.hasNext()) {
+            System.out.print(iterator2.next() + " ");
+        }
         System.out.println("");
     }
 }

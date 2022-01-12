@@ -24,7 +24,9 @@ int main() {
     x = calloc(n, sizeof(int));
 
     printf("Please type '%d' integers (seperated by a space): \n", n);
-    for (i = 0; i < n; i++) { scanf("%d", &x[i]); }
+    for (i = 0; i < n; i++) {
+        scanf("%d", &x[i]);
+    }
 
     printf("Displaying the numbers:\n");
     printArray(x, n);
@@ -49,7 +51,9 @@ int main() {
 
 void printArray(int *array, const int size) {
     int i;
-    for (i = 0; i < size; i++) { printf("%d ", array[i]); }
+    for (i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
     printf("\n");
 }
 
@@ -58,7 +62,9 @@ void sortArray(int *array, const int size) {
 
     for (i = 0; i < size - 1; i++) {
         for (j = 0; j < size - 1; j++) {
-            if (array[j] > array[j + 1]) { swapElements(&array[j], &array[j + 1]); }
+            if (array[j] > array[j + 1]) {
+                swapElements(&array[j], &array[j + 1]);
+            }
         }
     }
 }
@@ -73,7 +79,9 @@ void swapElements(int *x, int *y) {
 double findMean(const int *array, const int size) {
     int    i;
     double mean = 0;
-    for (i = 0; i < size; i++) { mean = mean + array[i]; }
+    for (i = 0; i < size; i++) {
+        mean = mean + array[i];
+    }
     mean = mean / size;
     return mean;
 }

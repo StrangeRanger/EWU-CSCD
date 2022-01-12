@@ -11,7 +11,6 @@ package lab7.cscd211lab7;
 
 import java.io.*;
 import java.util.*;
-
 import lab7.cscd211comparators.*;
 import lab7.cscd211inheritance.*;
 
@@ -27,18 +26,22 @@ public class CSCD211Lab7 {
 
         // Display Employee List.
         System.out.println("Employee List");
-        for (Employee e: myList) { System.out.println(e); }
+        for (Employee e : myList) {
+            System.out.println(e);
+        }
         System.out.println();
 
         // Display Employee Reports.
         System.out.println("Employee Report");
-        for (Employee e: myList) { e.report(); }
+        for (Employee e : myList) {
+            e.report();
+        }
         System.out.println();
 
         // Display Employee List by Natural Order.
         Collections.sort(myList);
         System.out.println("Employee List: Natural Order");
-        for (Employee e: myList) {
+        for (Employee e : myList) {
             System.out.println(e.getType() + " - " + e.getName() + " - " +
                                e.getSalary());
         }
@@ -47,7 +50,7 @@ public class CSCD211Lab7 {
         // Display Employee List by Salary.
         Collections.sort(myList, new SalaryComparator());
         System.out.println("Employee List by Salary");
-        for (Employee e: myList) {
+        for (Employee e : myList) {
             System.out.println(e.getType() + " - " + e.getName() + " - " +
                                e.getSalary());
         }
@@ -56,7 +59,7 @@ public class CSCD211Lab7 {
         // Display Employee List by Name.
         Collections.sort(myList, new NameComparator());
         System.out.println("Employee List by Name");
-        for (Employee e: myList) {
+        for (Employee e : myList) {
             System.out.println(e.getType() + " - " + e.getName() + " - " +
                                e.getSalary());
         }

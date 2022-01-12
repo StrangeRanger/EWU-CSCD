@@ -27,8 +27,8 @@ public class CSCD211_Ch0816_SortRowsColumnsArray {
      */
     public static void sort(int[][] m) {
         for (int primaryIndex = 0; primaryIndex < m.length; primaryIndex++) {
-            int minZero  = m[primaryIndex][0];
-            int minOne   = m[primaryIndex][1];
+            int minZero = m[primaryIndex][0];
+            int minOne  = m[primaryIndex][1];
             // 'minIndex' represents the index at m[j][] that will swap places
             // with the data at index m[primaryIndex][].
             int minIndex = 0;

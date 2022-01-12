@@ -17,13 +17,13 @@ public class HomeWorkTwo {
             System.out.print("Enter your weight in pounds: ");
             imperialWeight = userInput.nextDouble();
             // Converts pounds to kilograms.
-            weight         = imperialWeight / 2.205;
+            weight = imperialWeight / 2.205;
             System.out.print("Enter your height in inches: ");
             imperialHeight = userInput.nextDouble();
             // Converts inches to meters.
-            height         = imperialHeight / 39.37;
+            height = imperialHeight / 39.37;
             // Calculates BMI.
-            userBMI        = weight / (height * height);
+            userBMI = weight / (height * height);
             System.out.println("BMI: " + userBMI + "\n");
         }
 

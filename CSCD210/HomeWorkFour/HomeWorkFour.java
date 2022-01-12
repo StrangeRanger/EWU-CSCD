@@ -14,7 +14,7 @@ public class HomeWorkFour {
         Random  randomInt = new Random();
         int     userChoice, computerChoice, userScore = 0, computerScore = 0;
         // Dictates the number of wins required for the game to stop.
-        int     scoreToWin = 3;
+        int scoreToWin = 3;
 
         System.out.println("\n\n**********************\n* Performing Task 1! *\n"
                            + "**********************");

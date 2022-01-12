@@ -63,7 +63,7 @@ public class HomeWorkFive {
 
         /*--[ Task 4 ]*****************************************************************/
 
-        Random randInt          = new Random();
+        Random randInt = new Random();
         // Each index represents it's corresponding number/place value.
         int[] zeroToNineCounter = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         int randNum;

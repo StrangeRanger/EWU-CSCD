@@ -1,11 +1,10 @@
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
 import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.Scanner;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 public class CurrencyConverter {
     public static void main(String[] args) {
@@ -138,7 +137,9 @@ public class CurrencyConverter {
                 Scanner userInput    = new Scanner(url.openStream());
 
                 // Write all the JSON data into a string using a scanner.
-                while (userInput.hasNext()) { inline.append(userInput.nextLine()); }
+                while (userInput.hasNext()) {
+                    inline.append(userInput.nextLine());
+                }
 
                 // Close the scanner.
                 userInput.close();

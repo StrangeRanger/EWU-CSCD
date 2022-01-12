@@ -1,7 +1,6 @@
 package lab6.cscd211Lab6;
 
 import java.util.*;
-
 import lab6.cscd211Comparator.*;
 import lab6.cscd211Inheritance.*;
 
@@ -23,17 +22,21 @@ public class CSCD211Lab6 {
         myList.add(new CarEngine("Ford", 134));
         myList.add(new TruckEngine("Toyota", 200, false));
 
-        for (Engine e: myList) {
+        for (Engine e : myList) {
             System.out.println(e + " output of " + e.calcOutput());
         }
         System.out.println();
 
         Collections.sort(myList);
-        for (Engine e: myList) { System.out.println(e); }
+        for (Engine e : myList) {
+            System.out.println(e);
+        }
         System.out.println();
 
         Collections.sort(myList, new ManufacturerComparator());
-        for (Engine e: myList) { System.out.println(e); }
+        for (Engine e : myList) {
+            System.out.println(e);
+        }
         System.out.println();
     }
 }

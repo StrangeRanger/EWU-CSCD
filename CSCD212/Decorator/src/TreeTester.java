@@ -17,9 +17,9 @@ public class TreeTester {
         treeOne                  = Star.addStar(treeOne);
         treeOne                  = new Ruffles(treeOne);
         // Should fail to add a star.
-        treeOne                  = Star.addStar(treeOne);
-        treeOne                  = new Ruffles(treeOne);
-        treeOne                  = new Lights(treeOne);
+        treeOne = Star.addStar(treeOne);
+        treeOne = new Ruffles(treeOne);
+        treeOne = new Lights(treeOne);
         System.out.println("Tree1: " + treeOne.getDescription() + " costs: $" +
                            treeOne.getCost());
 
@@ -40,8 +40,8 @@ public class TreeTester {
         treeThree                  = new BlueBalls(treeThree);
         treeThree                  = new Ruffles(treeThree);
         // Should fail to add a star.
-        treeThree                  = Star.addStar(treeThree);
-        treeThree                  = new LEDs(treeThree);
+        treeThree = Star.addStar(treeThree);
+        treeThree = new LEDs(treeThree);
         System.out.println("Tree3: " + treeThree.getDescription() + " costs: $" +
                            treeThree.getCost());
 
@@ -50,9 +50,9 @@ public class TreeTester {
         treeFour                  = new Ruffles(treeFour);
         treeFour                  = Star.addStar(treeFour);
         // Should fail to add a star.
-        treeFour                  = Star.addStar(treeFour);
-        treeFour                  = new LEDs(treeFour);
-        treeFour                  = new RedBalls(treeFour);
+        treeFour = Star.addStar(treeFour);
+        treeFour = new LEDs(treeFour);
+        treeFour = new RedBalls(treeFour);
         System.out.println("Tree4: " + treeFour.getDescription() + " costs: $" +
                            treeFour.getCost());
     }

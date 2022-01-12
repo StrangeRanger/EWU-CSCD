@@ -21,7 +21,9 @@ int main() {
     for (i = 0; i < NUM_ALPHABETS; i++) {
         count = 0;
         for (j = 0; sentence[j] != '\0'; j++) {
-            if (toupper(sentence[j]) == alphabets[i]) { count += 1; }
+            if (toupper(sentence[j]) == alphabets[i]) {
+                count += 1;
+            }
         }
         frequency[i] = count;
     }
@@ -31,7 +33,9 @@ int main() {
     for (i = 0; i < NUM_ALPHABETS; i++) {
         printf("    %c                %d                      ", alphabets[i],
                frequency[i]);
-        for (j = 0; j < frequency[i]; j++) { printf("*"); }
+        for (j = 0; j < frequency[i]; j++) {
+            printf("*");
+        }
         printf("\n");
     }
 

@@ -17,10 +17,18 @@ int main() {
     scanf(" %d", &operation);
 
     switch (operation) {
-        case 0: pFcn = Add; break;
-        case 1: pFcn = Subtract; break;
-        case 2: pFcn = Multiply; break;
-        case 3: pFcn = Divide; break;
+        case 0:
+            pFcn = Add;
+            break;
+        case 1:
+            pFcn = Subtract;
+            break;
+        case 2:
+            pFcn = Multiply;
+            break;
+        case 3:
+            pFcn = Divide;
+            break;
     }
 
     printf("The answer is: %d\n", pFcn(X, Y));
@@ -46,4 +54,3 @@ int Divide(int x, int y) {
     int dividen = x / y;
     return dividen;
 }
-

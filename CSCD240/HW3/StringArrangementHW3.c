@@ -7,8 +7,8 @@ void swap(char **s, char **t);
 void sortString(char *s[], int count);
 
 int main() {
-    char   buff[BUFSIZ];
-    int    count;
+    char buff[BUFSIZ];
+    int  count;
     // 's' is a pointer to a char pointer, initially 's' is allocated storage for one
     // char pointer
     char **s = malloc(sizeof(char *));
@@ -44,7 +44,9 @@ int main() {
 
 void printString(char *s[], int count) {
     int i;
-    for (i = 0; i < count; i++) { printf("%s", s[i]); }
+    for (i = 0; i < count; i++) {
+        printf("%s", s[i]);
+    }
     printf("\n");
 }
 
@@ -59,7 +61,9 @@ void sortString(char *s[], int count) {
     int i, j;
     for (i = 0; i < count - 1; i++) {
         for (j = 0; j < count - 1; j++) {
-            if (strcmp(s[j], s[j + 1]) > 0) { swap(&s[j], &s[j + 1]); }
+            if (strcmp(s[j], s[j + 1]) > 0) {
+                swap(&s[j], &s[j + 1]);
+            }
         }
     }
 }
