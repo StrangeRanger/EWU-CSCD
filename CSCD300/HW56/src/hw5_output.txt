@@ -1,0 +1,34 @@
+(((A+B)-(C-D))/(E-F)) --> AB+CD--EF-/ --> -2.0
+(((A))) --> A --> 8.0
+(A) --> A --> 8.0
+((A --> Parens Not Match Error!
+(B --> Parens Not Match Error!
+D) --> Parens Not Match Error!
+D)) --> Parens Not Match Error!
+() --> Empty infix expression Error!
+(()) --> Empty infix expression Error!
+(((A+B))) --> AB+ --> 7.0
+((A*B)) --> AB* --> -8.0
+(A/B) --> AB/ --> -8.0
+A*B --> AB* --> -8.0
+A/B+C --> AB/C+ --> -1.0
+A^(B-C) --> ABC-^ --> 5.9604644775390625E-8
+(((C^E))) --> CE^ --> 1.977326743E9
+D --> D --> -4.0
+(A-B*C) --> ABC*- --> 15.0
+A-B/C --> ABC/- --> 8.142857142857142
+(A/B*C) --> AB/C* --> -56.0
+(A-C^C) --> ACC^- --> -823535.0
+(A*C^C) --> ACC^* --> 6588344.0
+(D/C^C) --> DCC^/ --> -4.857062715608049E-6
+A-C^C --> ACC^- --> -823535.0
+A-B*C+D/E --> ABC*-DE/+ --> 14.636363636363637
+A*B-C^C^D --> AB*CCD^^- --> -9.000810786714514
+AB-C^C^D --> Infix Syntax Error!
+((A-B*C)^D^E)^(F/G*H+I) --> ABC*-DE^^FG/H*I+^ --> 0.0
+(A-B)*((C*D)+E) --> AB-CD*E+* --> -153.0
+((()(())(((()))) --> Parens Not Match Error!
+((()(()(((()))) --> Parens Not Match Error!
+A*(B/C)+D(A-B) --> Infix Syntax Error!
+A*(B/C)+D^(A-B) --> ABC/*DAB-^+ --> -262145.14285714284
+A*(B/C)+D^A-B --> ABC/*DA^+B- --> 65535.857142857145

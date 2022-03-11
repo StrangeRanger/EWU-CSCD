@@ -1,0 +1,166 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red127\green0\blue85;\red0\green0\blue192;\red106\green62\blue62;
+\red63\green127\blue95;\red42\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c41569\c24314\c24314;
+\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c16471\c0\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs18 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 public\cf0  \cf2 class\cf0  LinkedListWithDummy \{\
+\
+	\cf2 private\cf0  \cf2 class\cf0  Node \{\
+		\cf2 private\cf0  Object \cf3 data\cf0 ;\
+		\cf2 private\cf0  Node \cf3 next\cf0 ;\
+		\
+		\cf2 private\cf0  Node( Object \cf4 data\cf0 , Node \cf4 next\cf0 ) \{\
+			\cf2 this\cf0 .\cf3 data\cf0  = \cf4 data\cf0 ;\
+			\cf2 this\cf0 .\cf3 next\cf0  = \cf4 next\cf0 ;\
+		\}\
+		\cf2 private\cf0  Node(Object \cf4 data\cf0 ) \{\
+			\cf2 this\cf0 (\cf4 data\cf0 , \cf2 null\cf0 );\
+		\}\
+	\}\cf5 //end of the Node class\cf0 \
+	\
+	\cf2 private\cf0  \cf2 int\cf0  \cf3 size\cf0 ;\
+	\cf2 private\cf0  Node \cf3 head\cf0 ;\
+	\
+	\cf5 //constructor \cf0 \
+	\cf2 public\cf0  LinkedListWithDummy() \{ \cf5 //this create an empty \ul linklist\cf0 \ulnone \
+		\cf2 this\cf0 .\cf3 head\cf0  = \cf2 new\cf0  Node(\cf2 null\cf0 , \cf2 null\cf0 );\
+		\cf2 this\cf0 .\cf3 size\cf0  = 0;\
+	\}\
+	\
+	\cf5 // remove the first occurrence of the object toRemove, if multiple copies\cf0 \
+	\cf5 //		exist in the list.\cf0 \
+	\cf5 // IN lecture, we assume that there is no null data element in this list, which\cf0 \
+	\cf5 // differs from the requirements of the hw1.\cf0 \
+	\cf2 public\cf0  \cf2 boolean\cf0  remove( Object \cf4 toRemove\cf0  ) \{\
+		\cf2 for\cf0 (Node \cf4 prev\cf0  = \cf2 this\cf0 .\cf3 head\cf0 , \cf4 cur\cf0  = \cf2 this\cf0 .\cf3 head\cf0 .\cf3 next\cf0 ; \
+				\cf4 cur\cf0  != \cf2 null\cf0 ; \cf4 prev\cf0  = \cf4 cur\cf0 , \cf4 cur\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ) \{\
+			\cf2 if\cf0 (\cf4 cur\cf0 .\cf3 data\cf0 .equals(\cf4 toRemove\cf0 )) \{ \cf5 //cur.data.equals(toRemove)\cf0 \
+				\cf4 prev\cf0 .\cf3 next\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ;\
+				\cf2 this\cf0 .\cf3 size\cf0  --;\
+				\cf2 return\cf0  \cf2 true\cf0 ;\
+			\}\
+		\}\
+		\cf2 return\cf0  \cf2 false\cf0 ;	\
+	\}\
+	\
+	\cf2 public\cf0  \cf2 boolean\cf0  removeAll(Object \cf4 toRemove\cf0 ) \{\
+		\cf2 boolean\cf0  \cf4 ret\cf0  = remove(\cf4 toRemove\cf0 );\
+		\cf2 while\cf0 ( remove(\cf4 toRemove\cf0 ) )\{\
+			\cf5 //empty body\cf0 \
+		\}\
+		\cf2 return\cf0  \cf4 ret\cf0 ;\
+	\}\
+	\
+	\cf2 public\cf0  \cf2 void\cf0  add(\cf2 int\cf0  \cf4 index\cf0 , Object \cf4 toAdd\cf0 ) \{\
+		\cf5 //we assume the worst\cf0 \
+		\cf5 //If index passed in is the list size, that means add at the last in the list.\cf0 \
+		\cf2 if\cf0 (\cf4 index\cf0  < 0 || \cf4 index\cf0  > \cf2 this\cf0 .\cf3 size\cf0 ) \{\
+			\cf2 throw\cf0  \cf2 new\cf0  IndexOutOfBoundsException(\cf6 "Index passed in not valid!"\cf0 );\
+		\}\
+		\cf5 //find where to insert\cf0 \
+		Node \cf4 cur\cf0  = \cf2 this\cf0 .\cf3 head\cf0 ; \cf5 //this is a special setup for a \ul linkedlist\ulnone  with a dummy.\cf0 \
+		                      \cf5 // Most of other methods, the setup may be cur = this.head.next;\cf0 \
+		\cf2 int\cf0  \cf4 i\cf0  = 0;\
+		\cf2 while\cf0 (\cf4 i\cf0  < \cf4 index\cf0 ) \{\
+			\cf4 cur\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ;\
+			\cf4 i\cf0  ++;\
+		\}\
+		\cf5 //after while stops, we insert after cur.\cf0 \
+		\cf5 //perform the add, the wire-in\cf0 \
+		Node \cf4 nn\cf0  = \cf2 new\cf0  Node(\cf4 toAdd\cf0 , \cf4 cur\cf0 .\cf3 next\cf0 );\
+		\cf4 cur\cf0 .\cf3 next\cf0  = \cf4 nn\cf0 ;\
+		\cf2 this\cf0 .\cf3 size\cf0  ++;\
+	\}\
+	\
+	\
+	\cf5 // remove the all occurrences of the object toRemove, if multiple copies\cf0 \
+	\cf5 //		exist in the list.\cf0 \
+	\cf2 public\cf0  \cf2 boolean\cf0  removeAll2( Object \cf4 toRemove\cf0  ) \{\
+		\cf2 boolean\cf0  \cf4 removed\cf0  = \cf2 false\cf0 ;\
+		\cf2 for\cf0 (Node \cf4 prev\cf0  = \cf2 this\cf0 .\cf3 head\cf0 , \cf4 cur\cf0  = \cf2 this\cf0 .\cf3 head\cf0 .\cf3 next\cf0 ;\
+				\cf4 cur\cf0  != \cf2 null\cf0 ; ) \{\
+			\
+			\cf2 if\cf0 ( \cf4 cur\cf0 .\cf3 data\cf0 .equals(\cf4 toRemove\cf0 ) ) \{\
+				\cf4 prev\cf0 .\cf3 next\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ;\
+				\cf2 this\cf0 .\cf3 size\cf0  --;\
+				\cf4 cur\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ;\
+				\cf4 removed\cf0  = \cf2 true\cf0 ;\
+			\}\
+			\cf2 else\cf0  \{\
+				\cf4 prev\cf0  = \cf4 cur\cf0 ;\
+				\cf4 cur\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ;\
+			\}\
+		\}\
+		\cf2 return\cf0  \cf4 removed\cf0 ;\
+	\}\
+	\
+	\cf5 // This method adds dataToAdd into the proper location of this list, such that\cf0 \
+	\cf5 // after insertion this list maintains the sorted order.\cf0 \
+	\cf5 //Precondition is, this list has been sorted already.\cf0 \
+	\cf5 // An empty list is considered as sorted.\cf0 \
+	\cf2 public\cf0  \cf2 void\cf0  addOrderred(\ul Comparable\ulnone  \cf4 dataToAdd\cf0 ) \{\
+		Node \cf4 prev\cf0  = \cf2 this\cf0 .\cf3 head\cf0 , \cf4 cur\cf0  = \cf2 this\cf0 .\cf3 head\cf0 .\cf3 next\cf0 ;\
+		\cf2 while\cf0 (\cf4 cur\cf0  != \cf2 null\cf0  && \ul ( (Comparable)\cf4 \ulc4 cur\cf0 \ulc0 .\cf3 \ulc3 data\cf0 \ulc0 ).compareTo(\cf4 \ulc4 dataToAdd\cf0 \ulc0 )\ulnone  < 0) \{\
+			\cf4 prev\cf0  = \cf4 cur\cf0 ;\
+			\cf4 cur\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ;\
+		\}\
+		\cf5 //here, we will insert before or after cur?  insert between \ul prev\ulnone  and cur;\cf0 \
+		Node \cf4 nn\cf0  = \cf2 new\cf0  Node(\cf4 dataToAdd\cf0 , \cf4 cur\cf0 );\
+		\cf4 prev\cf0 .\cf3 next\cf0  = \cf4 nn\cf0 ;\
+		\cf2 this\cf0 .\cf3 size\cf0  ++;\
+	\}\
+	\
+	\cf2 public\cf0  \cf2 void\cf0  sort() \{\
+		LinkedListWithDummy \cf4 newList\cf0  = \cf2 new\cf0  LinkedListWithDummy();\
+		\cf2 for\cf0 (Node \cf4 cur\cf0  = \cf2 this\cf0 .\cf3 head\cf0 .\cf3 next\cf0 ; \cf4 cur\cf0  != \cf2 null\cf0 ; \cf4 cur\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 ) \{\
+			\cf4 newList\cf0 .addOrderred((\ul Comparable\ulnone )\cf4 cur\cf0 .\cf3 data\cf0 );\
+		\}\
+		\cf2 this\cf0 .\cf3 head\cf0  = \cf4 newList\cf0 .\cf3 head\cf0 ;\cf5 //this.head.next = newlist.head.next;\cf0 \
+	\}\
+	\
+	\cf2 public\cf0  \cf2 void\cf0  selectionSort(\ul Comparable\ulnone  [] \cf4 array\cf0 ) \{\
+		\cf2 int\cf0  \cf4 smallest\cf0 , \cf4 cur\cf0 , \cf4 start\cf0 ; \
+		\ul Comparable\ulnone  \cf4 temp\cf0 ;\
+		\cf2 for\cf0 (\cf4 start\cf0  = 0; \cf4 start\cf0  < \cf4 array\cf0 .\cf3 length\cf0  - 1; \cf4 start\cf0  ++) \{ \cf5 //controls the number of \ul passess\cf0 \ulnone \
+			\cf4 smallest\cf0  = \cf4 start\cf0 ;\
+			\cf5 //search in the range of indices between start and the end of the array.\cf0 \
+			\cf2 for\cf0 (\cf4 cur\cf0  = \cf4 start\cf0  + 1; \cf4 cur\cf0  < \cf4 array\cf0 .\cf3 length\cf0 ; \cf4 cur\cf0  ++) \{\
+				\cf2 if\cf0 (\cf4 \ul \ulc4 array\cf0 \ulc0 [\cf4 \ulc4 cur\cf0 \ulc0 ].compareTo(\cf4 \ulc4 array\cf0 \ulc0 [\cf4 \ulc4 smallest\cf0 \ulc0 ])\ulnone  < 0) \{\
+					\cf4 smallest\cf0  = \cf4 cur\cf0 ;\
+				\}\
+			\}\cf5 //end of inner for\cf0 \
+			\
+			\cf5 //we swap the data at the smallest location with the data at start.\cf0 \
+			\cf4 temp\cf0  = \cf4 array\cf0 [\cf4 start\cf0 ];\
+			\cf4 array\cf0 [\cf4 start\cf0 ] = \cf4 array\cf0 [\cf4 smallest\cf0 ];\
+			\cf4 array\cf0 [\cf4 smallest\cf0 ] = \cf4 temp\cf0 ;\
+		\}\cf5 //end of outer for\cf0 \
+	\}\
+	\
+	\cf5 //sort this list\cf0 \
+	\cf2 public\cf0  \cf2 void\cf0  selectionSort() \{\
+		\cf2 if\cf0 (\cf2 this\cf0 .\cf3 size\cf0  <= 1)\
+			\cf2 return\cf0 ;\
+		Node \cf4 smallest\cf0 , \cf4 cur\cf0 , \cf4 start\cf0 ;\
+		\ul Comparable\ulnone  \cf4 temp\cf0 ;\
+		\cf2 for\cf0 (\cf4 start\cf0  = \cf2 this\cf0 .\cf3 head\cf0 .\cf3 next\cf0 ; \cf4 start\cf0 .\cf3 next\cf0  != \cf2 null\cf0 ; \cf4 start\cf0  = \cf4 start\cf0 .\cf3 next\cf0 ) \cf5 //controls the number of passes\cf0 \
+		\{\
+			\cf4 smallest\cf0  = \cf4 start\cf0 ;\
+			\cf2 for\cf0 (\cf4 cur\cf0  = \cf4 start\cf0 .\cf3 next\cf0 ; \cf4 cur\cf0  != \cf2 null\cf0 ; \cf4 cur\cf0  = \cf4 cur\cf0 .\cf3 next\cf0 )\{\
+				\cf2 if\cf0 ( \ul ((Comparable)\cf4 \ulc4 cur\cf0 \ulc0 .\cf3 \ulc3 data\cf0 \ulc0 ).compareTo(\cf4 \ulc4 smallest\cf0 \ulc0 .\cf3 \ulc3 data\cf0 \ulc0 )\ulnone  < 0)\
+					\cf4 smallest\cf0  = \cf4 cur\cf0 ;\
+			\}\
+			\cf4 temp\cf0  = (\ul Comparable\ulnone )\cf4 start\cf0 .\cf3 data\cf0 ;\
+			\cf4 start\cf0 .\cf3 data\cf0  = \cf4 smallest\cf0 .\cf3 data\cf0 ;\
+			\cf4 smallest\cf0 .\cf3 data\cf0  = \cf4 temp\cf0 ;\
+		\}\cf5 //end of outer loop\cf0 \
+	\}\cf5 //end of method\cf0 \
+	\
+\}\
+}
