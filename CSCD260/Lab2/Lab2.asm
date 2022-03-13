@@ -1,4 +1,4 @@
-.ORIG X3000
+.ORIG x3000
 
 ;;; Simulator used: http://lc3tutor.org/
 
@@ -57,10 +57,10 @@ LAST    STI R7, Z       ; Store the value at R7 to address Z
         HALT
 
 X .FILL x3120
-Y .FILL X3121
+Y .FILL x3121
 A .FILL x3122
 B .FILL x3123
-C .FILL X3124
+C .FILL x3124
 Z .FILL x3125
 
 .END
