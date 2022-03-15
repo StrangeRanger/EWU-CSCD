@@ -62,7 +62,7 @@ public class LinkedQueue {
             throw new Exception("Queue is empty.");
         Object tmp = head.data;
         head       = head.next;  // head always points to the item that is ready to be
-                           // dequeued next.
+                                 // dequeued next.
         size--;
 
         if (size == 0)
