@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class HomeWorkThree {
     public static void main(String[] args) {
-        /*--[ Task 1 ]*****************************************************************/
+        /* [ Task 1 ]**************************************************************** */
 
         Scanner userInput = new Scanner(System.in);
         int     year;
@@ -119,7 +119,7 @@ public class HomeWorkThree {
         // Adds extra line between next task.
         System.out.println();
 
-        /*--[ Task 2 ]*****************************************************************/
+        /* [ Task 2 ]**************************************************************** */
 
         Scanner userInputTwo = new Scanner(System.in);
         String  city1, city2, city3, temp;
@@ -162,7 +162,7 @@ public class HomeWorkThree {
         // Adds extra line between next task.
         System.out.println("");
 
-        /*--[ Task 3 ]*****************************************************************/
+        /* [ Task 3 ]**************************************************************** */
 
         int numberOfPrime = 0;
         System.out.println("**********************\n* Performing Task 3! *\n"
@@ -193,7 +193,7 @@ public class HomeWorkThree {
         // Adds extra line between next task.
         System.out.println();
 
-        /*--[ Task 4 ]*****************************************************************/
+        /* [ Task 4 ]**************************************************************** */
 
         Scanner userInputFour = new Scanner(System.in);
         String  string, stringLowerCase;
@@ -238,7 +238,7 @@ public class HomeWorkThree {
         // Adds extra line between next task.
         System.out.println();
 
-        /*--[ Task 5 ]*****************************************************************/
+        /* [ Task 5 ]**************************************************************** */
 
         Scanner userInputFive = new Scanner(System.in);
         String  normalString, reverseString;

@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class HomeWorkFive {
     public static void main(String[] args) {
-        /*--[ Module Wide Variables ]**************************************************/
+        /* [ Module Wide Variables ]************************************************* */
 
         String RED    = "\033[1;31m";  // String color becomes red
         String DEFCLR = "\033[0m";     // String color gets reset
 
-        /*--[ Task 1 ]*****************************************************************/
+        /* [ Task 1 ]**************************************************************** */
 
         // I am too tired and exhausted after working on the final for about 3 days
         // straight. I'm fine with taking the lose on this task.
@@ -20,7 +20,7 @@ public class HomeWorkFive {
                            "final for about 3 days straight. I'm fine with taking the "
                            + "Lose on this task.\n");
 
-        /*--[ Task 2 ]*****************************************************************/
+        /* [ Task 2 ]**************************************************************** */
 
         Scanner userInputTwo = new Scanner(System.in);
         int     nByN;
@@ -82,7 +82,7 @@ public class HomeWorkFive {
 
         System.out.println();
 
-        /*--[ Task 5 ]*****************************************************************/
+        /* [ Task 5 ]**************************************************************** */
 
         // I am too tired and exhausted after working on the final for about 3 days
         // straight. I'm fine with taking the Lose on this task.

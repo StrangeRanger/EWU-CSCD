@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 public class HomeWorkFour {
     public static void main(String[] args) {
-        /*--[ Module Wide Variables ]**************************************************/
+        /* [ Module Wide Variables ]************************************************* */
 
         String RED    = "\033[1;31m";  // String color becomes red.
         String DEFCLR = "\033[0m";     // String color gets reset.
 
-        /*--[ Task 1 ]*****************************************************************/
+        /* [ Task 1 ]**************************************************************** */
 
         Scanner userInput = new Scanner(System.in);
         Random  randomInt = new Random();
@@ -52,7 +52,7 @@ public class HomeWorkFour {
         // Adds extra line between next task.
         System.out.println();
 
-        /*--[ Task 2 ]*****************************************************************/
+        /* [ Task 2 ]**************************************************************** */
 
         Scanner userInputTwo = new Scanner(System.in);
         int     sum;
@@ -91,7 +91,7 @@ public class HomeWorkFour {
         // Adds extra line between next task.
         System.out.println();
 
-        /*--[ Task 3 ]*****************************************************************/
+        /* [ Task 3 ]**************************************************************** */
 
         Scanner userInputThree = new Scanner(System.in);
         String  hex;
@@ -142,7 +142,7 @@ public class HomeWorkFour {
             }
         }
 
-        /*--[ Task 4 ]*****************************************************************/
+        /* [ Task 4 ]**************************************************************** */
 
         String fiveAndSix = "", onlyFiveOrSix = "";
         int    fiveAndSixLineCount = 1, onlyFiveOrSixLineCount = 1;
@@ -175,7 +175,7 @@ public class HomeWorkFour {
         System.out.println("\nIntegers between 100 and 1,000 that are divisible "
                            + "by either 5 or 6, but not both:\n" + onlyFiveOrSix);
 
-        /*--[ Task 5 ]*****************************************************************/
+        /* [ Task 5 ]**************************************************************** */
 
         Scanner userInputFive = new Scanner(System.in);
         int     normalNumber;

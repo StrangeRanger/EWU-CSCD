@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class HomeWorkOne {
     public static void main(String[] args) {
-        /*--[ Task 1 ]*****************************************************************/
+        /* [ Task 1 ]**************************************************************** */
 
         System.out.println("**********************\n* Performing Task 1! *\n"
                            + "**********************");
         System.out.println("a  a^2  a^3\n1  1    1\n2  4    8\n3  9    27\n4  16   64");
 
-        /*--[ Task 2 ]*****************************************************************/
+        /* [ Task 2 ]**************************************************************** */
 
         double width = 4.5, height = 8.0;
 
@@ -20,7 +20,7 @@ public class HomeWorkOne {
         // Displays the calculated perimeter.
         System.out.println("Perimeter = " + (2 * (width + height)));
 
-        /*--[ Task 3 ]*****************************************************************/
+        /* [ Task 3 ]**************************************************************** */
 
         // Creates a Scanner object.
         Scanner userInputThree = new Scanner(System.in);
@@ -38,7 +38,7 @@ public class HomeWorkOne {
                                "°F");
         }
 
-        /*--[ Task 4 ]*****************************************************************/
+        /* [ Task 4 ]**************************************************************** */
 
         Scanner userInputFour = new Scanner(System.in);
         // 'height' has already been declared in Task 2.
@@ -60,7 +60,7 @@ public class HomeWorkOne {
         System.out.println("\nArea = " + area + " Squared\nVolume = " + volume +
                            " Cubed");
 
-        /*--[ Task 5 ]*****************************************************************/
+        /* [ Task 5 ]**************************************************************** */
 
         Scanner userInputFive = new Scanner(System.in);
         // Using DecimalFormat to format output with two decimal points.

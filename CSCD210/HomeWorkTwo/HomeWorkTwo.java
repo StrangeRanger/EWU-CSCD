@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class HomeWorkTwo {
     public static void main(String[] args) {
-        /*--[ Task 1 ]*****************************************************************/
+        /* [ Task 1 ]**************************************************************** */
 
         Scanner userInput = new Scanner(System.in);
         double  imperialWeight, imperialHeight, weight, height, userBMI;
@@ -27,7 +27,7 @@ public class HomeWorkTwo {
             System.out.println("BMI: " + userBMI + "\n");
         }
 
-        /*--[ Task 2 ]*****************************************************************/
+        /* [ Task 2 ]**************************************************************** */
 
         Scanner userInputTwo = new Scanner(System.in);
         String  integer;
@@ -47,7 +47,7 @@ public class HomeWorkTwo {
             }
         }
 
-        /*--[ Task 3 ]*****************************************************************/
+        /* [ Task 3 ]**************************************************************** */
 
         Scanner userInputThree = new Scanner(System.in);
         Random  randomInt      = new Random();
@@ -76,7 +76,7 @@ public class HomeWorkTwo {
             }
         }
 
-        /*--[ Task 4 ]*****************************************************************/
+        /* [ Task 4 ]**************************************************************** */
 
         Scanner userInputFour = new Scanner(System.in);
         int     userInt;
@@ -101,7 +101,7 @@ public class HomeWorkTwo {
                     ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n" : "False\n"));
         }
 
-        /*--[ Task 5 ]*****************************************************************/
+        /* [ Task 5 ]**************************************************************** */
 
         char    userHex;
         Scanner userInputFive = new Scanner(System.in);

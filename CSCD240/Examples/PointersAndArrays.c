@@ -2,73 +2,70 @@
 
 #define SIZE 10
 
-int main(){
+int main() {
+    int i;
 
-	int i;
+    int array[SIZE];
 
-	int array[SIZE];
+    for (i = 0; i < SIZE; i++)
+        array[i] = i;
 
-	for (i = 0; i < SIZE; i++)
-		array[i] = i;
+    int *ptr;
 
-	int *ptr;
-	
-	ptr = array;// sets pointer to the address of the first element of the array
+    ptr = array;  // sets pointer to the address of the first element of the array
 
-	
-	printf("Calling  *(ptr+i)   version: \n");
+    printf("Calling  *(ptr+i)   version: \n");
 
-	for (i = 0; i < SIZE; i++)
+    for (i = 0; i < SIZE; i++)
 
-		printf("%d ", *(ptr + i));
-	putchar('\n');
+        printf("%d ", *(ptr + i));
+    putchar('\n');
 
-	printf("Calling  array[i]   version: \n");
+    printf("Calling  array[i]   version: \n");
 
-	for (i = 0; i < SIZE; i++)
+    for (i = 0; i < SIZE; i++)
 
-		printf("%d ", array[i]);
-	putchar('\n');
+        printf("%d ", array[i]);
+    putchar('\n');
 
-	printf("Calling  *(array+i)   version: \n");
+    printf("Calling  *(array+i)   version: \n");
 
+    for (i = 0; i < SIZE; i++)
 
-	for (i = 0; i < SIZE; i++)
+        printf("%d ", *(array + i));
+    putchar('\n');
 
-		printf("%d ", *(array+i));
-	putchar('\n');
+    printf("Calling  ptr[i]   version: \n");
 
-        printf("Calling  ptr[i]   version: \n");
+    for (i = 0; i < SIZE; i++)
 
-	for (i = 0; i < SIZE; i++)
+        printf("%d ", ptr[i]);
+    putchar('\n');
 
-		printf("%d ", ptr[i]);
-	putchar('\n');
+    printf("Calling  *ptr++   version: \n");
+    for (i = 0; i < SIZE; i++)
 
-	printf("Calling  *ptr++   version: \n");
-	for (i = 0; i < SIZE; i++)
+        printf("%d ", *(ptr++));
+    putchar('\n');
 
-	printf("%d ", *(ptr++));
-	putchar('\n');
+    ptr = array;
 
-	ptr = array;
+    printf("Calling  *++ptr   version: \n");
+    for (i = 0; i < SIZE; i++)
 
-	printf("Calling  *++ptr   version: \n");
-	for (i = 0; i < SIZE; i++)
+        printf("%d ", *++ptr);
+    putchar('\n');
 
-		printf("%d ", *++ptr);
-	putchar('\n');
+    ptr = array;
 
-        ptr = array;
-        
-        printf("Calling  ++*ptr   version: \n");
-        for (i = 0; i < SIZE; i++)
-             ++*ptr;
- 
-       for (i = 0; i < SIZE; i++)
-            printf("%d ", ptr[i]);
+    printf("Calling  ++*ptr   version: \n");
+    for (i = 0; i < SIZE; i++)
+        ++*ptr;
 
-        putchar('\n');
-	
-	return 0;
+    for (i = 0; i < SIZE; i++)
+        printf("%d ", ptr[i]);
+
+    putchar('\n');
+
+    return 0;
 }

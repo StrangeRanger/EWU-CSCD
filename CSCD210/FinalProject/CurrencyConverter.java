@@ -8,7 +8,7 @@ import org.json.simple.parser.JSONParser;
 
 public class CurrencyConverter {
     public static void main(String[] args) {
-        /*--[ Module Wide Variables ]**************************************************/
+        /* [ Module Wide Variables ]************************************************ **/
 
         Scanner       userInput       = new Scanner(System.in);
         JSONObject    conversionRates = (JSONObject) getAPIData("USD");
@@ -18,7 +18,7 @@ public class CurrencyConverter {
         final String  RED    = "\033[1;31m";  // String color becomes red.
         final String  DEFCLR = "\033[0m";     // String color gets reset.
 
-        /*--[ Main ]*******************************************************************/
+        /* [ Main ]****************************************************************** */
 
         df.setRoundingMode(
                 RoundingMode.HALF_EVEN);  // Set rounding method for final output.
