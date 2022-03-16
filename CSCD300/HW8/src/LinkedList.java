@@ -80,11 +80,7 @@ public class LinkedList {
      * @param data Value to be stored in a specified Node.
      */
     public void addLast(Object data) {
-        Node current = this.head.next, newNode;
-
-        while (current.next != this.head) {
-            current = current.next;
-        }
+        Node current = this.head.prev, newNode;
 
         newNode           = new Node(data, current, current.next);
         current.next.prev = newNode;
