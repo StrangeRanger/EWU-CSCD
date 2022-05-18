@@ -172,8 +172,8 @@ public class CDoublyLinkedList {
             Comparable firstUnsortedData = (Comparable) lastSorted.next.data;
             Node       sortedWalker      = lastSorted;
 
-            for (; sortedWalker != this.head &&
-                   firstUnsortedData.compareTo(sortedWalker.data) < 0;
+            for (; sortedWalker != this.head
+                   && firstUnsortedData.compareTo(sortedWalker.data) < 0;
                  sortedWalker = sortedWalker.prev) {
                 sortedWalker.next.data = sortedWalker.data;
             }

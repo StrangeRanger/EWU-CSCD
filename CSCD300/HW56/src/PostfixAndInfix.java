@@ -114,8 +114,8 @@ public class PostfixAndInfix {
                 }
                 stack.pop();
             } else {
-                while (! stack.isEmpty() &&
-                       operatorPrecedence(stack.peek(), character)) {
+                while (! stack.isEmpty()
+                       && operatorPrecedence(stack.peek(), character)) {
                     postfixExpression += stack.pop();
                 }
                 stack.push(character);
@@ -170,8 +170,8 @@ public class PostfixAndInfix {
                         tmp = left % right;
                         break;
                     default:
-                        throw new Exception("Invalid operator was provided: " +
-                                            character);
+                        throw new Exception("Invalid operator was provided: "
+                                            + character);
                 }
 
                 stack.push(tmp);

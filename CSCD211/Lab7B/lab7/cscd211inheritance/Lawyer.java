@@ -34,8 +34,8 @@ public class Lawyer extends Employee {
      * class" and I have "stock options value" shares of stock.
      */
     public void report() {
-        System.out.println("I am a Lawyer. I get " + getSalary() + " and I have " +
-                           getStockOptions() + " shares of stock.");
+        System.out.println("I am a Lawyer. I get " + getSalary() + " and I have "
+                           + getStockOptions() + " shares of stock.");
     }
 
     // Unsure if this is correct

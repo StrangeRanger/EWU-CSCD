@@ -171,8 +171,8 @@ public class LinkedList {
             Node       sortedWalker;
 
             for (sortedWalker = lastSorted;
-                 sortedWalker != this.head &&
-                 firstUnsortedData.compareTo(sortedWalker.data) < 0;
+                 sortedWalker != this.head
+                 && firstUnsortedData.compareTo(sortedWalker.data) < 0;
                  sortedWalker = sortedWalker.prev) {
                 sortedWalker.next.data = sortedWalker.data;
             }

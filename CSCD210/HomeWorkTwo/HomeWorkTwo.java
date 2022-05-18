@@ -55,9 +55,9 @@ public class HomeWorkTwo {
 
         System.out.println("\n\n**********************\n* Performing Task 3! *\n"
                            + "**********************");
-        System.out.println("For a total of 5 times, you'll be asked to choose"
-                           +
-                           "rock, paper, or scissors in number formed (use key below)");
+        System.out.println(
+                "For a total of 5 times, you'll be asked to choose"
+                + "rock, paper, or scissors in number formed (use key below)");
         System.out.println("Key: 0 = Rock\n1 = Scissors\n2 = Paper\n");
 
         for (var i = 0; i < 5; i++) {
@@ -67,9 +67,9 @@ public class HomeWorkTwo {
             System.out.println("Computer choice: " + computerChoice);
             if (userChoice == computerChoice) {
                 System.out.println("Tie!\n");
-            } else if ((userChoice == 0 && computerChoice == 1) ||
-                       (userChoice == 1 && computerChoice == 2) ||
-                       (userChoice == 2 && computerChoice == 0)) {
+            } else if ((userChoice == 0 && computerChoice == 1)
+                       || (userChoice == 1 && computerChoice == 2)
+                       || (userChoice == 2 && computerChoice == 0)) {
                 System.out.println("User won!\n");
             } else {
                 System.out.println("Computer won!\n");
@@ -90,15 +90,15 @@ public class HomeWorkTwo {
             System.out.print("Enter your an integer: ");
             userInt = userInputFour.nextInt();
 
-            System.out.println(
-                    userInt + " is divisible by 6 and 7: " +
-                    ((userInt % 6 == 0 && userInt % 7 == 0) ? "True" : "False"));
-            System.out.println(
-                    userInt + " is divisible by 6 or 7: " +
-                    ((userInt % 6 == 0 || userInt % 7 == 0) ? "True" : "False"));
-            System.out.println(
-                    userInt + " is divisible by 6 or 7, but not both: " +
-                    ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n" : "False\n"));
+            System.out.println(userInt + " is divisible by 6 and 7: "
+                               + ((userInt % 6 == 0 && userInt % 7 == 0) ? "True"
+                                                                         : "False"));
+            System.out.println(userInt + " is divisible by 6 or 7: "
+                               + ((userInt % 6 == 0 || userInt % 7 == 0) ? "True"
+                                                                         : "False"));
+            System.out.println(userInt + " is divisible by 6 or 7, but not both: "
+                               + ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n"
+                                                                        : "False\n"));
         }
 
         /* [ Task 5 ]**************************************************************** */

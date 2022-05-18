@@ -164,8 +164,8 @@ public class Hashtable {
         myhash.put(3.4, "green");
         myhash.put(3.4, "white");  // this successfully updated the existing record with
                                    // key = 3.4
-        System.out.println("After total four adds(one update), hashtalbe is: \n" +
-                           myhash);
+        System.out.println("After total four adds(one update), hashtalbe is: \n"
+                           + myhash);
         System.out.println("Size of the table is " + myhash.size());
 
         myhash.remove(3.4);

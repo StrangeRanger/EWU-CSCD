@@ -12,39 +12,39 @@ public class MainCalss {
     public static void main(String[] args) throws Exception {
         PrintStream fileStream = new PrintStream(new File("hw5_output.txt"));
         String[] infixArray    = {"(((A + B) - (C - D)) / (E - F))",
-                               "(((A)))",
-                               "(A)",
-                               "((A",
-                               "(B",
-                               "D)",
-                               "D))",
-                               "()",
-                               "((  ))",
-                               "(((A + B)))",
-                               "((A * B))",
-                               "(A / B)",
-                               "A * B",
-                               "A / B + C",
-                               "A ^ (B - C) ",
-                               "(((C ^ E)))",
-                               "D",
-                               "( A - B * C)",
-                               "A- B / C",
-                               "( A / B * C)",
-                               "( A - C ^ C)",
-                               "( A * C ^ C) ",
-                               "( D / C ^ C)",
-                               "A - C ^ C ",
-                               "A - B * C +D / E",
-                               "A*B - C ^ C ^ D",
-                               "A B - C ^ C ^ D",
-                               "(( A - B * C) ^ D ^ E) ^ ( F / G * H + I )",
-                               "(A - B) * (( C * D ) + E)",
-                               "(((  )((  ) )((((  ))))",
-                               "(((  )((  ) ((((  ))))",
-                               "A * ( B / C) + D( A - B)",
-                               "A * ( B / C) + D ^ ( A - B)",
-                               "A * ( B / C) + D ^ A - B"};
+                                  "(((A)))",
+                                  "(A)",
+                                  "((A",
+                                  "(B",
+                                  "D)",
+                                  "D))",
+                                  "()",
+                                  "((  ))",
+                                  "(((A + B)))",
+                                  "((A * B))",
+                                  "(A / B)",
+                                  "A * B",
+                                  "A / B + C",
+                                  "A ^ (B - C) ",
+                                  "(((C ^ E)))",
+                                  "D",
+                                  "( A - B * C)",
+                                  "A- B / C",
+                                  "( A / B * C)",
+                                  "( A - C ^ C)",
+                                  "( A * C ^ C) ",
+                                  "( D / C ^ C)",
+                                  "A - C ^ C ",
+                                  "A - B * C +D / E",
+                                  "A*B - C ^ C ^ D",
+                                  "A B - C ^ C ^ D",
+                                  "(( A - B * C) ^ D ^ E) ^ ( F / G * H + I )",
+                                  "(A - B) * (( C * D ) + E)",
+                                  "(((  )((  ) )((((  ))))",
+                                  "(((  )((  ) ((((  ))))",
+                                  "A * ( B / C) + D( A - B)",
+                                  "A * ( B / C) + D ^ ( A - B)",
+                                  "A * ( B / C) + D ^ A - B"};
 
         // Set output stream.
         System.setOut(fileStream);
@@ -61,9 +61,9 @@ public class MainCalss {
             }
 
             expression.postfixEvaluation();
-            System.out.println(expression.getInfixExpression() + " --> " +
-                               expression.getPostfixExpression() + " --> " +
-                               expression.getPostfixValue());
+            System.out.println(expression.getInfixExpression() + " --> "
+                               + expression.getPostfixExpression() + " --> "
+                               + expression.getPostfixValue());
         }
     }
 }

@@ -63,8 +63,8 @@ public class Engine implements Comparable<Engine> {
      */
     @Override
     public String toString() {
-        return ("Manufacturer: " + this.manufacturer + " with HP of " +
-                this.horsePower);
+        return ("Manufacturer: " + this.manufacturer + " with HP of "
+                + this.horsePower);
     }
 
     /**

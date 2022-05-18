@@ -34,8 +34,8 @@ public class HomeWorkOne {
             System.out.print("Enter a temperature in degrees Celsius: ");
             double celsius = userInputThree.nextDouble();
             // Displays Temperature in Fahrenheit.
-            System.out.println(celsius + "°C = " + ((celsius * (9.0 / 5.0)) + 32.0) +
-                               "°F");
+            System.out.println(celsius + "°C = " + ((celsius * (9.0 / 5.0)) + 32.0)
+                               + "°F");
         }
 
         /* [ Task 4 ]**************************************************************** */
@@ -57,8 +57,8 @@ public class HomeWorkOne {
         area   = radius * radius * pi;
         volume = area * height;
 
-        System.out.println("\nArea = " + area + " Squared\nVolume = " + volume +
-                           " Cubed");
+        System.out.println("\nArea = " + area + " Squared\nVolume = " + volume
+                           + " Cubed");
 
         /* [ Task 5 ]**************************************************************** */
 
@@ -78,7 +78,7 @@ public class HomeWorkOne {
                 + "as .20)**\nEnter the amount (between 10% and 25%) to be tipped: ");
         tipPercent        = userInputFive.nextFloat();
         totalCostAfterTip = totalCost + (totalCost * tipPercent);
-        System.out.print("\nThe total amount spent after the tip: " +
-                         dF.format(totalCostAfterTip));
+        System.out.print("\nThe total amount spent after the tip: "
+                         + dF.format(totalCostAfterTip));
     }
 }

@@ -63,7 +63,9 @@ public class MyLinkedListTester {
             System.out.println(list3);
             list3.add(2, "B2");
             System.out.println(list3);
-        } catch (IndexOutOfBoundsException e) { System.out.println(e); }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e);
+        }
         drawLine();
     }
 
@@ -78,7 +80,9 @@ public class MyLinkedListTester {
             list0.remove(2);
             System.out.println(list0);
 
-        } catch (IndexOutOfBoundsException e) { System.out.println(e); }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e);
+        }
 
         list0.remove(1);
         System.out.println(list0);
@@ -98,7 +102,9 @@ public class MyLinkedListTester {
             System.out.println(list0.get(3));
             System.out.println(list0.get(4));
 
-        } catch (IndexOutOfBoundsException e) { System.out.println(e); }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e);
+        }
 
         System.out.println(list2.get(3));
 
@@ -157,7 +163,9 @@ public class MyLinkedListTester {
             System.out.println(list0 + ", removed:" + tmp);
             tmp = list0.removeFirst();
             System.out.println(list0 + ", removed:" + tmp);
-        } catch (Exception e) { System.out.println(e); }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         drawLine();
     }
 

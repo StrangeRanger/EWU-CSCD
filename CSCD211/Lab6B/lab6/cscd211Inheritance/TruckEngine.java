@@ -43,10 +43,10 @@ public class TruckEngine extends Engine {
      */
     @Override
     public String toString() {
-        return ("Truck Engine - " + super.toString() +
-                (this.diesel ? " is a "
-                                       + "diesel engine"
-                             : " is NOT a diesel Engine"));
+        return ("Truck Engine - " + super.toString()
+                + (this.diesel ? " is a "
+                                         + "diesel engine"
+                               : " is NOT a diesel Engine"));
     }
 
     /**
