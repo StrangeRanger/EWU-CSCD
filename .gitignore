@@ -97,9 +97,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-# clang stuff
-_clang-format
-c.txt
-java.txt
-code.sh
