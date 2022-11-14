@@ -14,7 +14,15 @@ import java.util.Arrays;
 public class CSCD211_Ch0816_SortRowsColumnsArray {
     public static void main(String[] args) {
         int[][] myArray = {
-                {4, 5}, {2, 4}, {1, 7}, {1, 2}, {1, 1}, {5, 2}, {4, 2}, {4, 1}, {5, 4},
+                {4, 5},
+                {2, 4},
+                {1, 7},
+                {1, 2},
+                {1, 1},
+                {5, 2},
+                {4, 2},
+                {4, 1},
+                {5, 4},
         };
 
         sort(myArray);

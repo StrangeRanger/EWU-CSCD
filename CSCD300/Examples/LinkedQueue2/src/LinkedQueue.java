@@ -26,11 +26,11 @@ public class LinkedQueue {
         this.size = 0;
     }
 
-    public int size() {  //# Return the current queue size
+    public int size() {  // # Return the current queue size
         return this.size;
     }
 
-    public boolean isEmpty() {  //# Returns true iff queue is empty
+    public boolean isEmpty() {  // # Returns true iff queue is empty
         if ((head == null) && (tail == null) || this.size == 0)
             return true;
 
@@ -49,7 +49,7 @@ public class LinkedQueue {
         size++;       // tail always points to the last inserted item.
     }
 
-    public Object front() throws Exception {  //# Return the first queue element
+    public Object front() throws Exception {  // # Return the first queue element
         if (size == 0)
             throw new Exception("Queue is empty.");
 
