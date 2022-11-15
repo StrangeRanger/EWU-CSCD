@@ -27,7 +27,7 @@ criminal_id		last	first	cnt_sentence
 1030			Panner	Lee		2
 ******** Query 5 ********
 precinct	charge_cnt
-WAVE		9
+WAVE		8
 ******** Query 6 ********
 criminal_id		first	last		earliest_start_date		latest_end_date
 1020			Sam		Phelps		2008-09-14				2010-09-14
