@@ -8,8 +8,7 @@ import org.json.simple.parser.JSONParser;
 
 public class CurrencyConverter {
     public static void main(String[] args) {
-        /* [ Module Wide Variables ]************************************************ **/
-
+        /* [ Module Wide Variables ]************************************************* */
         Scanner       userInput       = new Scanner(System.in);
         JSONObject    conversionRates = (JSONObject) getAPIData("USD");
         DecimalFormat df              = new DecimalFormat("#.##");  // Format output.
