@@ -179,6 +179,7 @@ public class MyQuery {
                      + "FROM crime_charges "
                      + "    JOIN crime_officers USING (crime_id) "
                      + "    JOIN officers       USING (officer_id) "
+                     + "WHERE (charge_status = 'GL') != 0 "
                      + "GROUP BY precinct "
                      + "HAVING charge_cnt >= 7;";
 
@@ -264,3 +265,4 @@ public class MyQuery {
         }
     }
 }
+
