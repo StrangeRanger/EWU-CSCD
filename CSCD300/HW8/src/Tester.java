@@ -22,8 +22,7 @@ public class Tester {
         then = System.currentTimeMillis();
         A2.insertionSort();
         now = System.currentTimeMillis();
-        System.out.println("Time cost in milliseconds for insertionsort "
-                           + (now - then));
+        System.out.println("Time cost in milliseconds for insertionsort " + (now - then));
         // verify that your insertion sort works.
         System.out.println(A2.isSorted());
         System.out.println("Size of list A2 is: " + A2.getSize());

@@ -84,18 +84,13 @@ public class Hashtable {
          * associated with that existing key. We first delete the existing mapping, then
          * insert a new record that key.
          */
-        if (this.contains(key)) {
-            remove(key);
-        }
+        if (this.contains(key)) { remove(key); }
         // Find out where, in our array, the new item should go.
         int pos = this.hash(key);
         // If nothing exists in the position, create a new linked list there.
-        if (this.table[pos] == null) {
-            this.table[pos] = new LinkedList<HashtableRecord>();
-        }
+        if (this.table[pos] == null) { this.table[pos] = new LinkedList<HashtableRecord>(); }
 
-        LinkedList<HashtableRecord> theList =
-                (LinkedList<HashtableRecord>) this.table[pos];
+        LinkedList<HashtableRecord> theList = (LinkedList<HashtableRecord>) this.table[pos];
         // Add to the linked list in the appropriate position.
         theList.add(new HashtableRecord(key, data));
         this.numElements++;
@@ -122,9 +117,7 @@ public class Hashtable {
                     (LinkedList<HashtableRecord>) this.table[pos];
 
             for (HashtableRecord hashtableRecord : theList) {
-                if (hashtableRecord.key.equals(key)) {
-                    return hashtableRecord.value;
-                }
+                if (hashtableRecord.key.equals(key)) { return hashtableRecord.value; }
             }
         }
 
@@ -145,10 +138,8 @@ public class Hashtable {
                     (LinkedList<HashtableRecord>) this.table[pos];
 
             boolean removed = theList.remove(node);
-            if (theList.size() == 0)
-                this.table[pos] = null;
-            if (removed)
-                this.numElements--;
+            if (theList.size() == 0) this.table[pos] = null;
+            if (removed) this.numElements--;
         }
     }
 
@@ -160,7 +151,9 @@ public class Hashtable {
     }
 
     /** Returns 'numElements'. */
-    public int getNumElements() { return this.numElements; }
+    public int getNumElements() {
+        return this.numElements;
+    }
 
     /** Checks if a given key exists in hashtable. */
     public boolean contains(Object key) {
@@ -183,9 +176,7 @@ public class Hashtable {
 
         buffer += "{\n";
         for (int i = 0; i < this.table.length; i++) {
-            if (this.table[i] != null) {
-                buffer = buffer + "\t" + this.table[i] + "\n";
-            }
+            if (this.table[i] != null) { buffer = buffer + "\t" + this.table[i] + "\n"; }
         }
         buffer += "}";
         return buffer;

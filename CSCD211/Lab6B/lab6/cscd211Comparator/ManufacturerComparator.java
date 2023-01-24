@@ -12,6 +12,7 @@ package lab6.cscd211Comparator;
 // *************************************************************************************
 
 import java.util.Comparator;
+
 import lab6.cscd211Inheritance.Engine;
 
 /**
@@ -30,5 +31,7 @@ public class ManufacturerComparator implements Comparator<Engine> {
      * @return int Representing if e1 < e2, e1 > e2, or e1 equal to e2 based on the
      *             manufacturer.
      */
-    public int compare(final Engine e1, final Engine e2) { return e1.compareTo(e2); }
+    public int compare(final Engine e1, final Engine e2) {
+        return e1.compareTo(e2);
+    }
 }

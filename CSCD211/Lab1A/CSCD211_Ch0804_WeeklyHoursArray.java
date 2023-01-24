@@ -39,8 +39,7 @@ public class CSCD211_Ch0804_WeeklyHoursArray {
         }
 
         // Lists employees from most amount of hours worked to least hours worked.
-        for (int totalHours = maxNumber(totalHoursWorked); totalHours >= 0;
-             totalHours--) {
+        for (int totalHours = maxNumber(totalHoursWorked); totalHours >= 0; totalHours--) {
             for (int employee = 0; employee < totalHoursWorked.length; employee++) {
                 if (totalHoursWorked[employee] == totalHours) {
                     System.out.println("Employee " + employee + "'s total "
@@ -59,9 +58,7 @@ public class CSCD211_Ch0804_WeeklyHoursArray {
     public static int maxNumber(int[] customArray) {
         int max = 0;
         for (int i = 0; i < customArray.length; i++) {
-            if (customArray[i] > max) {
-                max = customArray[i];
-            }
+            if (customArray[i] > max) { max = customArray[i]; }
         }
         return max;
     }

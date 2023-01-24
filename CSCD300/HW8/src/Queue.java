@@ -24,7 +24,9 @@ public class Queue {
      *
      * @return The current queue size.
      */
-    public int getSize() { return this.size; }
+    public int getSize() {
+        return this.size;
+    }
 
     /**
      * Return true if queue is empty, else return false.
@@ -60,17 +62,13 @@ public class Queue {
      * @throws Exception
      */
     public Object dequeue() throws Exception {
-        if (size == 0) {
-            throw new Exception("Queue is empty.");
-        }
+        if (size == 0) { throw new Exception("Queue is empty."); }
 
         Object tmp = head.data;
         head       = head.next;
         size--;
 
-        if (size == 0) {
-            tail = null;
-        }
+        if (size == 0) { tail = null; }
 
         return tmp;
     }
@@ -82,8 +80,7 @@ public class Queue {
             Node p = this.head;
             do {
                 s += p.data;
-                if (p != tail)
-                    s += ", ";
+                if (p != tail) s += ", ";
                 p = p.next;
             } while (p != null);
         }

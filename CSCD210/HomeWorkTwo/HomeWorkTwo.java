@@ -55,9 +55,8 @@ public class HomeWorkTwo {
 
         System.out.println("\n\n**********************\n* Performing Task 3! *\n"
                            + "**********************");
-        System.out.println(
-                "For a total of 5 times, you'll be asked to choose"
-                + "rock, paper, or scissors in number formed (use key below)");
+        System.out.println("For a total of 5 times, you'll be asked to choose"
+                           + "rock, paper, or scissors in number formed (use key below)");
         System.out.println("Key: 0 = Rock\n1 = Scissors\n2 = Paper\n");
 
         for (var i = 0; i < 5; i++) {
@@ -91,11 +90,9 @@ public class HomeWorkTwo {
             userInt = userInputFour.nextInt();
 
             System.out.println(userInt + " is divisible by 6 and 7: "
-                               + ((userInt % 6 == 0 && userInt % 7 == 0) ? "True"
-                                                                         : "False"));
+                               + ((userInt % 6 == 0 && userInt % 7 == 0) ? "True" : "False"));
             System.out.println(userInt + " is divisible by 6 or 7: "
-                               + ((userInt % 6 == 0 || userInt % 7 == 0) ? "True"
-                                                                         : "False"));
+                               + ((userInt % 6 == 0 || userInt % 7 == 0) ? "True" : "False"));
             System.out.println(userInt + " is divisible by 6 or 7, but not both: "
                                + ((userInt % 6 == 0 ^ userInt % 7 == 0) ? "True\n"
                                                                         : "False\n"));
@@ -114,9 +111,7 @@ public class HomeWorkTwo {
         for (var i = 0; i < 5; i++) {
             System.out.print("Enter a single-digit hexadecimal number: ");
             userHex = userInputFive.next().charAt(0);
-            if (Character.isLowerCase(userHex)) {
-                userHex = Character.toUpperCase(userHex);
-            }
+            if (Character.isLowerCase(userHex)) { userHex = Character.toUpperCase(userHex); }
             if (userHex == '0') {
                 System.out.println("0000");
             } else if (userHex == '1') {

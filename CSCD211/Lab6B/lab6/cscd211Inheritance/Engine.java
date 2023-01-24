@@ -48,9 +48,7 @@ public class Engine implements Comparable<Engine> {
         if ((manufacturer == null || manufacturer.isEmpty())) {
             throw new IllegalArgumentException("Bad Engine");
         }
-        if (horsePower <= 0) {
-            throw new IllegalArgumentException("Bad Engine");
-        }
+        if (horsePower <= 0) { throw new IllegalArgumentException("Bad Engine"); }
 
         this.manufacturer = manufacturer;
         this.horsePower   = horsePower;
@@ -63,8 +61,7 @@ public class Engine implements Comparable<Engine> {
      */
     @Override
     public String toString() {
-        return ("Manufacturer: " + this.manufacturer + " with HP of "
-                + this.horsePower);
+        return ("Manufacturer: " + this.manufacturer + " with HP of " + this.horsePower);
     }
 
     /**
@@ -72,7 +69,9 @@ public class Engine implements Comparable<Engine> {
      *
      * @return int Representing this horsePower divided by 5
      */
-    public int calcOutput() { return this.horsePower / 5; }
+    public int calcOutput() {
+        return this.horsePower / 5;
+    }
 
     // NOTE: Unsure if this is correct
     /**
@@ -86,8 +85,7 @@ public class Engine implements Comparable<Engine> {
         if (this.horsePower == pi.horsePower) {
             return this.manufacturer.compareTo(pi.manufacturer);
         } else {
-            return String.valueOf(this.horsePower)
-                    .compareTo(String.valueOf(pi.horsePower));
+            return String.valueOf(this.horsePower).compareTo(String.valueOf(pi.horsePower));
         }
     }
 
@@ -96,5 +94,7 @@ public class Engine implements Comparable<Engine> {
      *
      * @return String Representing this manufacturer.
      */
-    public String getManufacturer() { return this.manufacturer; }
+    public String getManufacturer() {
+        return this.manufacturer;
+    }
 }

@@ -64,9 +64,7 @@ public class Hashtable {
         // Find out where in our array should the new item goes
         int pos = this.hash(key);
         // If nothing exists in the position, create a new linked list there
-        if (this.table[pos] == null) {
-            this.table[pos] = new LinkedList<Record>();
-        }
+        if (this.table[pos] == null) { this.table[pos] = new LinkedList<Record>(); }
         LinkedList<Record> theList = this.table[pos];
         // If trying to add duplicate keys, that means
         // we like to update the value associated with that existing key.
@@ -77,9 +75,7 @@ public class Hashtable {
         }
         // Add to the linked list in the appropriate position
         theList.add(new Record(key, data));
-        if (! update) {
-            this.numElem++;
-        }
+        if (! update) { this.numElem++; }
     }
 
     public void put(Object[] keys, Object[] inputData) {
@@ -98,10 +94,8 @@ public class Hashtable {
             LinkedList<Record> theList = this.table[pos];
             //
             boolean removed = theList.remove(node);
-            if (theList.size() == 0)
-                this.table[pos] = null;
-            if (removed)
-                this.numElem--;
+            if (theList.size() == 0) this.table[pos] = null;
+            if (removed) this.numElem--;
         }
     }
 
@@ -116,15 +110,15 @@ public class Hashtable {
 
         buffer += "{\n";
         for (int i = 0; i < this.table.length; i++) {
-            if (this.table[i] != null) {
-                buffer = buffer + "\t" + this.table[i] + "\n";
-            }
+            if (this.table[i] != null) { buffer = buffer + "\t" + this.table[i] + "\n"; }
         }
         buffer += "}";
         return buffer;
     }
 
-    public int size() { return this.numElem; }
+    public int size() {
+        return this.numElem;
+    }
 
     public boolean contains(Object key) {
         boolean result = false;
@@ -133,9 +127,7 @@ public class Hashtable {
         if (this.table[hash] != null) {
             Record node = new Record();
             node.key    = key;
-            if (this.table[hash].indexOf(node) > -1) {
-                result = true;
-            }
+            if (this.table[hash].indexOf(node) > -1) { result = true; }
         }
         return result;
     }
@@ -164,8 +156,7 @@ public class Hashtable {
         myhash.put(3.4, "green");
         myhash.put(3.4, "white");  // this successfully updated the existing record with
                                    // key = 3.4
-        System.out.println("After total four adds(one update), hashtalbe is: \n"
-                           + myhash);
+        System.out.println("After total four adds(one update), hashtalbe is: \n" + myhash);
         System.out.println("Size of the table is " + myhash.size());
 
         myhash.remove(3.4);

@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 class Calculator2 extends JFrame implements ActionListener {
@@ -170,5 +171,7 @@ class Calculator2 extends JFrame implements ActionListener {
         }
     }
 
-    public static void main(String[] args) { new Calculator2(); }
+    public static void main(String[] args) {
+        new Calculator2();
+    }
 }

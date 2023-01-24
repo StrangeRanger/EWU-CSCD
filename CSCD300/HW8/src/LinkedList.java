@@ -25,7 +25,9 @@ public class LinkedList {
      *
      * @return True if LinkedList is empty, else false.
      */
-    public boolean isNotEmpty() { return this.head != this.head.next; }
+    public boolean isNotEmpty() {
+        return this.head != this.head.next;
+    }
 
     /**
      * Check if the LinkedList is sorted.
@@ -40,9 +42,7 @@ public class LinkedList {
             cur  = (Comparable) current.data;
             prev = (Comparable) current.prev.data;
 
-            if (cur.compareTo(prev) < 0) {
-                return false;
-            }
+            if (cur.compareTo(prev) < 0) { return false; }
         }
 
         return true;
@@ -53,14 +53,18 @@ public class LinkedList {
      *
      * @return size.
      */
-    public int getSize() { return this.size; }
+    public int getSize() {
+        return this.size;
+    }
 
     /**
      * Retrieve the data from the first node inside the LinkedList.
      *
      * @return The data from the first node inside the LinkedList.
      */
-    public Object getFirst() { return this.head.next.data; }
+    public Object getFirst() {
+        return this.head.next.data;
+    }
 
     /**
      * Add Object data to start of this LinkedList.
@@ -185,10 +189,8 @@ public class LinkedList {
     public String toString() {
         StringBuilder result = new StringBuilder("{");
         for (Node node = this.head.next; node != this.head; node = node.next) {
-            if (node.next != this.head)
-                result.append(node.data).append("->");
-            else
-                result.append(node.data);
+            if (node.next != this.head) result.append(node.data).append("->");
+            else result.append(node.data);
         }
         return result + "}";
     }

@@ -15,7 +15,8 @@ class DLinkedList {
     private Node last;   // Last element in the list.
 
     /** Constructor. */
-    public DLinkedList() { }
+    public DLinkedList() {
+    }
 
     /** The Node class stores a list element and a reference to the next node. */
     private class Node {
@@ -41,7 +42,9 @@ class DLinkedList {
          *
          * @param val The element to be stored in the node.
          */
-        Node(String val) { this(val, null, null); }
+        Node(String val) {
+            this(val, null, null);
+        }
     }
 
     /**
@@ -49,7 +52,9 @@ class DLinkedList {
      *
      * @return True if list is empty, false otherwise.
      */
-    public boolean isEmpty() { return first == null; }
+    public boolean isEmpty() {
+        return first == null;
+    }
 
     /**
      * The size method returns the length of the list.
@@ -94,16 +99,12 @@ class DLinkedList {
     public void add(int index, String e) {
         Node pred;
 
-        if (index < 0 || index > size()) {
-            throw new IndexOutOfBoundsException();
-        }
+        if (index < 0 || index > size()) { throw new IndexOutOfBoundsException(); }
 
         // New element is placed at the beginning
         if (index == 0) {
             first = new Node(e, first, null);
-            if (last == null) {
-                last = first;
-            }
+            if (last == null) { last = first; }
             return;
         }
 
@@ -115,9 +116,7 @@ class DLinkedList {
         // Adds new node containing the element.
         pred.next = new Node(e, pred.next, pred);
         // If the last element changed.
-        if (pred.next.next == null) {
-            last = pred.next;
-        }
+        if (pred.next.next == null) { last = pred.next; }
     }
 
     /**
@@ -148,17 +147,13 @@ class DLinkedList {
     public void remove(int index) {
         Node previous = first, current;
 
-        if (index < 0 || index >= size()) {
-            throw new IndexOutOfBoundsException();
-        }
+        if (index < 0 || index >= size()) { throw new IndexOutOfBoundsException(); }
 
         // Remove first element.
         if (index == 0) {
             first = first.next;
             // If there was only one element in list.
-            if (first == null) {
-                last = null;
-            }
+            if (first == null) { last = null; }
             return;
         }
 

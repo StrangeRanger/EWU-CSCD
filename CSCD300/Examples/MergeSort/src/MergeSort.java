@@ -1,7 +1,9 @@
 import java.util.Arrays;
 
 public class MergeSort {
-    public void mergeSort(Comparable array[]) { mergeSort(array, 0, array.length - 1); }
+    public void mergeSort(Comparable array[]) {
+        mergeSort(array, 0, array.length - 1);
+    }
 
     private void mergeSort(Comparable[] array, int low, int high) {
         if (low < high) {

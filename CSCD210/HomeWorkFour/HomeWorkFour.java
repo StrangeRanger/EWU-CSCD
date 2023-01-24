@@ -18,10 +18,9 @@ public class HomeWorkFour {
 
         System.out.println("\n\n**********************\n* Performing Task 1! *\n"
                            + "**********************");
-        System.out.println(
-                "You'll be asked to choose rock, paper, or scissors "
-                + "in number formed (use key below), until the first player wins 3"
-                + " games.");
+        System.out.println("You'll be asked to choose rock, paper, or scissors "
+                           + "in number formed (use key below), until the first player wins 3"
+                           + " games.");
         System.out.println("Key: 0 = Rock\n     1 = Scissors\n     2 = Paper\n");
 
         while (userScore < scoreToWin && computerScore < scoreToWin) {

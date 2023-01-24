@@ -2,6 +2,7 @@ package lab1.cscd211lab1;
 
 import java.io.*;
 import java.util.*;
+
 import lab1.cscd210utils.*;
 import lab1.cscd211classes.*;
 import lab1.cscd211comparators.*;
@@ -33,16 +34,14 @@ public class CSCD211Lab1 {
         do {
             choice = CSCD211Lab1Methods.menu(kb);
 
-            if (choice == 1)
-                CSCD211Lab1Methods.printArray(myPeeps);
+            if (choice == 1) CSCD211Lab1Methods.printArray(myPeeps);
             else if (choice == 2) {
                 Color toFind = CSCD211Lab1Methods.readColor(kb);
                 CSCD211Lab1Methods.displayAll(toFind, myPeeps);
             }  // end choice == 2
             else if (choice == 3)
                 Arrays.sort(myPeeps, new ColorComparator());
-            else if (choice == 4)
-                Arrays.sort(myPeeps);
+            else if (choice == 4) Arrays.sort(myPeeps);
         } while (choice != 5);
     }  // end main
 }  // end class

@@ -14,8 +14,7 @@ public class CSCD211_Ch0801_SumArray {
         Scanner userInput = new Scanner(System.in);
         double[][] m      = new double[3][4];
 
-        System.out.println("Enter " + m.length + " rows and " + m[0].length
-                           + " columns: ");
+        System.out.println("Enter " + m.length + " rows and " + m[0].length + " columns: ");
 
         // Updates 'm' based on input.
         for (int i = 0; i < m.length; i++) {

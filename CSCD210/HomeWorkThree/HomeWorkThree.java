@@ -38,8 +38,7 @@ public class HomeWorkThree {
                 month = userInput.nextLine().toLowerCase();
                 switch (month) {
                     case "jan":
-                        System.out.println("There are 31 days in January of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in January of " + year + "\n");
                         break;
                     case "feb":
                         int day;
@@ -61,55 +60,45 @@ public class HomeWorkThree {
                             day = 28;
                         }
 
-                        System.out.println("There are " + day + " days in February "
-                                           + year + "\n");
+                        System.out.println("There are " + day + " days in February " + year
+                                           + "\n");
                         break;
                     case "mar":
-                        System.out.println("There are 31 days in March of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in March of " + year + "\n");
                         break;
                     case "apr":
-                        System.out.println("There are 30 days in April of " + year
-                                           + "\n");
+                        System.out.println("There are 30 days in April of " + year + "\n");
                         break;
                     case "may":
-                        System.out.println("There are 31 days in May of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in May of " + year + "\n");
                         break;
                     case "jun":
-                        System.out.println("There are 30 days in June of " + year
-                                           + "\n");
+                        System.out.println("There are 30 days in June of " + year + "\n");
                         break;
                     case "jul":
-                        System.out.println("There are 31 days in July of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in July of " + year + "\n");
                         break;
                     case "aug":
-                        System.out.println("There are 31 days in August of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in August of " + year + "\n");
                         break;
                     case "sep":
                         System.out.println("There are 30 days in September of " + year
                                            + "\n");
                         break;
                     case "oct":
-                        System.out.println("There are 31 days in October of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in October of " + year + "\n");
                         break;
                     case "nov":
-                        System.out.println("There are 30 days in November of " + year
-                                           + "\n");
+                        System.out.println("There are 30 days in November of " + year + "\n");
                         break;
                     case "dec":
-                        System.out.println("There are 31 days in December of " + year
-                                           + "\n");
+                        System.out.println("There are 31 days in December of " + year + "\n");
                         break;
                     default:
                         // Output is printed in red.
-                        System.out.printf(
-                                "%sInvalid month: Enter one of the possible "
-                                        + "months displayed in the list above%s\n",
-                                "\033[1;31m", "\033[0m");
+                        System.out.printf("%sInvalid month: Enter one of the possible "
+                                                  + "months displayed in the list above%s\n",
+                                          "\033[1;31m", "\033[0m");
                         continue;
                 }
                 break;
@@ -155,8 +144,8 @@ public class HomeWorkThree {
                 city3 = temp;
             }
 
-            System.out.printf("Cities in ascending order: %s < %s < %s\n\n", city1,
-                              city2, city3);
+            System.out.printf("Cities in ascending order: %s < %s < %s\n\n", city1, city2,
+                              city3);
         }
 
         // Adds extra line between next task.
@@ -221,13 +210,12 @@ public class HomeWorkThree {
                 if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o'
                     || letter == 'u') {
                     vowel++;
-                } else if (letter == 'b' || letter == 'c' || letter == 'd'
-                           || letter == 'f' || letter == 'g' || letter == 'h'
-                           || letter == 'j' || letter == 'k' || letter == 'l'
-                           || letter == 'm' || letter == 'n' || letter == 'p'
-                           || letter == 'q' || letter == 'r' || letter == 's'
-                           || letter == 't' || letter == 'v' || letter == 'w'
-                           || letter == 'x' || letter == 'y' || letter == 'z') {
+                } else if (letter == 'b' || letter == 'c' || letter == 'd' || letter == 'f'
+                           || letter == 'g' || letter == 'h' || letter == 'j' || letter == 'k'
+                           || letter == 'l' || letter == 'm' || letter == 'n' || letter == 'p'
+                           || letter == 'q' || letter == 'r' || letter == 's' || letter == 't'
+                           || letter == 'v' || letter == 'w' || letter == 'x' || letter == 'y'
+                           || letter == 'z') {
                     consonant++;
                 }
             }
@@ -255,7 +243,7 @@ public class HomeWorkThree {
             normalString = userInputFive.nextLine();
 
             for (int index = 0; index < normalString.length(); index++) {
-                letter = normalString.charAt(normalString.length() - (index + 1));
+                letter        = normalString.charAt(normalString.length() - (index + 1));
                 reverseString = reverseString + letter;
             }
 

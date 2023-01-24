@@ -16,7 +16,8 @@ public class MyLinkedList {
             this.data = d;
             this.next = null;
         }
-        private ListNode() { }
+        private ListNode() {
+        }
     }
 
     /**
@@ -64,9 +65,7 @@ public class MyLinkedList {
      *             in a reversed order.
      */
     private MyLinkedList reverse(ListNode node) {
-        if (node == null) {
-            return new MyLinkedList();
-        }
+        if (node == null) { return new MyLinkedList(); }
 
         MyLinkedList reversedSubList = reverse(node.next);
 
@@ -83,9 +82,7 @@ public class MyLinkedList {
      * A's next to null.
      */
     public void reverse2() {
-        if (this.size <= 1) {
-            return;
-        }
+        if (this.size <= 1) { return; }
         // The following method call works on a *sublist* without a Dummy Node. Namely,
         // we preserved the OLD dummy head node in the reversed list.
         this.head.next = reverse(this.head.next, this.head.next.next);
@@ -144,8 +141,7 @@ public class MyLinkedList {
         for (ListNode node = this.head.next; node != null; node = node.next) {
             result += node.data;
 
-            if (node.next != null)
-                result += "->";
+            if (node.next != null) result += "->";
         }
         return result + "}";
     }

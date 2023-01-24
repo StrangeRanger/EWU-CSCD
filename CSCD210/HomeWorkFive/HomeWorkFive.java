@@ -15,10 +15,9 @@ public class HomeWorkFive {
         // straight. I'm fine with taking the lose on this task.
         System.out.println("**********************\n* Performing Task 1! *\n"
                            + "**********************");
-        System.out.println(
-                "I am too tired and exhausted after working on the "
-                + "final for about 3 days straight. I'm fine with taking the "
-                + "Lose on this task.\n");
+        System.out.println("I am too tired and exhausted after working on the "
+                           + "final for about 3 days straight. I'm fine with taking the "
+                           + "Lose on this task.\n");
 
         /* [ Task 2 ]**************************************************************** */
 
@@ -56,10 +55,9 @@ public class HomeWorkFive {
         // straight. I'm fine with taking the Lose on this task.
         System.out.println("**********************\n* Performing Task 3! *\n"
                            + "**********************");
-        System.out.println(
-                "I am too tired and exhausted after working on the "
-                + "final for about 3 days straight. I'm fine with taking the "
-                + "Lose on this task.\n");
+        System.out.println("I am too tired and exhausted after working on the "
+                           + "final for about 3 days straight. I'm fine with taking the "
+                           + "Lose on this task.\n");
 
         /*--[ Task 4 ]*****************************************************************/
 
@@ -88,10 +86,9 @@ public class HomeWorkFive {
         // straight. I'm fine with taking the Lose on this task.
         System.out.println("**********************\n* Performing Task 5! *\n"
                            + "**********************");
-        System.out.println(
-                "I am too tired and exhausted after working on the "
-                + "final for about 3 days straight. I'm fine with taking the "
-                + "Lose on this task.");
+        System.out.println("I am too tired and exhausted after working on the "
+                           + "final for about 3 days straight. I'm fine with taking the "
+                           + "Lose on this task.");
     }
 
     // Used in Task 2.

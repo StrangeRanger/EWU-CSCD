@@ -52,13 +52,9 @@ public class Tester {
     public boolean myContains(String s1, String s2) {
         // If either strings are empty or the length of string 2 is shorter than
         // string 1...
-        if ((s1 == null || s2 == null) || s2.length() < s1.length()) {
-            return false;
-        }
+        if ((s1 == null || s2 == null) || s2.length() < s1.length()) { return false; }
 
-        if (s2.startsWith(s1)) {
-            return true;
-        }
+        if (s2.startsWith(s1)) { return true; }
         return myContains(s1, s2.substring(1));
     }
 
@@ -71,9 +67,7 @@ public class Tester {
      * IllegalArgumentException object. Write this method below using recursion.
      */
     public int div(int m, int n) throws IllegalArgumentException {
-        if (n == 0) {
-            throw new IllegalArgumentException("Parameter 'n' can't equal 0!");
-        }
+        if (n == 0) { throw new IllegalArgumentException("Parameter 'n' can't equal 0!"); }
 
         if (m - n == 0) {
             return 1;
@@ -90,7 +84,9 @@ public class Tester {
      * method. You are NOT allowed to change the provided code in the *public* method
      * isSum24(int arr[]).
      */
-    public boolean isSum24(int arr[]) { return isSum24(arr, 24); }
+    public boolean isSum24(int arr[]) {
+        return isSum24(arr, 24);
+    }
 
     /**
      * Implement the private helper method below using recursion.
@@ -114,7 +110,9 @@ public class Tester {
      * You are NOT allowed to change the provided code in the *public* reverseArray(int
      * a[]) method below.
      */
-    public void reverseArray(int a[]) { reverseArray(a, 0, a.length - 1); }
+    public void reverseArray(int a[]) {
+        reverseArray(a, 0, a.length - 1);
+    }
 
     /**
      * Please write the private reverseArray() using recursion.
@@ -130,9 +128,7 @@ public class Tester {
         a[high] = a[low];
         a[low]  = tmp;
 
-        if (--high >= ++low) {
-            reverseArray(a, low, high);
-        }
+        if (--high >= ++low) { reverseArray(a, low, high); }
     }
 
     /**
@@ -155,9 +151,7 @@ public class Tester {
         int smallest = low, tmp;
 
         for (int i = low + 1; i < a.length; i++) {
-            if (a[i] < a[smallest]) {
-                smallest = i;
-            }
+            if (a[i] < a[smallest]) { smallest = i; }
         }
 
         if (a[smallest] != a[low]) {
@@ -166,9 +160,7 @@ public class Tester {
             a[low]      = tmp;
         }
 
-        if (++low < high) {
-            recursiveSelectionSort(a, low, high);
-        }
+        if (++low < high) { recursiveSelectionSort(a, low, high); }
     }
 
     /**

@@ -23,7 +23,9 @@ public class CDoublyLinkedList {
         this.size      = 0;
     }
 
-    public boolean isEmpty() { return this.head == this.head.next; }
+    public boolean isEmpty() {
+        return this.head == this.head.next;
+    }
 
     /**
      * Add Object data to start of this LinkedList.
@@ -81,9 +83,7 @@ public class CDoublyLinkedList {
             // When current.data is null, the if statement produces a
             // NullPointerException if placed with the if statement below it.
             if (current.data != null) {
-                if (data.compareTo(current.data) > 0) {
-                    newCDLL.addLast(current.data);
-                }
+                if (data.compareTo(current.data) > 0) { newCDLL.addLast(current.data); }
             }
             current = current.next;
         }
@@ -131,9 +131,7 @@ public class CDoublyLinkedList {
         int  indexLocation = this.size - 1;
 
         while (current != this.head) {
-            if (current.data == o) {
-                return indexLocation;
-            }
+            if (current.data == o) { return indexLocation; }
             current = current.prev;
             indexLocation--;
         }
@@ -153,9 +151,7 @@ public class CDoublyLinkedList {
      * Helper methods are allowed.
      */
     public boolean retainAll(CDoublyLinkedList other) throws NullPointerException {
-        if (other == null) {
-            throw new NullPointerException("Provided argument is null!");
-        }
+        if (other == null) { throw new NullPointerException("Provided argument is null!"); }
 
         // I couldn't get around to finishing this method because my computer
         // encountered a really nasty problem that required me to reinstall the OS.
@@ -186,10 +182,8 @@ public class CDoublyLinkedList {
     public String toString() {
         String result = "{";
         for (Node node = this.head.next; node != this.head; node = node.next) {
-            if (node.next != this.head)
-                result += node.data + "->";
-            else
-                result += node.data;
+            if (node.next != this.head) result += node.data + "->";
+            else result += node.data;
         }
         return result + "}";
     }

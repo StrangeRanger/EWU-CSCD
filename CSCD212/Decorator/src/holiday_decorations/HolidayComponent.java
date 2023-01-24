@@ -21,8 +21,12 @@ public class HolidayComponent {
     }
 
     /** Return component description. */
-    public String getDescription() { return description; }
+    public String getDescription() {
+        return description;
+    }
 
     /** Return component cost. */
-    public int getCost() { return cost; }
+    public int getCost() {
+        return cost;
+    }
 }

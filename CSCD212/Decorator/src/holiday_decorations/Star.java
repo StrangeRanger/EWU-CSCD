@@ -7,14 +7,18 @@ public class Star extends OrnamentDecorator {
     /**
      * Non-argument constructor.
      */
-    private Star() { super(null, -1, null); }
+    private Star() {
+        super(null, -1, null);
+    }
 
     /**
      * Constructor.
      *
      * @param component ...
      */
-    private Star(final HolidayComponent component) { super("Star", price, component); }
+    private Star(final HolidayComponent component) {
+        super("Star", price, component);
+    }
 
     /**
      * Add price to the current cost.

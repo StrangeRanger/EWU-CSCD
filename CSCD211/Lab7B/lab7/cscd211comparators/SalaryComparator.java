@@ -1,6 +1,7 @@
 package lab7.cscd211comparators;
 
 import java.util.Comparator;
+
 import lab7.cscd211inheritance.Employee;
 
 /**
@@ -19,9 +20,7 @@ public class SalaryComparator implements Comparator<Employee> {
      * @throws IllegalArgumentException If either Employee is null.
      */
     public int compare(final Employee e1, final Employee e2) {
-        if (e1 == null || e2 == null) {
-            throw new IllegalArgumentException("Bad compare");
-        }
+        if (e1 == null || e2 == null) { throw new IllegalArgumentException("Bad compare"); }
 
         // Code below can be replaced by:
         // return Double.compare(e1.getSalary(), e2.getSalary());

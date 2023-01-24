@@ -24,9 +24,13 @@ public class MyLinkedList {
         this.size = 0;
     }
 
-    public int size() { return this.size; }
+    public int size() {
+        return this.size;
+    }
 
-    public boolean isEmpty() { return size == 0; }
+    public boolean isEmpty() {
+        return size == 0;
+    }
 
     /**
      * Add Object e to start of this LinkedList.
@@ -47,9 +51,7 @@ public class MyLinkedList {
      * zero, throws an Exception.
      */
     public Object removeFirst() throws Exception {
-        if (isEmpty()) {
-            throw new Exception("LinkedList is empty!");
-        }
+        if (isEmpty()) { throw new Exception("LinkedList is empty!"); }
 
         ListNode previous = head, current = head.next;
 
@@ -67,9 +69,7 @@ public class MyLinkedList {
      */
     public boolean contains(Object o) {
         for (ListNode current = head.next; current != null; current = current.next) {
-            if (current.data == o) {
-                return true;
-            }
+            if (current.data == o) { return true; }
         }
         return false;
     }
@@ -255,10 +255,8 @@ public class MyLinkedList {
     public String toString() {
         String result = "{";
         for (ListNode node = this.head.next; node != null; node = node.next) {
-            if (node.next != null)
-                result += node.data + "->";
-            else
-                result += node.data;
+            if (node.next != null) result += node.data + "->";
+            else result += node.data;
         }
         return result + "}";
     }

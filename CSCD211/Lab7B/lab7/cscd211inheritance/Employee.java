@@ -27,9 +27,7 @@ public abstract class Employee implements Comparable<Employee> {
         if (name.isEmpty() || basePayrate < 0 || additionalPayrate < 0) {
             throw new IllegalArgumentException("Bad Employee");
         }
-        if (name == null) {
-            throw new IllegalArgumentException("Bad Employee");
-        }
+        if (name == null) { throw new IllegalArgumentException("Bad Employee"); }
 
         this.name   = name;
         this.BASE   = basePayrate;
@@ -41,28 +39,36 @@ public abstract class Employee implements Comparable<Employee> {
      *
      * @return double Salary.
      */
-    public double getSalary() { return this.salary + this.BASE; }
+    public double getSalary() {
+        return this.salary + this.BASE;
+    }
 
     /**
      * Return the base salary.
      *
      * @return double Base salary.
      */
-    public double getBaseSalary() { return this.BASE; }
+    public double getBaseSalary() {
+        return this.BASE;
+    }
 
     /**
      * Return the name.
      *
      * @return String Name.
      */
-    public String getName() { return this.name; }
+    public String getName() {
+        return this.name;
+    }
 
     /**
      * This method first gets the class via getClass and then the simple name.
      *
      * @return String the String of the simpleName.
      */
-    public String getType() { return this.getClass().getSimpleName(); }
+    public String getType() {
+        return this.getClass().getSimpleName();
+    }
 
     /**
      * Simply returns the name.
@@ -83,13 +89,10 @@ public abstract class Employee implements Comparable<Employee> {
      * @throws IllegalArgumentException If another is null.
      */
     public int compareTo(Employee another) {
-        if (another == null) {
-            throw new IllegalArgumentException("Bad compareTo");
-        }
+        if (another == null) { throw new IllegalArgumentException("Bad compareTo"); }
 
         if (this.getType().equals(another.getType())) {
-            return String.valueOf(this.salary)
-                    .compareTo(String.valueOf(another.salary));
+            return String.valueOf(this.salary).compareTo(String.valueOf(another.salary));
         } else {
             return this.getType().compareTo(another.getType());
         }

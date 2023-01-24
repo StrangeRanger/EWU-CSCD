@@ -64,21 +64,27 @@ public class PostfixAndInfix {
      *
      * @return The value of infixExpression.
      */
-    public String getInfixExpression() { return this.infixExpression; }
+    public String getInfixExpression() {
+        return this.infixExpression;
+    }
 
     /**
      * Return postfixExpression.
      *
      * @return The value of postfixExpression.
      */
-    public String getPostfixExpression() { return this.postfixExpression; }
+    public String getPostfixExpression() {
+        return this.postfixExpression;
+    }
 
     /**
      * Return postfixValue.
      *
      * @return The value of postfixValue.
      */
-    public Double getPostfixValue() { return this.postfixValue; }
+    public Double getPostfixValue() {
+        return this.postfixValue;
+    }
 
     /**
      * Convert the infix expression into a postfix expression.
@@ -114,8 +120,7 @@ public class PostfixAndInfix {
                 }
                 stack.pop();
             } else {
-                while (! stack.isEmpty()
-                       && operatorPrecedence(stack.peek(), character)) {
+                while (! stack.isEmpty() && operatorPrecedence(stack.peek(), character)) {
                     postfixExpression += stack.pop();
                 }
                 stack.push(character);
@@ -151,27 +156,14 @@ public class PostfixAndInfix {
                 left  = stack.pop();
 
                 switch (character) {
-                    case '+':
-                        tmp = left + right;
-                        break;
-                    case '-':
-                        tmp = left - right;
-                        break;
-                    case '*':
-                        tmp = left * right;
-                        break;
-                    case '/':
-                        tmp = left / right;
-                        break;
-                    case '^':
-                        tmp = Math.pow(left, right);
-                        break;
-                    case '%':
-                        tmp = left % right;
-                        break;
+                    case '+': tmp = left + right; break;
+                    case '-': tmp = left - right; break;
+                    case '*': tmp = left * right; break;
+                    case '/': tmp = left / right; break;
+                    case '^': tmp = Math.pow(left, right); break;
+                    case '%': tmp = left % right; break;
                     default:
-                        throw new Exception("Invalid operator was provided: "
-                                            + character);
+                        throw new Exception("Invalid operator was provided: " + character);
                 }
 
                 stack.push(tmp);
@@ -205,9 +197,7 @@ public class PostfixAndInfix {
             if (character == '(') {
                 stack.push(character);
             } else if (character == ')') {
-                if (stack.isEmpty()) {
-                    return false;
-                }
+                if (stack.isEmpty()) { return false; }
                 stack.pop();
             }
         }

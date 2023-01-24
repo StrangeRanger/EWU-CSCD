@@ -7,7 +7,8 @@ public class HOTSingleton {
     private int                 tails = 0;
 
     /** Private constructor. */
-    private HOTSingleton() { }
+    private HOTSingleton() {
+    }
 
     /** Create or return an already existing instance of HOTSingleton. */
     public static synchronized HOTSingleton getUniqueInstance() {
@@ -37,9 +38,8 @@ public class HOTSingleton {
 
     /** Print out the total number of times the coin has landed on heads and tails. */
     public void getCount() {
-        System.out.println(
-                "Displaying number times heads and tails occured respectively: " + heads
-                + " | " + tails);
+        System.out.println("Displaying number times heads and tails occured respectively: "
+                           + heads + " | " + tails);
     }
 
     /** Reset the number of heads and tails to 0. */

@@ -55,9 +55,9 @@ public class Tester {
         list0.addFirst("apple");
         System.out.println(list0.removeStartingAtBack("notexist"));  // false
         System.out.println(list0.removeStartingAtBack("apple"));     // true
-        System.out.println(list0);                             // apple, null, bad, null
-        System.out.println(list0.removeStartingAtBack(null));  // true
-        System.out.println(list0);                             // apple, null, bad
+        System.out.println(list0);                                   // apple, null, bad, null
+        System.out.println(list0.removeStartingAtBack(null));        // true
+        System.out.println(list0);                                   // apple, null, bad
         list2.removeStartingAtBack("1:Good");
         System.out.println(list2);
 

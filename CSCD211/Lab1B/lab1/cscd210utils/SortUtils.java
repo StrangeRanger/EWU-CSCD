@@ -9,7 +9,8 @@ package lab1.cscd210utils;
  */
 public class SortUtils<T extends Comparable<? super T>> {
     /* ignore this it is here so it doesn't appear in the JavaDocs */
-    public SortUtils() { }
+    public SortUtils() {
+    }
 
     /**
      * The selectSort method sorts the array in ascending order. The array is of a type
@@ -32,9 +33,7 @@ public class SortUtils<T extends Comparable<? super T>> {
             min = start;
 
             for (search = start + 1; search < array.length; search++) {
-                if (array[search].compareTo(array[min]) < 0) {
-                    min = search;
-                }
+                if (array[search].compareTo(array[min]) < 0) { min = search; }
             }
 
             temp         = array[min];

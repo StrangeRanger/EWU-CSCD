@@ -22,27 +22,26 @@ public class LinkedStack {
         this.top  = null;
         this.size = 0;
     }
-    public int size() { return size; }
+    public int size() {
+        return size;
+    }
 
     public boolean isEmpty() {
-        if (top == null)
-            return true;
+        if (top == null) return true;
         return false;
     }
     public void push(Object elem) {
-        Node v = new Node(
-                elem, top);  // create and link-in a new node, new node's next gets top;
-        this.top = v;        // equivalent to addFirst operation on linked list.
+        Node v   = new Node(elem,
+                            top);  // create and link-in a new node, new node's next gets top;
+        this.top = v;              // equivalent to addFirst operation on linked list.
         this.size++;
     }
     public Object top() throws EmptyStackException {
-        if (isEmpty())
-            throw new EmptyStackException("Stack is empty.");
+        if (isEmpty()) throw new EmptyStackException("Stack is empty.");
         return top.data;
     }
     public Object pop() throws EmptyStackException {
-        if (isEmpty())
-            throw new EmptyStackException("Stack is empty.");
+        if (isEmpty()) throw new EmptyStackException("Stack is empty.");
 
         Object temp = top.data;
         this.top    = top.next;  // equivalent to removeFirst operation on linked list.
@@ -87,10 +86,8 @@ public class LinkedStack {
         System.out.println(op);
         System.out.println("Returned: " + element);
         String emptyStatus;
-        if (S.isEmpty())
-            emptyStatus = "empty";
-        else
-            emptyStatus = "not empty";
+        if (S.isEmpty()) emptyStatus = "empty";
+        else emptyStatus = "not empty";
         System.out.println("size = " + S.size() + ", " + emptyStatus);
         System.out.println("Stack: " + S);
     }

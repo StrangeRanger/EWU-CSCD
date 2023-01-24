@@ -56,9 +56,7 @@ public class MainCalss {
 
             // If it's not possible to convert the infix expression to a postfix
             // expression...
-            if (! expression.infixConversion()) {
-                continue;
-            }
+            if (! expression.infixConversion()) { continue; }
 
             expression.postfixEvaluation();
             System.out.println(expression.getInfixExpression() + " --> "

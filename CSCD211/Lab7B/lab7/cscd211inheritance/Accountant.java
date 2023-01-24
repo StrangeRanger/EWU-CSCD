@@ -18,13 +18,13 @@ public class Accountant extends Employee {
     public Accountant(String name, double basePayrate, double additionalPayrate,
                       double parkingStipend) {
         super(name, basePayrate, additionalPayrate);
-        if (parkingStipend < 0.00) {
-            throw new IllegalArgumentException("Bad Accountant");
-        }
+        if (parkingStipend < 0.00) { throw new IllegalArgumentException("Bad Accountant"); }
         this.parkingStipend = parkingStipend;
     }
 
-    public double getParkingStipend() { return this.parkingStipend; }
+    public double getParkingStipend() {
+        return this.parkingStipend;
+    }
 
     /**
      * Report prints to the screen I am an accountant. I make "the salary from the base

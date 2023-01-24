@@ -47,9 +47,7 @@ public class TestMyQuery {
             mquery.findCrimeCounts();
 
             conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SQLException e) { e.printStackTrace(); } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -58,16 +56,14 @@ public class TestMyQuery {
         Connection connection;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e1) {
-            e1.printStackTrace();
-        }
+        } catch (ClassNotFoundException e1) { e1.printStackTrace(); }
 
         // Create a connection to the database
         String serverName = "xxxxxxxxxxxxx";
-        String mydatabase =" xxxxxxxxxxxxx_crimeDB";                   // change needed
-        String url = "jdbc:mysql://" + serverName + "/" + mydatabase;  // a JDBC url
-        String username = "xxxxxxxxxxxxx";                             // change needed
-        String password = "xxxxxxxxxxxxx";                             // change needed
+        String mydatabase = " xxxxxxxxxxxxx_crimeDB";                         // change needed
+        String url        = "jdbc:mysql://" + serverName + "/" + mydatabase;  // a JDBC url
+        String username   = "xxxxxxxxxxxxx";                                  // change needed
+        String password   = "xxxxxxxxxxxxx";                                  // change needed
 
         connection = DriverManager.getConnection(url, username, password);
         return connection;

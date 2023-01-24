@@ -21,13 +21,13 @@ public class Lawyer extends Employee {
     public Lawyer(String name, double basePayrate, double additionalPayrate,
                   int stockOptions) {
         super(name, basePayrate, additionalPayrate);
-        if (stockOptions < 0.00) {
-            throw new IllegalArgumentException("Bad Lawyer");
-        }
+        if (stockOptions < 0.00) { throw new IllegalArgumentException("Bad Lawyer"); }
         this.stockOptions = stockOptions;
     }
 
-    public int getStockOptions() { return this.stockOptions; }
+    public int getStockOptions() {
+        return this.stockOptions;
+    }
 
     /**
      * Report prints to the screen I am an lawyer. I get "the salary from the base

@@ -43,8 +43,12 @@ class Rectangle {
     }
 
     /** Return the area of this rectangle. */
-    double getArea() { return width * height; }
+    double getArea() {
+        return width * height;
+    }
 
     /** Return the perimeter of this rectangle. */
-    double getPerimeter() { return ((width * 2) + (height * 2)); }
+    double getPerimeter() {
+        return ((width * 2) + (height * 2));
+    }
 }

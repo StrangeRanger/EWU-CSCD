@@ -31,8 +31,7 @@ public class LinkedQueue {
     }
 
     public boolean isEmpty() {  // # Returns true iff queue is empty
-        if ((head == null) && (tail == null) || this.size == 0)
-            return true;
+        if ((head == null) && (tail == null) || this.size == 0) return true;
 
         return false;
     }
@@ -40,33 +39,28 @@ public class LinkedQueue {
     public void enqueue(Object elem) {
         Node node = new Node(elem);
 
-        if (size == 0)
-            head = node;  // edge case of a previously empty queue
-        else
-            tail.next = node;  // add node at the tail of the list
+        if (size == 0) head = node;  // edge case of a previously empty queue
+        else tail.next = node;       // add node at the tail of the list
 
         tail = node;  // update the reference to the tail node
         size++;       // tail always points to the last inserted item.
     }
 
     public Object front() throws Exception {  // # Return the first queue element
-        if (size == 0)
-            throw new Exception("Queue is empty.");
+        if (size == 0) throw new Exception("Queue is empty.");
 
         return head.data;
     }
 
     // begin#fragment dequeue
     public Object dequeue() throws Exception {
-        if (size == 0)
-            throw new Exception("Queue is empty.");
+        if (size == 0) throw new Exception("Queue is empty.");
         Object tmp = head.data;
         head       = head.next;  // head always points to the item that is ready to be
                                  // dequeued next.
         size--;
 
-        if (size == 0)
-            tail = null;  // the queue is now empty, why not set head = null also?
+        if (size == 0) tail = null;  // the queue is now empty, why not set head = null also?
         return tmp;
     }
     // end#fragment dequeue
@@ -78,8 +72,7 @@ public class LinkedQueue {
             Node p = this.head;
             do {
                 s += p.data;
-                if (p != tail)
-                    s += ", ";
+                if (p != tail) s += ", ";
                 p = p.next;
             } while (p != null);
         }
@@ -100,10 +93,8 @@ public class LinkedQueue {
         System.out.println(op);
         System.out.println("Returned: " + element);
         String emptyStatus;
-        if (Q.isEmpty())
-            emptyStatus = "empty";
-        else
-            emptyStatus = "not empty";
+        if (Q.isEmpty()) emptyStatus = "empty";
+        else emptyStatus = "not empty";
         System.out.println("size = " + Q.size() + ", " + emptyStatus);
         System.out.println("Queue: " + Q);
     }
@@ -138,12 +129,12 @@ public class LinkedQueue {
                 status(A, "dequeue()", o);
             }
 
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+        } catch (Exception e) { System.out.println(e); }
     }
 }
 
 class EmptyQueueException extends RuntimeException {
-    public EmptyQueueException(String err) { super(err); }
+    public EmptyQueueException(String err) {
+        super(err);
+    }
 }

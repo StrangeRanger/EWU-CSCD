@@ -50,14 +50,10 @@ public class Person implements Comparable<Person> {
     @Override
     public int compareTo(Person another) {
         int res = this.ln.compareTo(another.ln);
-        if (res != 0) {
-            return res;
-        }
+        if (res != 0) { return res; }
 
         res = this.ln.compareTo(another.fn);
-        if (res != 0) {
-            return res;
-        }
+        if (res != 0) { return res; }
 
         return 0;  // Added this because compiler complained about no return
     }
@@ -67,7 +63,9 @@ public class Person implements Comparable<Person> {
      *
      * @return Color Returns the reference to the enumerated type Color.
      */
-    public Color getColor() { return this.color; }
+    public Color getColor() {
+        return this.color;
+    }
 
     /**
      * The toString returns the first name space last name, color.

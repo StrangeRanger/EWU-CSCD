@@ -9,7 +9,9 @@ public class LEDs extends OrnamentDecorator {
      *
      * @param component ...
      */
-    public LEDs(final HolidayComponent component) { super("LEDs", price, component); }
+    public LEDs(final HolidayComponent component) {
+        super("LEDs", price, component);
+    }
 
     /**
      * Add price to the current cost.

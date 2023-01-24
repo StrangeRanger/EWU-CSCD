@@ -33,8 +33,7 @@ public class AdapterPatternDemo {
         }
 
         if (! roundHole.fits(largeSquarePegAdapter)) {
-            System.out.println(
-                    "The bigger square peg doesn't fit the smaller round hole");
+            System.out.println("The bigger square peg doesn't fit the smaller round hole");
         }
     }
 }

@@ -1,10 +1,11 @@
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.Scanner;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 public class CurrencyConverter {
     public static void main(String[] args) {
@@ -19,39 +20,35 @@ public class CurrencyConverter {
 
         /* [ Main ]****************************************************************** */
 
-        df.setRoundingMode(
-                RoundingMode.HALF_EVEN);  // Set rounding method for final output.
+        df.setRoundingMode(RoundingMode.HALF_EVEN);  // Set rounding method for final output.
 
-        System.out.println(
-                "IMPORTANT NOTES:\n1) When entering a currency, "
-                + "enter it's short handed name (i.e. US Dollar = USD, Japanese "
-                + "yen = JPY, etc.");
-        System.out.println(
-                "2) All available currencies (as of 2020-12-7):\n"
-                + "    AUD = Australian dollar   |  BGN = Bulgarian lev\n"
-                + "    BRL = Brazilian real      |  CAD = Canadian dollar\n"
-                + "    CHF = Swiss franc         |  CNY = Chinese yuan renminbi\n"
-                + "    CZK = Czech koruna        |  DKK = Danish krone\n"
-                + "    GBP = Pound sterling      |  HKD = Hong Kong dollar\n"
-                + "    HRK = Croatian kuna       |  HUF = Hungarian forint\n"
-                + "    ILS = Israeli shekel      |  INR = Indian rupee\n"
-                + "    ISK = Icelandic krona     |  JPY = Japanese yen\n"
-                + "    KRW = South Korean won    |  MXN = Mexican peso\n"
-                + "    MYR = Malaysian ringgit   |  NOK = Norwegian krone\n"
-                + "    NZD = New Zealand dollar  |  PHP = Philippine peso\n"
-                + "    PLN = Polish zloty        |  RON = Romanian leu\n"
-                + "    RUB = Russian rouble      |  SEK = Swedish krona\n"
-                + "    SGD = Singapore dollar    |  THB = Thai baht\n"
-                + "    TRY = Turkish lira        |  USD = US dollar\n"
-                + "    ZAR = South African rand\n");
+        System.out.println("IMPORTANT NOTES:\n1) When entering a currency, "
+                           + "enter it's short handed name (i.e. US Dollar = USD, Japanese "
+                           + "yen = JPY, etc.");
+        System.out.println("2) All available currencies (as of 2020-12-7):\n"
+                           + "    AUD = Australian dollar   |  BGN = Bulgarian lev\n"
+                           + "    BRL = Brazilian real      |  CAD = Canadian dollar\n"
+                           + "    CHF = Swiss franc         |  CNY = Chinese yuan renminbi\n"
+                           + "    CZK = Czech koruna        |  DKK = Danish krone\n"
+                           + "    GBP = Pound sterling      |  HKD = Hong Kong dollar\n"
+                           + "    HRK = Croatian kuna       |  HUF = Hungarian forint\n"
+                           + "    ILS = Israeli shekel      |  INR = Indian rupee\n"
+                           + "    ISK = Icelandic krona     |  JPY = Japanese yen\n"
+                           + "    KRW = South Korean won    |  MXN = Mexican peso\n"
+                           + "    MYR = Malaysian ringgit   |  NOK = Norwegian krone\n"
+                           + "    NZD = New Zealand dollar  |  PHP = Philippine peso\n"
+                           + "    PLN = Polish zloty        |  RON = Romanian leu\n"
+                           + "    RUB = Russian rouble      |  SEK = Swedish krona\n"
+                           + "    SGD = Singapore dollar    |  THB = Thai baht\n"
+                           + "    TRY = Turkish lira        |  USD = US dollar\n"
+                           + "    ZAR = South African rand\n");
 
         while (true) {
             System.out.print("Enter base currency to be converted: ");
             base = userInput.nextLine().toUpperCase();
 
             // A. Checks if a valid base currency is provided.
-            if (conversionRates.get(base)
-                != null) {  // B. Null produced if base not found.
+            if (conversionRates.get(base) != null) {  // B. Null produced if base not found.
                 conversionRates = (JSONObject) getAPIData(base);
                 baseValue       = (double) conversionRates.get(base);
                 break;
@@ -91,8 +88,8 @@ public class CurrencyConverter {
             }
         }
 
-        System.out.printf("\nConversion rates\n%s: %f\n%s: %f\n\n", base, baseValue,
-                          nonBase, nonBaseValue);
+        System.out.printf("\nConversion rates\n%s: %f\n%s: %f\n\n", base, baseValue, nonBase,
+                          nonBaseValue);
         System.out.printf("Note: Output rounded to two decimals\nConverted "
                                   + "currency approximate: %s %s",
                           df.format(amount * nonBaseValue), nonBase);
@@ -118,9 +115,8 @@ public class CurrencyConverter {
      */
     public static Object getAPIData(String baseCurrency) {
         try {
-            String tmpURL =
-                    "https://api.exchangeratesapi.io/latest?base=" + (baseCurrency);
-            URL url = new URL(tmpURL);
+            String tmpURL = "https://api.exchangeratesapi.io/latest?base=" + (baseCurrency);
+            URL    url    = new URL(tmpURL);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");

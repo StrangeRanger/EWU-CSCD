@@ -23,7 +23,9 @@ public class Programmer extends Employee {
         this.busPass = busPass;
     }
 
-    public boolean getBusPass() { return this.busPass; }
+    public boolean getBusPass() {
+        return this.busPass;
+    }
 
     /**
      * Report prints to the screen I am a programmer. I get "the salary from the base
