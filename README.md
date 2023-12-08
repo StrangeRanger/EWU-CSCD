@@ -1,6 +1,6 @@
 # EWU Computer Science
 
-[![Project Tracker](https://img.shields.io/badge/repo%20status-Project%20Tracker-lightgrey)](https://wiki.randomserver.xyz/en/project-tracker#ewu-cscd)
+[![Project Tracker](https://img.shields.io/badge/repo%20status-Project%20Tracker-lightgrey)](https://wiki.hthompson.dev/en/project-tracker)
 
 This repo is a collection of all the projects/homework that I've done while at EWU.
 
